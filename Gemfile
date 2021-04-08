@@ -40,6 +40,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem "webdrivers"
   gem 'shoulda-matchers'
+  gem 'capybara'
 end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
