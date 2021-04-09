@@ -5,4 +5,10 @@ class PagesController < ApplicationController
 
   def choose_universe
   end
+
+  def entrepreneur_tutorial
+  end
+
+  def contributor_tutorial
+  end
 end

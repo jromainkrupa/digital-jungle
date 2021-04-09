@@ -23,7 +23,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def update
     if params[:choice]
     resource.update(is_entrepreneur: is_entrepreneur_choice)
-    redirect_to root_path
+    redirect_to_good_tutorial(resource)
     else
       super
     end
@@ -44,6 +44,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
   private
+  def redirect_to_good_tutorial(resource)
+    if resource.is_entrepreneur
+      redirect_to entrepreneur_tutorial_path
+    else
+      redirect_to contributor_tutorial_path
+    end
+  end
 
   def is_entrepreneur_choice
     if params[:choice] == 'contributeur'
