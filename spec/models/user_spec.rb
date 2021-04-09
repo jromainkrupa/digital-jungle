@@ -10,7 +10,8 @@ describe User, type: :model do
       user = User.create(first_name: "Jean",
                         last_name: "Krupa",
                         email: "jkrupa@hotmail.fr",
-                        password:"azerty")
+                        password:"azerty",
+                        is_entrepreneur: false)
       expect(user).to be_valid
     end
 

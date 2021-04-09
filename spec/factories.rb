@@ -10,7 +10,7 @@ FactoryBot.define do
     last_name    { 'Krupa' }
     email        { 'c@c.com' }
     phone_number { '0695500784' }
-    is_entrepreneur { false }
+    is_entrepreneur { true }
     password     { 'c@c.com' }
   end
 
