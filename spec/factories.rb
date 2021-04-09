@@ -1,4 +1,10 @@
 FactoryBot.define do
+  factory :project do
+    user { nil }
+    name { "MyString" }
+    description { "MyString" }
+  end
+
   factory :user do
     first_name   { 'Jean' }
     last_name    { 'Krupa' }
