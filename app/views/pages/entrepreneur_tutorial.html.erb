@@ -1,3 +1,16 @@
-<h1>entrepreneur</h1>
+<div class="py-32 max-w-2xl m-auto text-center flex flex-col items-center justify-center">
 
-<%= current_user.is_entrepreneur %>
+  <h1 class="mb-2 text-white">Bienvenu <%= current_user.first_name %>!</h1>
+
+  <p class="mb-6 text-gray-400 leading-normal text-xl">Regarde ce tutoriel de l'espace</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/17XZGUX_9iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="mt-12">
+    <p class="mb-6 text-gray-200 leading-normal"> Que veux tu faire maintenant ?</p>
+    <div class="flex  items-center justify-center text-center">
+      <%= link_to "Voir les pitchs des autres", new_user_registration_path, class: 'btn btn-primary' %>
+      <%= link_to "Créer mon projet", new_project_path, class: 'btn btn-primary ml-8' %>
+    </div>
+  </div>
+
+
+</div>
