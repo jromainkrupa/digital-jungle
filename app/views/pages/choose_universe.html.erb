@@ -1,10 +1,15 @@
 <div class="py-32 max-w-2xl m-auto text-center flex flex-col items-center justify-center">
 
-  <h1 class="mb-2 hidden">Choisissez votre univers</h1>
-  <p class="mb-6 text-gray-400 leading-normal text-xl">Find the next big thing.</p>
+  <h1 class="mb-2 text-white">Choisissez votre univers</h1>
   <div class="flex flex-col items-center justify-center text-center mt-12">
-    <%= link_to "Contributeur", user_registration_path(choice: "contributeur"),method: :put, class: 'btn btn-primary' %>
-    <%= link_to "Entrepreneur", user_registration_path(choice: "entrepreneur"),method: :put, class: 'btn btn-primary' %>
+    <div class="w-64">
+      <p class="text-gray-400">Pour voir les projets et donner mon avis, je continue en tant que :</p>
+      <%= link_to "Contributeur", user_registration_path(choice: "contributeur"),method: :put, class: 'btn btn-primary mt-4 ' %>
+    </div>
+    <div class="w-64 mt-8 ">
+      <p class="text-gray-400">Pour pitcher mon projet, je continue en tant que :</p>
+      <%= link_to "Entrepreneur", user_registration_path(choice: "entrepreneur"),method: :put, class: 'btn btn-primary mt-4' %>
+    </div>
   </div>
 
 </div>
