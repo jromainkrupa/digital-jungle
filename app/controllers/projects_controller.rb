@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  
   def create
     @user    = current_user
     @user.update(is_entrepreneur: true)
