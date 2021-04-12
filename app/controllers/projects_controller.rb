@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
   def new
     @project = Project.new
   end
@@ -20,13 +21,19 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    if @project.update(project_params)
+      redirect_to @project, notice: "project was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @project.destroy
+    redirect_to projects_url, notice: "project was successfully destroyed."
   end
 
   def show
-    @project = Project.find(params[:id])
   end
 
   def index
@@ -34,6 +41,10 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
 
   def project_params
     params.require(:project).permit(:name, :description)

@@ -1,12 +1,20 @@
 <div class="container mx-auto my-8 px-4">
   <div class="max-w-3xl mx-auto">
     <div class="flex justify-between items-center mb-4">
+      <h1 class="h3 text-gray-400"><%= link_to "Projets", projects_path %> ><span class="text-aquamarine-500"> Projet #<%= @project.id %></span></h1>
+      <%= link_to t("edit"), edit_project_path(@project), class: "btn btn-link" %>
     </div>
 
-    <div class="bg-gray-800 text-white rounded shadow p-8">
+    <div class="bg-gray-800 rounded shadow p-8">
+      <div class="mb-4">
+        <h5 class="text-gray-400">Nom</h5>
+        <p class="text-white"><%= @project.name %></p>
+      </div>
+      <div class="mb-4">
+        <h5 class="text-gray-400">Description</h5>
+        <p class="text-white"><%= @project.description %></p>
 
-      <h1 class="h3 "><%= @project.name %></h1>
-      <p><%= @project.description %></p>
+      </div>
     </div>
   </div>
 </div>
