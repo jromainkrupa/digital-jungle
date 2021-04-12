@@ -28,6 +28,10 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  def index
+    @projects = Project.where(user: current_user)
+  end
+
   private
 
   def project_params
