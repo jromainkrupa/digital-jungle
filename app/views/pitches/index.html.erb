@@ -1,8 +1,42 @@
+<div class="py-32 text-white text-center mx-auto" data-controller="swiper">
+  <h1 class="text-white">Les pitchs du moment</h1>
+  <div class="swiper-container max-w-5xl my-24">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper mb-12">
+      <!-- Slides -->
+      t
+      <% @pitches.each do |pitch| %>
+        <div class="swiper-slide">
+          <div class="mt-4">
+            <h2><%= pitch.title %></h2>
+            <div class="flex items-center justify-center">
+              <% if pitch.video.key %>
+                <%= cl_video_tag(pitch.video.key, :loop => true, :controls => true,
+              :transformation => [
+                :height=>600, :width=>360, :crop=>"pad",
+                :quality=>70, :duration=>"10"])  %>
 
-<% @pitches.each do |pitch| %>
-  <%= link_to pitch_path(pitch) do %>
-    <p><%= pitch.title %></p>
-    <p><%= pitch.project.description %></p>
-    <p><%= pitch.project.user.full_name %></p>
-  <% end %>
-<% end %>
+              <% else %>
+                <p>Sorry there is a problem</p>
+              <% end %>
+        </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination pt-4 border-none shadow-none"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+  </div>
+  <div class="mt-12">
+    <div class="flex  items-center justify-center text-center">
+      <%= link_to "J'ai compris", new_user_registration_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
