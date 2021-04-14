@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def pitch_list
+    @pitches = Pitch.includes(:project)
+  end
+
   def choose_universe
   end
 

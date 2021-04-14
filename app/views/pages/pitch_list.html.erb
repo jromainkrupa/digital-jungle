@@ -1,0 +1,6 @@
+
+<% @pitches.each do |pitch| %>
+  <p class="text-white"><%= pitch.title %></p>
+<p class="text-white"><%= pitch.project.description %></p>
+<p class="text-white"><%= pitch.project.user.full_name %></p>
+<% end %>

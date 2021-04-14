@@ -9,4 +9,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true, uniqueness: { scope: :first_name}
   validates :email, presence: true, uniqueness: true
+
+  def full_name
+    "#{first_name.capitalize} #{last_name.upcase}"
+  end
 end
