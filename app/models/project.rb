@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
   belongs_to :user
-  has_many :pitches
+  has_many :pitches, dependent: :destroy
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true, uniqueness: true, length: {minimum:50, maximum:150}
   validate :owner_must_be_entrepreneur

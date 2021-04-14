@@ -3,7 +3,7 @@
     <h1 class="h3 text-white">Mes projects</h1>
 
     <% if @projects.any? %>
-    <%= link_to "Créer un projet", new_project_path, class: "btn btn-primary" %>
+    <%= link_to "Créer un projet", new_entrepreneur_project_path, class: "btn btn-primary" %>
     <% end %>
   </div>
 
@@ -24,7 +24,7 @@
           <td class="p-3"><%= project.id %></td>
 
           <td>
-            <%= link_to project.name, project_path(project), class: "btn btn-link no-underline" %>
+            <%= link_to project.name, entrepreneur_project_path(project), class: "btn btn-link no-underline" %>
           </td>
           <td class="p-3"><%= project.description %></td>
         </tr>
@@ -37,7 +37,7 @@
     <%= image_tag "empty.svg", class: "mb-4 lg:w-1/2" %>
     <div class="flex-1 text-center">
       <p class="h3 mb-4 text-white">Vous n'avez pas encore de projet ?</p>
-      <%= link_to "Créer un projet", new_project_path, class: "btn btn-primary" %>
+      <%= link_to "Créer un projet", new_entrepreneur_project_path, class: "btn btn-primary" %>
     </div>
   </div>
   <% end %>
