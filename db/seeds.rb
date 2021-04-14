@@ -33,25 +33,25 @@ mathieu = User.create!(first_name: "mathieu",
 p "contributor created!"
 
 p "creating 1 project per entrepreneur"
-oenoplace = Project.create!(name:"oenoplace",
-                            description: "oenoplace is the future of wine trading, we propose a unique market place to estimate wine",
-                            user: jeremy)
-cryptohelpers =   Project.create!(name:"cryptohelpers",
-                            description: "crypto is the new big thing, you can't miss it ask for help the crypto helpers to answer all your questions about crypto.",
-                            user: etienne)
-pividori =   Project.create!(name:"pividori design",
-                            description: "design you personal earing on pividori design, pick you model adjust the shape, the colors and let eloise do her magic!",
-                            user: eloise)
+oenoplace =     Project.create!(name:"oenoplace",
+                                description: "oenoplace is the future of wine trading, we propose a unique market place to estimate wine",
+                                user: jeremy)
+cryptohelpers = Project.create!(name:"cryptohelpers",
+                                description: "crypto is the new big thing, you can't miss it ask for help the crypto helpers to answer all your questions about crypto.",
+                                user: etienne)
+pividori =      Project.create!(name:"pividori design",
+                                description: "design you personal earing on pividori design, pick you model adjust the shape, the colors and let eloise do her magic!",
+                                user: eloise)
 p "projects done!"
 
 p "creating 1 pitch per project"
-oenoplace_pitch = Pitch.create!(title:"oenoplace pitch by #{jeremy.first_name}",
-                            is_publishable: false,
-                            project: oenoplace)
-cryptohelpers_pitch =   Pitch.create!(title:"cryptohelpers pitch by #{etienne.first_name}",
-                            is_publishable: false,
-                            project: cryptohelpers)
-pividori_pitch =   Pitch.create!(title:"pividori design pitch by #{eloise.first_name}",
-                            is_publishable: false,
-                            project: pividori)
+oenoplace_pitch =     Pitch.create!(title:"oenoplace pitch by #{jeremy.first_name}",
+                                    is_publishable: false,
+                                    project: oenoplace)
+cryptohelpers_pitch = Pitch.create!(title:"cryptohelpers pitch by #{etienne.first_name}",
+                                    is_publishable: false,
+                                    project: cryptohelpers)
+pividori_pitch =      Pitch.create!(title:"pividori design pitch by #{eloise.first_name}",
+                                    is_publishable: false,
+                                    project: pividori)
 p "pitch done!"
