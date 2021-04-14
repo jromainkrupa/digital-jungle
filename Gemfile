@@ -33,6 +33,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem "rspec-rails"
   gem 'factory_bot_rails'
+  gem 'dotenv-rails'
 end
 
 group :test do 
@@ -59,3 +60,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise", "~> 4.7"
 
 gem "inline_svg", "~> 1.7"
+
+gem "cloudinary", "~> 1.20"
