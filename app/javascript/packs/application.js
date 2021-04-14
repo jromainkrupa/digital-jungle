@@ -8,7 +8,7 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "controllers";
-
+import "src/direct_uploads";
 Turbolinks.start();
 ActiveStorage.start();
 

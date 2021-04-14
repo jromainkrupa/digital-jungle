@@ -8,12 +8,12 @@ Rails.application.routes.draw do
     get "/choose-universe",to: "pages#choose_universe"
     get "/entrepreneur-tutorial",to: "pages#entrepreneur_tutorial"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
-    resources :pitches, only: %i[index show]
+    # resources :pitches, only: %i[index show]
   end
 
   authenticated :user, lambda {|u| u.is_entrepreneur?} do
     resources :projects, only: %i[index new create edit update destroy show] do
-      resources :pitches, only: %i[new create edit update destroy]
+      resources :pitches, only: %i[index show new create edit update destroy]
     end
   end
 end

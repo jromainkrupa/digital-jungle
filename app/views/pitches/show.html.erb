@@ -1,2 +1,14 @@
-<h1>Pitches#show</h1>
-<p>Find me in app/views/pitches/show.html.erb</p>
+<div class="container mx-auto my-8 px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="h3"><%= link_to "Pitches", project_pitches_path %> > Pitch #<%= @pitch.id %></h1>
+    </div>
+
+    <% if @pitch.video.key %>
+    <%= cl_video_tag(@pitch.video.key, :loop => true, :controls => true,
+  :transformation => [
+    :height=>600, :width=>360, :crop=>"pad",
+    :quality=>70, :duration=>"10"])  %>
+    <%end %>
+  </div>
+</div>
