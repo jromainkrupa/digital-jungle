@@ -1,0 +1,8 @@
+
+<% @pitches.each do |pitch| %>
+  <%= link_to pitch_path(pitch) do %>
+    <p><%= pitch.title %></p>
+    <p><%= pitch.project.description %></p>
+    <p><%= pitch.project.user.full_name %></p>
+  <% end %>
+<% end %>

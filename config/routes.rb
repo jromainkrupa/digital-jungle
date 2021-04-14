@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pitches/index'
+  get 'pitches/show'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
     get "/entrepreneur-tutorial",to: "pages#entrepreneur_tutorial"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
     get "/pitch-list",to: "pages#pitch_list"
-    resources :pitches, only: [:show]
+    resources :pitches, only: [:index, :show]
 
   end
 
