@@ -12,6 +12,10 @@ export default class extends Controller {
     const swiper = new Swiper(".swiper-container", {
       // Optional parameters
       direction: "horizontal",
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      spaceBetween: 20,
+
       loop: false,
 
       // If we need pagination
