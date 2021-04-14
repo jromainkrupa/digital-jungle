@@ -1,9 +1,9 @@
 class PitchesController < ApplicationController
-  before_action :set_project, only: [:new,:create, :show]
+  before_action :set_project, only: [:index,:new,:create, :show]
   before_action :set_pitch, only: [:show]
 
   def index
-
+    @pitches = @project.pitches
   end
 
   def show
