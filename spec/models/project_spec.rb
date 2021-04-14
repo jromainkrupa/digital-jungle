@@ -3,6 +3,7 @@ require 'rails_helper'
 describe Project, type: :model do
   context 'Associations' do
     it { should belong_to(:user) } 
+    it { should have_many(:pitches) }
   end
 
   context 'Validations' do

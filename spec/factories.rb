@@ -1,8 +1,14 @@
 FactoryBot.define do
+  factory :pitch do
+    title { "MyString" }
+    project { nil }
+    is_publishable { false }
+  end
+
   factory :project do
     user { nil }
     name { "MyString" }
-    description { "MyString" }
+    description { "This a super cool description of a project, yes it's a bit to have to fill 50 characters." }
   end
 
   factory :user do
