@@ -1,5 +1,44 @@
+<div class="container mx-auto my-8 px-4">
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="h3 text-white">Mes pitches</h1>
 
-<% @pitches.each do |pitch| %>
-  <p class="text-white"><%= pitch.title %></p>
+    <% if @pitches.any? %>
+    <%= link_to "Créer un pitch", new_entrepreneur_project_pitch_path(@project), class: "btn btn-primary" %>
+    <% end %>
+  </div>
 
-<% end %>
+  <% if @pitches.any? %>
+  <div class="bg-gray-800 rounded shadow table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="p-3 uppercase text-left text-gray-400 text-xs">n°</th>
+          <th class="p-3 uppercase text-left text-xs text-gray-400 w-20">Nom</th>
+          <th class="p-3 uppercase text-left text-xs text-gray-400 w-20">Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @pitches.each do |pitch| %>
+        <tr class="group border-t text-white border-gray-400 hover:bg-gray-900">
+          <td class="p-3"><%= pitch.id %></td>
+
+          <td>
+            <%= link_to pitch.title, entrepreneur_project_pitch_path(@project, pitch), class: "btn btn-link no-underline" %>
+          </td>
+          <td class="p-3"><%= pitch.is_publishable %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <% else %>
+  <div class="bg-gray-800 rounded shadow flex flex-col items-center justify-between p-8 lg:flex-row">
+    <%= image_tag "empty.svg", class: "mb-4 lg:w-1/2" %>
+    <div class="flex-1 text-center">
+      <p class="h3 mb-4 text-white">Vous n'avez pas encore de pitch ?</p>
+      <%= link_to "Créer un premier pitch", new_entrepreneur_project_pitch_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
+</div>

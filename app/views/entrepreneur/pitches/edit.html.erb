@@ -1,2 +1,25 @@
 <h1>Pitches#edit</h1>
 <p>Find me in app/views/pitches/edit.html.erb</p>
+    <div class="bg-gray-800 rounded shadow p-8">
+      <%= form_with(model: [@project, @pitch], url: entrepreneur_project_pitch_path(@project, @pitch), html: { method: :put }) do |form| %>
+        <%= render "shared/error_messages", resource: form.object %>
+        <div class="form-group">
+          <%= form.label "titre" %>
+          <%= form.text_field :title, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :video %>
+          <%= form.file_field :video, class: "form-control" %>
+        </div>
+
+        <div class="form-group flex justify-between">
+          <%= form.button class: "btn btn-primary" %>
+
+          <% if form.object.persisted? %>
+          <%= link_to "supprimer", entrepreneur_project_pitch_path(@project, @pitch), class: "btn btn-danger outline", method: :delete, data: { confirm: "sûre ?" } %>
+          <% end %>
+          
+        </div>
+      <% end %>
+    </div>

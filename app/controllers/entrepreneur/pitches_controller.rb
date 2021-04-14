@@ -1,13 +1,14 @@
 module Entrepreneur
   class PitchesController < ApplicationController
-    before_action :set_project, only: [:index,:new,:create]
-    before_action :set_pitch, only: [:show]
+    before_action :set_project, only: [:show, :index, :destroy, :new, :create, :edit, :update]
+    before_action :set_pitch, only: [:show, :edit, :update, :destroy]
 
     def index
       @pitches = @project.pitches
     end
 
     def show
+      
     end
 
     def new
@@ -26,12 +27,11 @@ module Entrepreneur
     end
 
     def edit
-      
     end
 
     def update
       if @pitch.update(pitch_params)
-        redirect_to @pitch, notice: "Pitch was successfully updated."
+        redirect_to entrepreneur_project_pitch_path(@project, @pitch), notice: "Pitch was successfully updated."
       else
         render :edit, status: :unprocessable_entity
       end
@@ -39,7 +39,7 @@ module Entrepreneur
 
     def destroy
       @pitch.destroy
-      redirect_to pitches_url, notice: "Pitch was successfully destroyed."
+      redirect_to entrepreneur_project_pitches_path, notice: "Pitch was successfully destroyed."
     end
 
     private

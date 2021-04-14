@@ -12,7 +12,7 @@
       %>
     </div>
 
-    <div class="bg-gray-800 rounded shadow py-8">
+    <div class="bg-gray-800 rounded shadow p-8">
       <div class="mb-4">
         <h5 class="text-gray-400">Nom</h5>
         <p class="text-white"><%= @project.name %></p>
@@ -21,10 +21,14 @@
         <h5 class="text-gray-400">Description</h5>
         <p class="text-white"><%= @project.description %></p>
       </div>
-      <div class="flex items-center justify-start text-center">
-        <%= link_to "Créer mon pitch", new_entrepreneur_project_pitch_path(@project), class:
-        'btn btn-primary ml-8' %>
-      </div>
     </div>
   </div>
+</div>
+<div class="flex items-center justify-start text-center">
+  <%= link_to "Voir les pitchs", entrepreneur_project_pitches_path(@project), class:
+  'btn btn-primary ml-8' %>
+</div>
+<div class="flex items-center justify-start text-center">
+  <%= link_to "Créer un pitch", new_entrepreneur_project_pitch_path(@project), class:
+  'btn btn-primary ml-8' %>
 </div>
