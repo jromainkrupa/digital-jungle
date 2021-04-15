@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'investments/new'
+  get 'investments/create'
   get 'pitches/index'
   get 'pitches/show'
   devise_for :users, controllers: {
