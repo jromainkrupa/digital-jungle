@@ -4,6 +4,7 @@ describe Project, type: :model do
   context 'Associations' do
     it { should belong_to(:user) } 
     it { should have_many(:pitches) }
+    it { should have_many(:investments) } 
   end
 
   context 'Validations' do

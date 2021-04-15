@@ -1,4 +1,10 @@
 FactoryBot.define do
+  factory :investment do
+    user { nil }
+    project { nil }
+    amount { 1 }
+  end
+
   factory :pitch do
     title { "MyString" }
     project { nil }
