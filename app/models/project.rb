@@ -7,6 +7,10 @@ class Project < ApplicationRecord
   validates :description, presence: true, uniqueness: true, length: {minimum:50, maximum:150}
   validate :owner_must_be_entrepreneur
 
+  def publishable_pitch
+    self.pitches.map {|pitch| pitch if pitch.is_publishable? }.first
+  end
+
   private 
 
   def owner_must_be_entrepreneur

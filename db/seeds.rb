@@ -46,12 +46,12 @@ p "projects done!"
 
 p "creating 1 pitch per project"
 oenoplace_pitch =     Pitch.create!(title:"oenoplace pitch by #{jeremy.first_name}",
-                                    is_publishable: false,
+                                    is_publishable: true,
                                     project: oenoplace)
 cryptohelpers_pitch = Pitch.create!(title:"cryptohelpers pitch by #{etienne.first_name}",
-                                    is_publishable: false,
+                                    is_publishable: true,
                                     project: cryptohelpers)
 pividori_pitch =      Pitch.create!(title:"pividori design pitch by #{eloise.first_name}",
-                                    is_publishable: false,
+                                    is_publishable: true,
                                     project: pividori)
 p "pitch done!"

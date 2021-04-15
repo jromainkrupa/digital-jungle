@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'projects/index'
+  get 'projects/show'
   get 'investments/new'
   get 'investments/create'
   get 'pitches/index'
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
     get "/entrepreneur-tutorial",to: "pages#entrepreneur_tutorial"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
     get "/pitch-list",to: "pages#pitch_list"
-    resources :pitches, only: [:index, :show]
+    resources :projects, only: [:index, :show]
 
   end
 
