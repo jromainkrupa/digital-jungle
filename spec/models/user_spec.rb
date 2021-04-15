@@ -6,13 +6,23 @@ describe User, type: :model do
   end
 
   context 'Validations' do
-    it "is valid with a first name, last name, email, and password" do
+    it "is valid with a first name, last name, email, and a balance password" do
       user = User.create(first_name: "Jean",
                         last_name: "Krupa",
                         email: "jkrupa@hotmail.fr",
                         password:"azerty",
+                        balance: 100,
                         is_entrepreneur: false)
       expect(user).to be_valid
+    end
+    it "is should set a balance at 1M€ when created" do
+      user = User.create(first_name: "Jean",
+        last_name: "Krupa",
+        email: "jkrupa@hotmail.fr",
+        password:"azerty",
+        is_entrepreneur: false)
+
+      expect(user.balance).to be(1000000)
     end
 
     it "is invalid without a first name" do
