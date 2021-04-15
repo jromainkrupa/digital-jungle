@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     if resource.is_entrepreneur?
       entrepreneur_projects_path
     else
-      pitches_path
+      projects_path
     end
   end
 end

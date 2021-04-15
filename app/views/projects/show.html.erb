@@ -44,6 +44,8 @@
 <div class="m-4 text-white">
   <p><%= @project.description %></p>
 </div>
-<div class="flex items-center justify-center mt-16">
-  <%= link_to "Investir dans #{@project.name}", new_project_investment_path(@project), class:"btn btn-primary" %>
-</div>
+<% if current_user != @project.user %>
+  <div class="flex items-center justify-center mt-16">
+    <%= link_to "Investir dans #{@project.name}", new_project_investment_path(@project), class:"btn btn-primary" %>
+  </div>
+<% end %>
