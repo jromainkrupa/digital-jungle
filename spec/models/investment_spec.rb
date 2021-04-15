@@ -8,11 +8,18 @@ describe Investment, type: :model do
 
   context 'Validations' do
     it "is valid with a user, a project and an amount" do
-      user    = create(:user)
-      project = create(:project, user: user)
-      investment = Investment.create(amount: 100000,
-                        project: project,
-                        user: user)
+      project     = create(:project)
+      contributor = User.create(first_name: "Mathieu",
+                          last_name: "cartiller",
+                          email: "matt@hotmail.fr",
+                          password:"azerty",
+                          balance: 100001,
+                          is_entrepreneur: false)
+
+      investment  = Investment.create(amount: 100000,
+                          project: project,
+                          user: contributor)
+
       expect(investment).to be_valid
     end
 
@@ -47,16 +54,41 @@ describe Investment, type: :model do
     end
 
     it "it is invalid when you invest on your own project" do
-      pending
+      project = create(:project)
+      investment  = Investment.create(amount: 90000,
+                                      project: project,
+                                      user: project.user)
+      expect(investment.errors[:user]).to include('you can\'t invest in your own project')
     end
 
     it "it should deduct the amount from user balance" do
-      pending
+      project     = create(:project)
+      contributor = User.create(first_name: "Mathieu",
+                          last_name: "cartiller",
+                          email: "matt@hotmail.fr",
+                          password:"azerty",
+                          balance: 100000,
+                          is_entrepreneur: false)
+      investment  = Investment.create(amount: 90000,
+                          project: project,
+                          user: contributor)
+
+      expect(contributor.balance).to eq(10000)
     end
 
     it "it is invalid when user balance < amount " do
-      pending
+      project     = create(:project)
+      contributor = User.create(first_name: "Mathieu",
+                            last_name: "cartiller",
+                            email: "matt@hotmail.fr",
+                            password:"azerty",
+                            balance: 89000,
+                            is_entrepreneur: false)
+      investment  = Investment.create(amount: 90000,
+                            project: project,
+                            user: contributor)
+
+      expect(investment.errors[:user]).to include('you don\'t have enough money')
     end
-    
   end
 end

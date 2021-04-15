@@ -10,13 +10,6 @@ FactoryBot.define do
     project { nil }
     is_publishable { false }
   end
-
-  factory :project do
-    user { nil }
-    name { "MyString" }
-    description { "This a super cool description of a project, yes it's a bit to have to fill 50 characters." }
-  end
-
   factory :user do
     first_name   { 'Jean' }
     last_name    { 'Krupa' }
@@ -25,5 +18,12 @@ FactoryBot.define do
     is_entrepreneur { true }
     password     { 'c@c.com' }
   end
+
+  factory :project do
+    user
+    name { "MyString" }
+    description { "This a super cool description of a project, yes it's a bit to have to fill 50 characters." }
+  end
+
 
 end
