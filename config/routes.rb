@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  get 'projects/index'
-  get 'projects/show'
-  get 'investments/new'
-  get 'investments/create'
-  get 'pitches/index'
-  get 'pitches/show'
+
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -15,7 +10,9 @@ Rails.application.routes.draw do
     get "/entrepreneur-tutorial",to: "pages#entrepreneur_tutorial"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
     get "/pitch-list",to: "pages#pitch_list"
-    resources :projects, only: [:index, :show]
+    resources :projects, only: [:index, :show] do 
+      resources :investments, only: [:new, :create]
+    end
 
   end
 

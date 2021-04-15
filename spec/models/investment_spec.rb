@@ -45,6 +45,18 @@ describe Investment, type: :model do
       p investment.valid?
       expect(investment.errors[:amount]).to include('must be greater than 0')
     end
+
+    it "it is invalid when you invest on your own project" do
+      pending
+    end
+
+    it "it should deduct the amount from user balance" do
+      pending
+    end
+
+    it "it is invalid when user balance < amount " do
+      pending
+    end
     
   end
 end
