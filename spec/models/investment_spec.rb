@@ -90,5 +90,9 @@ describe Investment, type: :model do
 
       expect(investment.errors[:user]).to include('you don\'t have enough money')
     end
+
+    it "is invalid to invest twice in the same project if you don't have invested in 2 other project" do 
+      pending
+    end
   end
 end

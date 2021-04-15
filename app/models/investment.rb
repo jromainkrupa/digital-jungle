@@ -28,5 +28,6 @@ class Investment < ApplicationRecord
 
   def deduct_investment_amount_from_user_balance
     user.balance -= amount 
+    user.save
   end
 end
