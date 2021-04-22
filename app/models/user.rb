@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :projects, dependent: :destroy
   has_many :investments, dependent: :destroy
-  
+
   validates :first_name, presence: true
   validates :last_name, presence: true, uniqueness: { scope: :first_name}
   validates :email, presence: true, uniqueness: true
@@ -14,5 +14,8 @@ class User < ApplicationRecord
 
   def full_name
     "#{first_name.capitalize} #{last_name.upcase}"
+  end
+
+  def age_in_days
   end
 end
