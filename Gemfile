@@ -62,3 +62,5 @@ gem "devise", "~> 4.7"
 gem "inline_svg", "~> 1.7"
 
 gem "cloudinary", "~> 1.20"
+
+gem "devise-i18n", "~> 1.9"
