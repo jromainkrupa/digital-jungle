@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: "pages#home"
-
+  get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
+  
   authenticated :user do 
     get "/choose-universe",to: "pages#choose_universe"
     get "/entrepreneur-tutorial",to: "pages#entrepreneur_tutorial"
