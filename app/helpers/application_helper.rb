@@ -8,4 +8,8 @@ module ApplicationHelper
     filename = "#{name}.svg"
     inline_svg_tag(filename, options)
   end
+  
+  def disable_with(text)
+    "<i class=\"far fa-spinner-third fa-spin\"></i> #{text}".html_safe
+  end
 end

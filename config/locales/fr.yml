@@ -1,6 +1,9 @@
 fr:
   hello: "bonjour tout le monde"
+  sign_up: "Créez un compte"
+  sign_in: "Se connecter"
   pages:
+    home:
     choose_universe:
       universe-title: "Choisi ton univers"
     contributor_tutorial:
