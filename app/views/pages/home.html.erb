@@ -3,7 +3,7 @@
     <%= render_svg "logo", styles: "fill-current text-gray-700 hover:text-gray-800" %>
 
     <h1 class="mb-2 hidden">Welcome to yoopitch</h1>
-    <p class="mb-6 text-gray-400 leading-normal text-xl">Find the next big thing.</p>
+    <p class="mb-6 text-gray-400 leading-normal text-xl"><%= t("slogan") %></p>
     <div class="flex flex-col items-center justify-center text-center mt-12">
       <%= link_to "Créer un compte", new_user_registration_path, class: 'btn btn-primary' %>
       <%= link_to "Se connecter", new_user_session_path, class: 'btn btn-link mt-4' %>

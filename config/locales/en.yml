@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  pages:
+    choose_universe:
+      universe-title: "Choose your universe"
+    contributor_tutorial:
+      welcome: "Welcome %{name}!"
+  slogan: "Find the next big thing"

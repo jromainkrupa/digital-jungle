@@ -1,5 +1,5 @@
 <div class="py-32 text-white text-center mx-auto" data-controller="swiper">
-  <h1 class="text-white">Bienvenu <%= current_user.first_name %>!</h1>
+  <h1 class="text-white"><%= t(".welcome",name: current_user.first_name) %></h1>
   <div class="swiper-container max-w-5xl my-24">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper mb-12">

@@ -1,0 +1,8 @@
+fr:
+  hello: "bonjour tout le monde"
+  pages:
+    choose_universe:
+      universe-title: "Choisi ton univers"
+    contributor_tutorial:
+      welcome: "Bienvenu %{name}!"
+  slogan: "Trouvez la prochaine pépite"
