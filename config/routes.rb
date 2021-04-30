@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   }
   root to: "pages#home"
   get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
-  
+  get "/landing-contributor",to: "pages#landing_contributor"
+
   authenticated :user do 
     get "/choose-universe",to: "pages#choose_universe"
     get "/entrepreneur-tutorial",to: "pages#entrepreneur_tutorial"
