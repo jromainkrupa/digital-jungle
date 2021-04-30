@@ -3,6 +3,7 @@
 # for devise 4.6.2+
 
 fr:
+  or: "ou"
   devise:
     confirmations:
       confirmed: "Votre compte a été validé."

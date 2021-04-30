@@ -34,6 +34,7 @@ en:
   sign_in: "Sign in"
   pages:
     home:
+    landing_entrepreneur:
     choose_universe:
       universe-title: "Choose your universe"
     contributor_tutorial:

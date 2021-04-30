@@ -1,15 +1,17 @@
-<div class="py-32 max-w-2xl m-auto text-center flex flex-col items-center justify-center">
-
-  <h1 class="mb-2 text-white"><%= t(".universe-title") %></h1>
-  <div class="flex flex-col items-center justify-center text-center mt-12">
-    <div class="w-64">
-      <p class="text-gray-400">Pour voir les projets et donner mon avis, je continue en tant que :</p>
-      <%= link_to "Contributeur", user_registration_path(choice: "contributeur"),method: :put, class: 'btn btn-primary mt-4 ' %>
-    </div>
-    <div class="w-64 mt-8 ">
-      <p class="text-gray-400">Pour pitcher mon projet, je continue en tant que :</p>
-      <%= link_to "Entrepreneur", user_registration_path(choice: "entrepreneur"),method: :put, class: 'btn btn-primary mt-4' %>
+<div class="container px-4 mx-auto my-10 lg:px-0">
+  <div class="w-full m-auto lg:w-1/2">
+    <div class="p-4 bg-gray-900 text-center rounded-lg shadow-sm lg:p-10">
+      <h1 class="mb-2 text-white"><%= t(".universe-title") %></h1>
+      <div class="flex flex-col items-center justify-center text-center mt-12">
+        <div class="w-64">
+          <p class="text-gray-400">Pour voir les projets et donner mon avis, je continue en tant que :</p>
+          <%= link_to "Contributeur", user_registration_path(choice: "contributeur"),method: :put, class: 'btn btn-primary mt-4 ' %>
+        </div>
+        <div class="w-64 mt-8 ">
+          <p class="text-gray-400">Pour pitcher mon projet, je continue en tant que :</p>
+          <%= link_to "Entrepreneur", user_registration_path(choice: "entrepreneur"),method: :put, class: 'btn btn-primary mt-4' %>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>

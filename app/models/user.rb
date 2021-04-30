@@ -20,6 +20,6 @@ class User < ApplicationRecord
   end
 
   def self.language_list
-    [['English', 'en'], ['Français', 'fr']]
+    [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
   end
 end
