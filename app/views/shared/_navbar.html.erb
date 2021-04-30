@@ -1,4 +1,4 @@
-<nav class="flex flex-wrap items-center justify-between px-4 py-2 bg-gray-900 border-b text-sm" data-controller="toggle">
+<nav class="flex flex-wrap items-center justify-between px-4 py-2 bg-gray-800 border-b text-sm" data-controller="toggle">
   <div class="flex items-center flex-shrink-0 mr-6">
     <%= link_to root_path do %>
     <%= render_svg "logo_inline", styles: "fill-current text-gray-700 hover:text-gray-800" %>
@@ -84,8 +84,8 @@
       </div>
 
       <% else %>
-      <%= link_to "log_in", new_user_session_path, class: 'nav-link' %>
-      <%= link_to "sign_up", new_user_registration_path, class: 'btn btn-primary' %>
+      <%= link_to "sign in ", new_user_session_path, class: 'nav-link' %>
+      <%= link_to "sign up", new_user_registration_path, class: 'btn btn-primary' %>
       <% end %>
 
     </div>
