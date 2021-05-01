@@ -80,10 +80,10 @@ form.inline {
   z-index: 2;
   cursor: pointer;
 
-  @apply opacity-0 inline-block pl-1 pr-0 py-3 px-3 overflow-hidden absolute border-none;
+  @apply opacity-0 text-white inline-block pl-1 pr-0 py-3 px-3 overflow-hidden absolute border-none;
 
   + label {
-    @apply inline-flex text-sm font-bold text-center px-4 py-0 rounded no-underline items-center justify-between cursor-pointer;
+    @apply inline-flex text-white text-sm font-bold text-center px-4 py-0 rounded no-underline items-center justify-between cursor-pointer;
 
     height: 40px;
     line-height: 40px;
@@ -94,7 +94,7 @@ form.inline {
     //@extend .outline;
 
     &:focus {
-      outline: 1px dotted #000;
+      outline: 1px dotted red;
       outline: -webkit-focus-ring-color auto 5px;
     }
   }

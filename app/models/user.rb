@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
   has_many :investments, dependent: :destroy
 
+  has_one_attached :avatar
+
   validates :first_name, presence: true
   validates :last_name, presence: true, uniqueness: { scope: :first_name}
   validates :email, presence: true, uniqueness: true
