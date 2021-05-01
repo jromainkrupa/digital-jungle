@@ -1,0 +1,46 @@
+<div class="container mx-auto my-8 px-4">
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="h3 text-gray-900">Investments</h1>
+
+    <% if @investments.any? %>
+      <%= link_to "New investment", projects_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <% if @investments.any? %>
+    <div class="bg-white rounded shadow table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="p-3 uppercase text-left text-xs text-gray-700">project</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-700">amount</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-700 w-20">action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @investments.each do |investment| %>
+          <tr class="group border-t border-gray-400 hover:bg-gray-100">
+                      <td class="p-3"><%= investment.project.name %></td>
+                      <td class="p-3"><%= investment.amount %> €</td>
+          
+            <td>
+              <%= link_to "view", project_path(investment.project), class: "btn btn-link no-underline" %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <h3>you still have: <span><%= current_user.balance %> €</span></h2>
+
+  <% else %>
+    <div class="bg-gray-800 text-white rounded shadow flex flex-col items-center justify-between p-8 lg:flex-row">
+      <%= image_tag "empty.svg", class: "mb-4 lg:w-1/2" %>
+      <div class="flex-1 text-center">
+        <p class="h3 mb-4">Create your first investment</p>
+        <%= link_to "see projects", projects_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

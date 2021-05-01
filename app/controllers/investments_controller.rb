@@ -1,5 +1,5 @@
 class InvestmentsController < ApplicationController
-  before_action :set_project, only: [:index, :new, :create]
+  before_action :set_project, only: [:new, :create]
   
   def index
     @investments = Investment.where(user_id: current_user)
