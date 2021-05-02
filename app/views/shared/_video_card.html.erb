@@ -4,7 +4,6 @@
       <% if project.publishable_pitch.video.key %>
         <%= cl_video_tag(project.publishable_pitch.video.key, :loop => true, :controls => true,
           :transformation => [
-
             :crop=>"pad", :background => "#F3F4F6",
             :quality=>70]) %>
       <% end %>

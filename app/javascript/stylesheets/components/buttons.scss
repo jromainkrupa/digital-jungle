@@ -56,7 +56,7 @@
   }
 
   &.outline {
-    @apply bg-transparent border border-aquamarine-500 text-aquamarine-500 shadow-none;
+    @apply bg-transparent border-2 border-gray-900 text-gray-900 font-bold shadow-none;
 
     &:hover,
     &:focus {

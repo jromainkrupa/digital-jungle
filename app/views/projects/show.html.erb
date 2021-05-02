@@ -1,25 +1,35 @@
-<div>
-  <% if @project.publishable_pitch.video.key %>
-    <%= cl_video_tag(@project.publishable_pitch.video.key, :loop => true, :controls => true,
-  :transformation => [
-    :height=>375, :width=>375, :crop=>"pad",
-    :quality=>70, :duration=>"10"])  %>
+<%= link_to projects_path, class:"btn btn-secondary outline" do %>
+  <i class="fas fa-arrow-left"></i>
+  <p class="ml-1">Back</p>
+<% end %>
 
-  <% else %>
-    <%= link_to "upload une video", edit_entrepreneur_project_pitch_path, class: "btn btn-link"%>
-  <% end %>
-</div>
-<div class="m-4">
-  <h1 class="text-white text-xl"><%= @project.name %></h1>
-  <p class="text-xl text-gray-400">by <%= @project.user.full_name %></p>
+<div class="mt-8">
+  <div class="rounded flex flex-col max-w-4xl mx-auto items-center justify-center bg-gray-900">
+    <% if @project.publishable_pitch %>
+      <% if @project.publishable_pitch.video.key %>
+        <%= cl_video_tag(@project.publishable_pitch.video.key, :loop => true, :controls => true,
+          :transformation => [
+            :crop=>"pad", :background => "#F3F4F6",
+            :quality=>70]) %>
+      <% end %>
+    <% end %>
+
+
+    <%= render "shared/top-level-buttons", project: @project %>
+
+    <div class="max-w-xl mt-2">
+      <h2 class="h3 text-gray-100"><%= @project.name %></h2>
+      <p class="text-gray-300 mt-2"><%= @project.description %></p>
+    </div>
+
+    <div class="mt-10 mb-8 w-3/12">
+      <%= link_to "see more", project_path(@project), class:"btn btn-primary btn-expanded" %>
+    </div>
+  </div>
 </div>
 
-<div class="flex justify-around items-center">
-  <%= render "shared/top-level-buttons", project: @project %>             
-</div>
-<div class="m-4 text-white">
-  <p><%= @project.description %></p>
-</div>
+
+
 <% if current_user != @project.user %>
   <div class="flex items-center justify-center mt-16">
     <%= link_to "Investir dans #{@project.name}", new_project_investment_path(@project), class:"btn btn-primary" %>
