@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.includes(:pitches)
+    @projects = Project.includes(:pitches).where(pitches: {is_publishable: true})
   end
 
   def show
