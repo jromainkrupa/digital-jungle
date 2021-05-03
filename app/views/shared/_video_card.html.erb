@@ -17,8 +17,10 @@
       <p class="text-gray-300 mt-2"><%= project.description %></p>
     </div>
 
-    <div class="mt-10 mb-8 w-3/12">
-      <%= link_to "see more", project_path(project), class:"btn btn-primary btn-expanded" %>
-    </div>
+    <% if current_user != project.user %>
+      <div class="mt-10 mb-8 w-5/12">
+        <%= link_to "Investir dans #{project.name}", new_project_investment_path(project), class:"btn btn-primary btn-expanded" %>
+      </div>
+    <% end %>
   </div>
 </div>
