@@ -62,8 +62,13 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    aes_key_wrap (1.1.0)
+    arel-helpers (2.12.0)
+      activerecord (>= 3.1.0, < 7)
+    attr_required (1.0.1)
     aws_cf_signer (0.1.3)
     bcrypt (3.1.16)
+    bindata (2.4.9)
     bindex (0.8.1)
     bootsnap (1.7.3)
       msgpack (~> 1.0)
@@ -105,18 +110,47 @@ GEM
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
     ffi (1.15.0)
+    forest_liana (6.3.2)
+      arel-helpers
+      bcrypt
+      groupdate (= 2.5.2)
+      httparty
+      ipaddress
+      json
+      json-jwt
+      jsonapi-serializers (>= 0.14.0)
+      jwt
+      openid_connect
+      rack-cors
+      rails (>= 4.0)
+      useragent
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (2.5.2)
+      activesupport (>= 3)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httparty (0.18.1)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
+    httpclient (2.8.3)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     inline_svg (1.7.2)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
+    ipaddress (0.8.3)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    json (2.5.1)
+    json-jwt (1.13.0)
+      activesupport (>= 4.2)
+      aes_key_wrap
+      bindata
+    jsonapi-serializers (1.0.1)
+      activesupport
+    jwt (2.2.3)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -133,12 +167,23 @@ GEM
     mini_mime (1.0.3)
     minitest (5.14.4)
     msgpack (1.4.2)
+    multi_xml (0.6.0)
     netrc (0.11.0)
     nio4r (2.5.7)
     nokogiri (1.11.3-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
+    openid_connect (1.2.0)
+      activemodel
+      attr_required (>= 1.0.0)
+      json-jwt (>= 1.5.0)
+      rack-oauth2 (>= 1.6.1)
+      swd (>= 1.0.0)
+      tzinfo
+      validate_email
+      validate_url
+      webfinger (>= 1.0.1)
     orm_adapter (0.5.0)
     pg (1.2.3)
     public_suffix (4.0.6)
@@ -146,8 +191,16 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-mini-profiler (2.3.1)
       rack (>= 1.2.0)
+    rack-oauth2 (1.16.0)
+      activesupport
+      attr_required
+      httpclient
+      json-jwt (>= 1.11.0)
+      rack (>= 2.1.0)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -233,6 +286,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    swd (1.2.0)
+      activesupport (>= 3)
+      attr_required (>= 0.0.5)
+      httpclient (>= 2.4)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -243,6 +300,13 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
+    useragent (0.16.10)
+    validate_email (0.1.6)
+      activemodel (>= 3.0)
+      mail (>= 2.2.5)
+    validate_url (1.0.13)
+      activemodel (>= 3.0.0)
+      public_suffix
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -254,6 +318,9 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (>= 3.0, < 4.0)
+    webfinger (1.1.0)
+      activesupport
+      httpclient (>= 2.4)
     webpacker (5.2.1)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
@@ -279,6 +346,7 @@ DEPENDENCIES
   devise-i18n (~> 1.9)
   dotenv-rails
   factory_bot_rails
+  forest_liana (~> 6.3)
   inline_svg (~> 1.7)
   jbuilder (~> 2.7)
   listen (~> 3.3)

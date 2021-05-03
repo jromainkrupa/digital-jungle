@@ -64,3 +64,5 @@ gem "inline_svg", "~> 1.7"
 gem "cloudinary", "~> 1.20"
 
 gem "devise-i18n", "~> 1.9"
+
+gem "forest_liana", "~> 6.3"
