@@ -1,3 +1,5 @@
+include ActionView::Helpers::NumberHelper
+
 class Project < ApplicationRecord
   belongs_to :user
   has_many :pitches, dependent: :destroy
@@ -9,6 +11,11 @@ class Project < ApplicationRecord
 
   def publishable_pitch
     self.pitches.map {|pitch| pitch if pitch.is_publishable? }.first
+  end
+
+  def total_amount_invested
+    amount = self.investments.map { |investment| investment.amount }.sum
+    number_to_human(amount,format: '%n %u', precision: 4, units: { thousand: 'K€', million: 'M€', billion: 'B€' })
   end
 
   private 
