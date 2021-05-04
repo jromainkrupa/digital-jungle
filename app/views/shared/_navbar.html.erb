@@ -32,9 +32,9 @@
         <div class="flex items-center px-4">
           <div class="flex-shrink-0">
             <% if current_user.avatar.attached? %>
-              <%= cl_image_tag current_user.avatar.key, class: "rounded-full h-10 w-10", :transformation=>[{:gravity=>"face", :crop=>"crop"}]  %>
+              <%= cl_image_tag current_user.avatar.key, class: "rounded-full h-10 w-10" %>
             <% else %>
-              <img src="https://eu.ui-avatars.com/api/?name=<%= current_user.first_name  + current_user.last_name%>" alt="rounded-full h-10 w-10">
+              <img src="https://eu.ui-avatars.com/api/?rounded=true&name=<%= current_user.first_name  + current_user.last_name%>" class="rounded-full h-10 w-10">
             <% end %>
           </div>
           <div class="ml-3">
