@@ -1,4 +1,4 @@
-<div class="mt-8 bg-gray-900 h-screen max-w-2xl mx-auto text-center flex flex-col items-center justify-start">
+<div class="mt-8 bg-gray-900 rounded shadow-sm py-8 max-w-2xl mx-auto text-center flex flex-col items-center justify-start">
   <h1 class="mb-2 text-white text-2xl"><%= current_user.first_name %> <br> vous êtes sur le point d'investir dans <span class="text-aquamarine-500"><%= @project.name.capitalize %></span></h1>
   <div class="mt-8 text-xl">
     <p class="mb-6 text-gray-400 leading-normal">Vous avez sur votre compte:</p>
@@ -18,7 +18,7 @@
           placeholder: "250000 €",
           min: "10000",
           max: "500000",
-          class: "h-8 text-aquamarine-500 bg-gray-900" %>
+          class: "h-8 w-24 text-aquamarine-500 bg-gray-900" %>
           <%# <input data-investment-target="amountField" type="number" placeholder="250000" min="10000" max="500000" step="10000" class="h-8 text-aquamarine-500 bg-gray-900" placeholder="0.00" aria-describedby="price-currency"> %>
         </div>
       </div>
