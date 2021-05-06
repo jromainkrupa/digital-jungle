@@ -32,6 +32,12 @@ mathieu = User.create!(first_name: "mathieu",
                       is_entrepreneur: false )
 p "contributor created!"
 
+jeanro = User.create!(first_name: "jean-romain", 
+  last_name:"krupa",
+  email: "jkrupa@hotmail.com",
+  password: "azerty",
+  is_entrepreneur: false )
+
 p "creating 1 project per entrepreneur"
 oenoplace =     Project.create!(name:"oenoplace",
                                 description: "oenoplace is the future of wine trading, we propose a unique market place to estimate wine",
@@ -55,3 +61,4 @@ pividori_pitch =      Pitch.create!(title:"pividori design pitch by #{eloise.fir
                                     is_publishable: true,
                                     project: pividori)
 p "pitch done!"
+

@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :balance, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+  after_create :send_welcome_email
+
   def full_name
     "#{first_name.capitalize} #{last_name.upcase}"
   end
@@ -23,5 +25,11 @@ class User < ApplicationRecord
 
   def self.language_list
     [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
+  end
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver
   end
 end
