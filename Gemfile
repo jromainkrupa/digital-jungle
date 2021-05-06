@@ -66,3 +66,7 @@ gem "cloudinary", "~> 1.20"
 gem "devise-i18n", "~> 1.9"
 
 gem "forest_liana", "~> 6.3"
+
+gem "sidekiq", "~> 6.2"
+
+gem "sidekiq-failures", "~> 1.0"
