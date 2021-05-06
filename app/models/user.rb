@@ -20,9 +20,6 @@ class User < ApplicationRecord
     "#{first_name.capitalize} #{last_name.upcase}"
   end
 
-  def age_in_days
-  end
-
   def self.language_list
     [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
   end
@@ -30,6 +27,6 @@ class User < ApplicationRecord
   private
 
   def send_welcome_email
-    UserMailer.welcome(self).deliver
+    UserMailer.welcome(self).deliver_later
   end
 end
