@@ -30,4 +30,11 @@
   </div>
 </div>
 
+<% @project_messages.each do |message| %>
+<p><%= message.username %></p>
+<p><%= message.body %></p>
+
+<% end %>
+
+
 

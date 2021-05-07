@@ -5,5 +5,6 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @project_messages = FetchMessagesFromProjectJob.perform_now(@project, 10)
   end
 end
