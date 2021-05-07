@@ -1,14 +1,11 @@
 <div class="container mx-auto my-8 px-4">
   <div class="max-w-3xl mx-auto">
     <div class="flex justify-between items-center mb-4">
-      <h1 class="h3 text-gray-400">
-        <%= link_to "Projets", entrepreneur_projects_path %> ><span
-          class="text-aquamarine-500"
-        >
-          Projet #<%= @project.id %></span
-        >
+      <h1 class="h3 text-gray-900">
+        <%= link_to "Projets", entrepreneur_projects_path %> >
+        <span class="text-aquamarine-500">Projet #<%= @project.id %></span>
       </h1>
-      <%= link_to t("edit"), edit_entrepreneur_project_path(@project), class: "btn btn-link"
+      <%= link_to t("edit"), edit_entrepreneur_project_path(@project), class: "btn btn-secondary outline"
       %>
     </div>
 
@@ -21,14 +18,14 @@
         <h5 class="text-gray-400">Description</h5>
         <p class="text-white"><%= @project.description %></p>
       </div>
+    <div class="flex items-center justify-start text-center mt-8">
+    <% if @project.pitches.any? %>
+      <%= link_to "Voir les pitchs", entrepreneur_project_pitches_path(@project), class:'btn btn-primary' %>
+    <% else %>
+      <%= link_to "Créer mon pitch", new_entrepreneur_project_pitch_path(@project), class:'btn btn-primary' %>
+
+    <% end %>
+    </div>
     </div>
   </div>
-</div>
-<div class="flex items-center justify-start text-center">
-  <%= link_to "Voir les pitchs", entrepreneur_project_pitches_path(@project), class:
-  'btn btn-primary ml-8' %>
-</div>
-<div class="flex items-center justify-start text-center">
-  <%= link_to "Créer un pitch", new_entrepreneur_project_pitch_path(@project), class:
-  'btn btn-primary ml-8' %>
 </div>
