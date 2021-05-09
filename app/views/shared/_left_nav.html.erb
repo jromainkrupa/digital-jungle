@@ -1,7 +1,11 @@
 <%# Place any links for the LEFT side of the nav bar here. Be sure to add class: "nav-link" to each item for proper spacing. %>
 <%#= nav_link_to "Projects", projects_path, class: 'nav-link' %>
 <%#= nav_link_to "Investments", project_investments_path(@project), class: 'nav-link' %>
-<% if user_signed_in? %>
-  <%= link_to "Projects", projects_path, class: 'nav-link' %>
+<% if user_signed_in? && pages_without_navbar %>
+
+  <%= link_to "All projects", projects_path, class: 'nav-link' %>
+  <%= link_to "My investments", investments_path, class: 'nav-link' %>
+  <%= link_to "My favorites", investments_path, class: 'nav-link' %>
+  <%= link_to "Investor ranking", investments_path, class: 'nav-link' %>
   <%#= nav_link_to t(".pricing"), pricing_path, class: "nav-link" %>
 <% end %>

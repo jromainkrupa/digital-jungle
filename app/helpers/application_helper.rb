@@ -12,4 +12,8 @@ module ApplicationHelper
   def disable_with(text)
     "<i class=\"far fa-spinner-third fa-spin\"></i> #{text}".html_safe
   end
+
+  def pages_without_navbar
+    return true unless current_page?("/choose-universe")  || current_page?("/contributor-tutorial") || current_page?("/entrepreneur-tutorial")
+  end
 end
