@@ -9,18 +9,14 @@
       <% end %>
     <% end %>
 
-
     <%= render "shared/top-level-buttons", project: project %>
 
     <div class="max-w-xl mt-2">
       <h2 class="h3 text-gray-100"><%= project.name.capitalize %></h2>
       <p class="text-gray-300 mt-2"><%= project.description %></p>
     </div>
-
-    <% if current_user != project.user %>
-      <div class="mt-10 mb-8 w-5/12">
-        <%= link_to "Investir dans #{project.name}", new_project_investment_path(project), class:"btn btn-primary btn-expanded" %>
-      </div>
-    <% end %>
+    <div class="mt-10 mb-8 w-5/12">
+      <%= link_to "see more", project_path(project), class:"btn btn-primary btn-expanded" %>
+    </div>
   </div>
 </div>
