@@ -1,4 +1,20 @@
 FactoryBot.define do
+  factory :project_message do
+    username { "MyString" }
+    body { "MyText" }
+    project { nil }
+  end
+
+  factory :project_slack_message do
+    project { nil }
+    slack_message { nil }
+  end
+
+  factory :slack_message do
+    username { "MyString" }
+    body { "MyText" }
+  end
+
   factory :investment do
     user { nil }
     project { nil }

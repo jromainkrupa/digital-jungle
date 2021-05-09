@@ -1,20 +1,21 @@
-<div class="py-32 text-white text-center mx-auto" data-controller="swiper">
-  <h1 class="text-white"><%= t(".welcome",name: current_user.first_name) %></h1>
-  <div class="swiper-container max-w-5xl my-24">
+<div class="py-16 text-white  text-center mx-auto" data-controller="swiper">
+  <h1 class="text-gray-900"><%= t(".welcome",name: current_user.first_name) %></h1>
+  <div class="swiper-container bg-gray-900 rounded max-w-5xl p-16 my-16">
     <!-- Additional required wrapper -->
-    <div class="swiper-wrapper mb-12">
+    <div class="swiper-wrapper  mb-12">
       <!-- Slides -->
       <div class="swiper-slide">
-        <div class="mt-4">
+        <div class="mt-4 text-center">
           <p class="mb-6 text-gray-200 leading-normal text-xl">
-            Yoopitch est une application pour ceux qui souhaite aider des entrepreneurs en donnant leur avis sur leur projets.
-            Une seule règle, rester cordial. Soyez constructif dans vos commentaires.
+            Vous allez aidez des entrepreneurs en <span class="text-aquamarine-500 font-bold">investissant</span> et en donnant votre <span class="text-aquamarine-500 font-bold">avis</span>  sur leur projets.
           </p>
           <p class="mb-6 text-gray-200 leading-normal text-xl">
             Voilà un petit cadeau de bienvenu
           </p>
+          <p class="mb-6 text-aquamarine-500 font-bold leading-normal text-xl">
+            1 000 000 €
+          </p>
           <p class="mb-6 text-gray-200 leading-normal text-xl">
-            <span class="text-aquamarine-500 font-bold">1 000 000 €</span> <br>
             que vous pouvez <span class="text-aquamarine-500 font-bold">investir</span> dans vos projets favoris
           </p>
         </div>
@@ -69,8 +70,8 @@
     <div class="swiper-pagination pt-4 border-none shadow-none"></div>
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev bg-aquamarine-500"></div>
+    <div class="swiper-button-next bg-aquamarine-500 p-2"></div>
 
     <!-- If we need scrollbar -->
   </div>
