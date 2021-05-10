@@ -4,17 +4,22 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs";
-import Turbolinks from "turbolinks";
+import { Turbo } from "@hotwired/turbo-rails";
+
+// Make accessible for Electron and Mobile adapters
+window.Rails = Rails;
+window.Turbo = Turbo;
+
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "controllers";
 import "src/direct_uploads";
-Turbolinks.start();
+require("trix");
+require("@rails/actiontext");
+import "controllers";
+
 ActiveStorage.start();
 
 Rails.start();
 
 import "stylesheets/application";
-
-require("trix")
-require("@rails/actiontext")

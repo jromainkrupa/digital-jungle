@@ -12,6 +12,7 @@
       <input data-investment-target="amount" data-action="input->investment#change" class="mt-4 bg-white" type="range" min="10000" max="500000" step="10000">
       <div class="w-44 mx-auto mt-4">
         <div class="mt-1 rounded-md shadow-sm">
+
       <%= form_with(model: [@project,@investment]) do |form| %>
           <%= form.number_field :amount, 
           data: { investment_target:"amountField"},
@@ -32,4 +33,5 @@
       </div>
     </div>
       <% end %>
+
 </div>
