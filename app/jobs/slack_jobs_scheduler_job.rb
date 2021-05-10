@@ -1,4 +1,4 @@
-class SlackJobSchedulerJob < ApplicationJob
+class SlackJobsSchedulerJob < ApplicationJob
   queue_as :default
 
   def perform

@@ -49,7 +49,7 @@ module Entrepreneur
     end
 
     def project_params
-      params.require(:project).permit(:name, :description)
+      params.require(:project).permit(:name, :description, :pain, :target, :solution)
     end
 
   end
