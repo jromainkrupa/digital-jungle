@@ -65,10 +65,6 @@ GEM
     aes_key_wrap (1.1.0)
     arel-helpers (2.12.0)
       activerecord (>= 3.1.0, < 7)
-    async (1.29.0)
-      console (~> 1.10)
-      nio4r (~> 2.3)
-      timers (~> 4.1)
     attr_required (1.0.1)
     aws_cf_signer (0.1.3)
     bcrypt (3.1.16)
@@ -92,11 +88,7 @@ GEM
       rest-client (>= 2.0.0)
     concurrent-ruby (1.1.8)
     connection_pool (2.2.5)
-    console (1.12.0)
-      fiber-local
     crass (1.0.6)
-    declarative (0.0.20)
-    declarative-option (0.1.0)
     devise (4.8.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -112,44 +104,13 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
-    dry-configurable (0.12.1)
-      concurrent-ruby (~> 1.0)
-      dry-core (~> 0.5, >= 0.5.0)
-    dry-container (0.7.2)
-      concurrent-ruby (~> 1.0)
-      dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.5.0)
-      concurrent-ruby (~> 1.0)
-    dry-inflector (0.2.0)
-    dry-logic (1.2.0)
-      concurrent-ruby (~> 1.0)
-      dry-core (~> 0.5, >= 0.5)
-    dry-types (1.5.1)
-      concurrent-ruby (~> 1.0)
-      dry-container (~> 0.3)
-      dry-core (~> 0.5, >= 0.5)
-      dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 1.0, >= 1.0.2)
     erubi (1.10.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.1.0)
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
-    faraday (1.4.1)
-      faraday-excon (~> 1.1)
-      faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.1)
-      multipart-post (>= 1.2, < 3)
-      ruby2_keywords (>= 0.0.4)
-    faraday-excon (1.1.0)
-    faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
-    faraday_middleware (1.0.0)
-      faraday (~> 1.0)
     ffi (1.15.0)
-    fiber-local (1.0.0)
-    foreman (0.87.2)
     forest_liana (6.3.2)
       arel-helpers
       bcrypt
@@ -164,25 +125,14 @@ GEM
       rack-cors
       rails (>= 4.0)
       useragent
-    gli (2.20.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    grape (1.5.3)
-      activesupport
-      builder
-      dry-types (>= 1.1)
-      mustermann-grape (~> 1.0.0)
-      rack (>= 1.3.0)
-      rack-accept
-    grape-roar (0.4.1)
-      grape
-      multi_json
-      roar (~> 1.1.0)
-    grape-swagger (1.4.0)
-      grape (~> 1.3)
     groupdate (2.5.2)
       activesupport (>= 3)
-    hashie (4.1.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -206,10 +156,6 @@ GEM
     jsonapi-serializers (1.0.1)
       activesupport
     jwt (2.2.3)
-    kaminari-core (1.2.1)
-    kaminari-grape (1.0.1)
-      grape
-      kaminari-core (~> 1.0)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -226,23 +172,13 @@ GEM
     mini_mime (1.0.3)
     minitest (5.14.4)
     msgpack (1.4.2)
-    multi_json (1.15.0)
     multi_xml (0.6.0)
-    multipart-post (2.1.1)
-    mustermann (1.1.1)
-      ruby2_keywords (~> 0.0.1)
-    mustermann-grape (1.0.1)
-      mustermann (>= 1.0.0)
     netrc (0.11.0)
     nio4r (2.5.7)
     nokogiri (1.11.3-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
-    omniauth (2.0.4)
-      hashie (>= 3.4.6)
-      rack (>= 1.6.2, < 3)
-      rack-protection
     openid_connect (1.2.0)
       activemodel
       attr_required (>= 1.0.0)
@@ -260,8 +196,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-accept (0.4.5)
-      rack (>= 0.4)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-mini-profiler (2.3.2)
@@ -272,12 +206,7 @@ GEM
       httpclient
       json-jwt (>= 1.11.0)
       rack (>= 2.1.0)
-    rack-protection (2.1.0)
-      rack
     rack-proxy (0.6.5)
-      rack
-    rack-rewrite (1.5.1)
-    rack-server-pages (0.1.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -313,10 +242,6 @@ GEM
       ffi (~> 1.0)
     redis (4.2.5)
     regexp_parser (2.1.1)
-    representable (3.0.4)
-      declarative (< 0.1.0)
-      declarative-option (< 0.2.0)
-      uber (< 0.2.0)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -325,8 +250,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    roar (1.1.0)
-      representable (~> 3.0.0)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -344,7 +267,6 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
-    ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -368,23 +290,6 @@ GEM
       redis (>= 4.2.0)
     sidekiq-failures (1.0.0)
       sidekiq (>= 4.0.0)
-    slack-ruby-bot-server (1.2.0)
-      async
-      foreman
-      grape
-      grape-roar (>= 0.4.0)
-      grape-swagger
-      kaminari-grape
-      rack-cors
-      rack-rewrite
-      rack-server-pages
-      slack-ruby-client
-    slack-ruby-client (0.17.0)
-      faraday (>= 1.0)
-      faraday_middleware
-      gli
-      hashie
-      websocket-driver
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -393,19 +298,18 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stimulus-rails (0.2.3)
+      rails (>= 6.0.0)
     swd (1.2.0)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
       httpclient (>= 2.4)
     thor (1.1.0)
     tilt (2.0.10)
-    timers (4.3.3)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    turbo-rails (0.5.9)
+      rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    uber (0.1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
@@ -456,24 +360,22 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   forest_liana (~> 6.3)
+  hotwire-rails (~> 0.1.3)
   inline_svg (~> 1.7)
   jbuilder (~> 2.7)
   listen (~> 3.3)
-  omniauth (~> 2.0)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.3)
+  redis (~> 4.0)
   rspec-rails
   sass-rails (>= 6)
   selenium-webdriver
   shoulda-matchers
   sidekiq (~> 6.2)
   sidekiq-failures (~> 1.0)
-  slack-ruby-bot-server (~> 1.2)
-  slack-ruby-client (~> 0.17.0)
   spring
-  turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
