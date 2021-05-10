@@ -12,7 +12,7 @@
                   <div class="flex items-center">
                     <img class="h-16 w-16 rounded-full sm:hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixqx=tM4wN2sJYF&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.6&w=256&h=256&q=80" alt="">
                     <h1 class="ml-3 text-2xl font-bold leading-7 text-white sm:leading-9 sm:truncate">
-                      Good morning, <%= current_user.full_name %>
+                      Hello, <%= current_user.full_name %>
                     </h1>
                   </div>
                   <dl class="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap">
@@ -162,7 +162,7 @@
                     <tr class="bg-white">
                       <td class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-white">
                         <div class="flex">
-                          <a href="#" class="group inline-flex space-x-2 truncate text-sm">
+                          <%= link_to new_entrepreneur_project_path, class:"group inline-flex space-x-2 truncate text-sm" do %>
                             <!-- Heroicon name: solid/cash -->
                             <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                               <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
@@ -171,7 +171,7 @@
                             <p class="text-gray-500 truncate group-hover:text-gray-900">
                               Create your project
                             </p>
-                          </a>
+                          <% end %>
                         </div>
                       </td>
                       <% if  !current_user.projects.empty? %>
@@ -198,7 +198,7 @@
                     <tr class="bg-white">
                       <td class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-white">
                         <div class="flex">
-                          <a href="#" class="group inline-flex space-x-2 truncate text-sm">
+                          <%= link_to "https://yoopitch.slack.com",target: "_blank", class:"group inline-flex space-x-2 truncate text-sm" do %>
                             <!-- Heroicon name: solid/cash -->
                             <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                               <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
@@ -206,7 +206,7 @@
                             <p class="text-gray-500 truncate group-hover:text-gray-900">
                               Connect to Slack
                             </p>
-                          </a>
+                         <% end %>
                         </div>
                       </td>
                       <% if  current_user.projects.last.channel_id %>
@@ -234,7 +234,7 @@
                     <tr class="bg-white">
                       <td class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-white">
                         <div class="flex">
-                          <a href="#" class="group inline-flex space-x-2 truncate text-sm">
+                          <%= link_to entrepreneur_tutorial_path, class:"group inline-flex space-x-2 truncate text-sm" do %>
                             
                             <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                               <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
@@ -242,7 +242,7 @@
                             <p class="text-gray-500 truncate group-hover:text-gray-900">
                               Learn the art of pitch
                             </p>
-                          </a>
+                          <% end %>
                         </div>
                       </td>
                       <% if  current_user.done_pitch_lesson? %>
@@ -268,7 +268,7 @@
                     <tr class="bg-white">
                       <td class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-white">
                         <div class="flex">
-                          <a href="#" class="group inline-flex space-x-2 truncate text-sm">
+                          <%= link_to new_entrepreneur_project_pitch_path(current_user.projects.last), class:"group inline-flex space-x-2 truncate text-sm" do %>
                             <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                               <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                               <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
@@ -276,7 +276,7 @@
                             <p class="text-gray-500 truncate group-hover:text-gray-900">
                               Create your pitch script
                             </p>
-                          </a>
+                          <% end %>
                         </div>
                       </td>
                       <% if  current_user.projects.last.pitches.last %>
@@ -305,14 +305,14 @@
                     <tr class="bg-white">
                       <td class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-white">
                         <div class="flex">
-                          <a href="#" class="group inline-flex space-x-2 truncate text-sm">
+                          <%= link_to new_entrepreneur_project_pitch_path(current_user.projects.last), class:"group inline-flex space-x-2 truncate text-sm" do %>
                             <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                               <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd" />
                             </svg>
                             <p class="text-gray-500 truncate group-hover:text-gray-900">
                               Record & upload your pitch
                             </p>
-                          </a>
+                          <% end %>
                         </div>
                       </td>
                       <% if  current_user.projects.last.pitches.last %>
@@ -337,32 +337,45 @@
                       </td>
                       <% end %>
                     </tr>
+                    <tr class="bg-white">
+                      <td class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-white">
+                        <div class="flex">
+                          <a href="#" class="group inline-flex space-x-2 truncate text-sm">
+                            <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-gray-500 truncate group-hover:text-gray-900">
+                              You pitch has been validated
+                            </p>
+                          </a>
+                        </div>
+                      </td>
+                      <% if  current_user.projects.last.pitches.last %>
+                        <% if current_user.projects.last.pitches.last.is_publishable? %>
+                          <td class="hidden px-6 py-4 whitespace-nowrap text-sm text-gray-500 md:block">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 capitalize">
+                              done
+                            </span>
+                          </td>
+                          <td class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500">
+                            <time datetime="2020-07-11"><%= current_user.projects.last.pitches.last.updated_at.strftime("%a, %d %b %Y") %></time>
+                          </td>
+                        <% end %>
+                      <% else %>
+                      <td class="hidden px-6 py-4 whitespace-nowrap text-sm text-gray-500 md:block">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 capitalize">
+                          to do
+                        </span>
+                      </td>
+                      <td class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500">
+                        <time datetime="2020-07-11">ASAP</time>
+                      </td>
+                      <% end %>
+                    </tr>
 
                     <!-- More transactions... -->
                   </tbody>
                 </table>
-                <!-- Pagination -->
-                <nav class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6" aria-label="Pagination">
-                  <div class="hidden sm:block">
-                    <p class="text-sm text-gray-700">
-                      Showing
-                      <span class="font-medium">1</span>
-                      to
-                      <span class="font-medium">10</span>
-                      of
-                      <span class="font-medium">20</span>
-                      results
-                    </p>
-                  </div>
-                  <div class="flex-1 flex justify-between sm:justify-end">
-                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                      Previous
-                    </a>
-                    <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                      Next
-                    </a>
-                  </div>
-                </nav>
               </div>
             </div>
           </div>
