@@ -1,44 +1,48 @@
-<div class="container mx-auto my-8 px-4">
-  <div class="flex justify-between items-center mb-4">
-    <h1 class="h3 text-gray-800">Mes projects</h1>
+<% content_for :sidebar_block do %>
+  <div class="container mx-auto my-8 px-4">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="h3 text-gray-800">Mes projects</h1>
+
+      <% if @projects.any? %>
+      <%= link_to "Créer un projet", new_entrepreneur_project_path, class: "btn btn-primary" %>
+      <% end %>
+    </div>
 
     <% if @projects.any? %>
-    <%= link_to "Créer un projet", new_entrepreneur_project_path, class: "btn btn-primary" %>
+    <div class="bg-gray-800 rounded shadow table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="p-3 uppercase text-left text-gray-400 text-xs">n°</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-400 ">Nom</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-400 ">Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @projects.each do |project| %>
+          <tr class="group border-t text-white border-gray-400 hover:bg-gray-900">
+            <td class="p-3"><%= project.id %></td>
+
+            <td>
+              <%= link_to project.name, entrepreneur_project_path(project), class: "btn btn-link no-underline" %>
+            </td>
+            <td class="p-3"><%= project.description %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <% else %>
+    <div class="bg-gray-800 rounded shadow flex flex-col items-center justify-between p-8 lg:flex-row">
+      <%= image_tag "empty.svg", class: "mb-4 lg:w-1/2" %>
+      <div class="flex-1 text-center">
+        <p class="h3 mb-4 text-white">Vous n'avez pas encore de projet ?</p>
+        <%= link_to "Créer un projet", new_entrepreneur_project_path, class: "btn btn-primary" %>
+      </div>
+    </div>
     <% end %>
   </div>
+<% end %>
 
-  <% if @projects.any? %>
-  <div class="bg-gray-800 rounded shadow table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="p-3 uppercase text-left text-gray-400 text-xs">n°</th>
-          <th class="p-3 uppercase text-left text-xs text-gray-400 ">Nom</th>
-          <th class="p-3 uppercase text-left text-xs text-gray-400 ">Description</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @projects.each do |project| %>
-        <tr class="group border-t text-white border-gray-400 hover:bg-gray-900">
-          <td class="p-3"><%= project.id %></td>
-
-          <td>
-            <%= link_to project.name, entrepreneur_project_path(project), class: "btn btn-link no-underline" %>
-          </td>
-          <td class="p-3"><%= project.description %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-  <% else %>
-  <div class="bg-gray-800 rounded shadow flex flex-col items-center justify-between p-8 lg:flex-row">
-    <%= image_tag "empty.svg", class: "mb-4 lg:w-1/2" %>
-    <div class="flex-1 text-center">
-      <p class="h3 mb-4 text-white">Vous n'avez pas encore de projet ?</p>
-      <%= link_to "Créer un projet", new_entrepreneur_project_path, class: "btn btn-primary" %>
-    </div>
-  </div>
-  <% end %>
-</div>
+<%= render "entrepreneur/shared/sidebar_block", nav_page: "projects" %>

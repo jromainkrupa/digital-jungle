@@ -52,7 +52,7 @@ module Entrepreneur
     end
 
     def pitch_params
-      params.require(:pitch).permit(:title, :video)
+      params.require(:pitch).permit(:title, :video, :script)
     end
   end
 end

@@ -1,31 +1,47 @@
-<div class="container mx-auto my-8 px-4">
-  <div class="max-w-3xl mx-auto">
-    <div class="flex justify-between items-center mb-4">
-      <h1 class="h3 text-gray-900">
-        <%= link_to "Projets", entrepreneur_projects_path %> >
-        <span class="text-aquamarine-500">Projet #<%= @project.id %></span>
-      </h1>
-      <%= link_to t("edit"), edit_entrepreneur_project_path(@project), class: "btn btn-secondary outline"
-      %>
-    </div>
-
-    <div class="bg-gray-800 rounded shadow p-8">
-      <div class="mb-4">
-        <h5 class="text-gray-400">Nom</h5>
-        <p class="text-white"><%= @project.name %></p>
+<% content_for :sidebar_block do %>
+  <div class="container mx-auto my-8 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="h3 text-gray-900">
+          <%= link_to "Projets", entrepreneur_projects_path %> >
+          <span class="text-aquamarine-500">Projet #<%= @project.id %></span>
+        </h1>
+        <%= link_to t("edit"), edit_entrepreneur_project_path(@project), class: "btn btn-secondary outline"
+        %>
       </div>
-      <div class="mb-4">
-        <h5 class="text-gray-400">Description</h5>
-        <p class="text-white"><%= @project.description %></p>
-      </div>
-    <div class="flex items-center justify-start text-center mt-8">
-    <% if @project.pitches.any? %>
-      <%= link_to "Voir les pitchs", entrepreneur_project_pitches_path(@project), class:'btn btn-primary' %>
-    <% else %>
-      <%= link_to "Créer mon pitch", new_entrepreneur_project_pitch_path(@project), class:'btn btn-primary' %>
 
-    <% end %>
-    </div>
+      <div class="bg-gray-800 rounded shadow p-8">
+        <div class="mb-4">
+          <h5 class="text-gray-400">Nom</h5>
+          <p class="text-white"><%= @project.name %></p>
+        </div>
+        <div class="mb-4">
+          <h5 class="text-gray-400">Description</h5>
+          <p class="text-white"><%= @project.description %></p>
+        </div>
+        <div class="mb-4">
+          <h5 class="text-gray-400">Cible</h5>
+          <p class="text-white"><%= @project.target %></p>
+        </div>
+        <div class="mb-4">
+          <h5 class="text-gray-400">Pain</h5>
+          <p class="text-white"><%= @project.pain %></p>
+        </div>
+        <div class="mb-4">
+          <h5 class="text-gray-400">Solution</h5>
+          <p class="text-white"><%= @project.solution %></p>
+        </div>
+      <div class="flex items-center justify-start text-center mt-8">
+      <% if @project.pitches.any? %>
+        <%= link_to "Voir les pitchs", entrepreneur_project_pitches_path(@project), class:'btn btn-primary' %>
+      <% else %>
+        <%= link_to "Créer mon pitch", new_entrepreneur_project_pitch_path(@project), class:'btn btn-primary' %>
+
+      <% end %>
+      </div>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
+
+<%= render "entrepreneur/shared/sidebar_block", nav_page: "projects" %>

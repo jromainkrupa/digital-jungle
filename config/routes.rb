@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
   authenticated :user do 
     get "/choose-universe",to: "pages#choose_universe"
-    get "/entrepreneur-tutorial",to: "pages#entrepreneur_tutorial"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
     get "/pitch-list",to: "pages#pitch_list"
     resources :investments, only: [:index]
@@ -31,6 +30,9 @@ Rails.application.routes.draw do
       resources :projects, only: %i[index new create edit update destroy show] do
         resources :pitches, only: %i[index show new create edit update destroy]
       end
+      get "/tutorial",to: "pages#tutorial"
+      get "/dashboard",to: "pages#dashboard"
+      get "/statistics",to: "pages#statistics"
     end
   end
 end

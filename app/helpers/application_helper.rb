@@ -16,4 +16,8 @@ module ApplicationHelper
   def pages_without_navbar
     return true unless current_page?("/choose-universe")  || current_page?("/contributor-tutorial") || current_page?("/entrepreneur-tutorial")
   end
+
+  def nav_current
+    "bg-gray-900 text-white"
+  end
 end

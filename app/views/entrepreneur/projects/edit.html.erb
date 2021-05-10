@@ -1,29 +1,33 @@
-<div class="container mx-auto my-8 px-4">
-  <div class="max-w-3xl mx-auto">
-    <div class="flex justify-between items-center mb-4">
-      <h1 class="h3 text-white">Modifier <em class="text-aquamarine-500"><%= @project.name %></em></h1>
-      <%= link_to t("cancel"), entrepreneur_project_path(@project), class: "btn btn-link" %>
-    </div>
+<% content_for :sidebar_block do %>
+  <div class="container mx-auto my-8 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="h3 text-gray-900">Modifier <em class="text-aquamarine-500"><%= @project.name %></em></h1>
+        <%= link_to t("cancel"), entrepreneur_project_path(@project), class: "btn btn-secondary outline" %>
+      </div>
 
-    <div class="bg-gray-800 rounded shadow p-8">
-      <%= form_with(model: @project, url: entrepreneur_project_path(@project), html: { method: :put }) do |form| %>
-        <%= render "shared/error_messages", resource: form.object %>
-        <div class="form-group">
-          <%= form.label "nom" %>
-          <%= form.text_field :name, class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= form.label :description %>
-          <%= form.text_area :description, class: "form-control" %>
-        </div>
-        <div class="form-group flex justify-between">
-          <%= form.button class: "btn btn-primary" %>
+      <div class="bg-gray-800 rounded shadow p-8">
+        <%= form_with(model: @project, url: entrepreneur_project_path(@project), html: { method: :put }) do |form| %>
+          <%= render "shared/error_messages", resource: form.object %>
+          <div class="form-group">
+            <%= form.label "nom" %>
+            <%= form.text_field :name, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= form.label :description %>
+            <%= form.text_area :description, class: "form-control" %>
+          </div>
+          <div class="form-group flex justify-between">
+            <%= form.button class: "btn btn-primary" %>
 
-          <% if form.object.persisted? %>
-          <%= link_to "supprimer", entrepreneur_project_path(@project), class: "btn btn-danger outline", method: :delete, data: { confirm: t("are_you_sure") } %>
-          <% end %>
-        </div>
-      <% end %>
+            <% if form.object.persisted? %>
+            <%= link_to "supprimer", entrepreneur_project_path(@project), class: "btn btn-danger outline", method: :delete, data: { confirm: t("are_you_sure") } %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
+
+<%= render "entrepreneur/shared/sidebar_block", nav_page: "projects" %>
