@@ -16,6 +16,17 @@ class User < ApplicationRecord
 
   after_create :send_welcome_email
 
+  enum next_action: {
+    tutorial: 0,
+    create_project: 1,
+    conntect_slack: 2,
+    learn_how_to_pitch: 3,
+    create_pitch_script: 4,
+    upload_pitch: 5,
+    wait_validation: 6,
+    validated: 7
+  }
+
   def full_name
     "#{first_name.capitalize} #{last_name.upcase}"
   end

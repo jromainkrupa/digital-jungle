@@ -30,9 +30,10 @@ Rails.application.routes.draw do
       resources :projects, only: %i[index new create edit update destroy show] do
         resources :pitches, only: %i[index show new create edit update destroy]
       end
-      get "/tutorial",to: "pages#tutorial"
-      get "/dashboard",to: "pages#dashboard"
-      get "/statistics",to: "pages#statistics"
+      get  "/tutorial",   to: "pages#tutorial"
+      post "/tutorial",   to: "pages#tutorial"
+      get  "/dashboard",  to: "pages#dashboard"
+      get  "/statistics", to: "pages#statistics"
     end
   end
 end
