@@ -13,7 +13,7 @@
         <% if !current_user.watched_tutorial %>
           <%= link_to "mark as seen", entrepreneur_tutorial_path(done: true), method: :post, class: 'btn btn-primary ml-8' %>
         <% else %>
-          <p class="btn btn-secondary">seen</p>
+          <p class="btn bg-gray-500 text-gray-900">seen</p>
         <% end %>
       </div>
     </div>

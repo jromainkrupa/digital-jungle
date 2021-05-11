@@ -8,7 +8,7 @@ module Entrepreneur
 
     def create
       @user    = current_user
-      @user.update(is_entrepreneur: true)
+      @user.update(is_entrepreneur: true, next_action: :connect_slack )
       @project = Project.new(project_params)
       @project.user = @user
 

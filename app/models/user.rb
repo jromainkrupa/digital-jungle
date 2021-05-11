@@ -19,7 +19,7 @@ class User < ApplicationRecord
   enum next_action: {
     tutorial: 0,
     create_project: 1,
-    conntect_slack: 2,
+    connect_slack: 2,
     learn_how_to_pitch: 3,
     create_pitch_script: 4,
     upload_pitch: 5,
@@ -35,9 +35,29 @@ class User < ApplicationRecord
     [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
   end
 
+  def self.stringify_next_action(next_action)
+    case next_action
+    when "tutorial" then "Watch the tutorial"
+    when "create_project" then "Create your first project"
+    when "connect_slack" then "Connect to Slack to discuss about your project"
+    when "learn_how_to_pitch" then "Learn the art of a good pitch"
+    when "create_pitch_script" then "Create the script for your pitch"
+    when "upload_pitch" then "Record & Upload your pitch"
+    when "wait_validation" then "Ask & Wait for content validation"
+    when "validated" then "Start getting feedback!"     
+    end
+  end
+
+  def self.linkify_next_action(next_action)
+    case next_action
+    when "tutorial" then :entrepreneur_tutorial
+    end
+  end
+
   private
 
   def send_welcome_email
     UserMailer.welcome(self).deliver_later
   end
+
 end
