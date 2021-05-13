@@ -11,7 +11,7 @@ class Project < ApplicationRecord
   validate :owner_must_be_entrepreneur
 
   def publishable_pitch
-    self.pitches.map {|pitch| pitch if pitch.is_publishable? }.first
+    self.pitches.map {|pitch| pitch if pitch.is_publishable? }.compact.first
   end
 
   def total_amount_invested
