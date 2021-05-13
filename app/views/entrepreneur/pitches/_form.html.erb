@@ -1,10 +1,5 @@
 <%= form_with(model: [project,pitch], url: entrepreneur_project_pitches_path ) do |form| %>
   <%= render "shared/error_messages", resource: form.object %>
-  <div class="form-group">
-    <%= form.label "titre" %>
-    <%= form.text_field :title, class: "form-control" %>
-  </div>
-
   <div class="">
     <div class="form-group">
       <%= form.file_field :video, class: "text-white" %>

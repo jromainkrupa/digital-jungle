@@ -1,5 +1,5 @@
 <div class="">
-  <div class="rounded flex flex-col max-w-2xl mx-auto items-center justify-center bg-gray-900">
+  <div class="rounded overflow-hidden	flex flex-col max-w-2xl mx-auto items-center justify-center bg-gray-900">
     <% if project.publishable_pitch %>
       <% if project.publishable_pitch.video.key %>
         <%= cl_video_tag(project.publishable_pitch.video.key, :loop => true, :controls => true,
