@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :projects, dependent: :destroy
   has_many :investments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   has_one_attached :avatar
 
@@ -52,6 +53,10 @@ class User < ApplicationRecord
     case next_action
     when "tutorial" then :entrepreneur_tutorial
     end
+  end
+
+  def likes?(project)
+    project.likes.where(user_id: id).any?
   end
 
   private

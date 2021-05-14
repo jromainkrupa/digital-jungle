@@ -5,6 +5,7 @@ class Project < ApplicationRecord
   has_many :pitches, dependent: :destroy
   has_many :investments, dependent: :destroy
   has_many :project_messages, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true, uniqueness: true, length: {minimum:50, maximum:150}

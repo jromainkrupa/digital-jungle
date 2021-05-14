@@ -1,4 +1,10 @@
 FactoryBot.define do
+  factory :like do
+    user { nil }
+    project { nil }
+    is_like { false }
+  end
+
   factory :project_message do
     username { "MyString" }
     body { "MyText" }
