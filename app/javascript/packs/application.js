@@ -11,14 +11,12 @@ window.Rails = Rails;
 window.Turbo = Turbo;
 
 import * as ActiveStorage from "@rails/activestorage";
+ActiveStorage.start();
 import "channels";
 import "controllers";
 import "src/direct_uploads";
 require("trix");
 require("@rails/actiontext");
-import "controllers";
-
-ActiveStorage.start();
 
 Rails.start();
 

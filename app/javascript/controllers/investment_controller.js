@@ -1,12 +1,7 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ["amount", "amountField", "price", "nbmonth"];
-  connect() {
-    console.log("i am in connect");
-    const amount = 250000;
-    this.change(amount);
-  }
+  static targets = ["amount", "amountField"];
 
   change(amount) {
     console.log("i am in change");

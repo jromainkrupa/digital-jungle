@@ -8,30 +8,30 @@
   <div data-controller="investment" class="mt-8 text-xl">
     <div class="flex flex-col m-auto text-center">
       <p class="leading-normal text-gray-400">Quel montant souhaitez vous investir ?</p>
-
       <input data-investment-target="amount" data-action="input->investment#change" class="mt-4 bg-white" type="range" min="10000" max="500000" step="10000">
+
       <div class="w-44 mx-auto mt-4">
         <div class="mt-1 rounded-md shadow-sm">
-
-      <%= form_with(model: [@project,@investment]) do |form| %>
-          <%= form.number_field :amount, 
-          data: { investment_target:"amountField"},
-          placeholder: "250000 €",
-          min: "10000",
-          max: "500000",
-          class: "h-8 w-24 text-aquamarine-500 bg-gray-900" %>
-          <%# <input data-investment-target="amountField" type="number" placeholder="250000" min="10000" max="500000" step="10000" class="h-8 text-aquamarine-500 bg-gray-900" placeholder="0.00" aria-describedby="price-currency"> %>
+          <%= form_with(model: [@project,@investment]) do |form| %>
+            <%= render "shared/error_messages", resource: form.object %>
+            <div class="form-group">
+              <%= form.number_field :amount, 
+                data: { investment_target:"amountField"},
+                placeholder: "250000 €",
+                min: "10000",
+                max: "500000",
+                class: "h-8 w-24 text-aquamarine-500 bg-gray-900"%>
+            </div>
+            <div class="form-group flex justify-between">
+              <%= form.button class: "btn btn-primary" %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
-  
-  <div class="mt-12">
-      <%= render "shared/error_messages", resource: form.object %>
-    <div class="flex items-center justify-center text-center">
-      <div class="form-group flex justify-between">
-        <%= form.button class: "btn btn-primary" %>
+    <div class="mt-12">
+      <div class="flex items-center justify-center text-center">
       </div>
     </div>
-      <% end %>
-
+  </div>
 </div>
