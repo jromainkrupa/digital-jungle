@@ -1,0 +1,45 @@
+<div class="container mx-auto my-8 px-4 ">
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="h3 text-gray-900">Favorites</h1>
+  </div>
+
+  <% if @projects.any? %>
+    <div class="bg-white rounded shadow table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="p-3 uppercase text-left text-xs text-gray-700">name</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-700">description</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-700 w-20">likes</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-700 w-20">Money raised</th>
+            <th class="p-3 uppercase text-left text-xs text-gray-700 w-20">link</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @projects.each do |project| %>
+          <tr class="group border-t border-gray-400 hover:bg-gray-100">
+                      <td class="p-3"><%= project.name %></td>
+                      <td class="p-3"><%= project.description %></td>
+                      <td class="p-3"><%= project.likes_count %></td>
+                      <td class="p-3"><%= project.total_amount_invested %> €</td>
+          
+            <td>
+              <%= link_to "view", project_path(project), class: "btn btn-link no-underline" %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+  <% else %>
+    <div class="bg-gray-800 text-white rounded shadow flex flex-col items-center justify-between p-8 lg:flex-row">
+      <%= image_tag "empty.svg", class: "mb-4 lg:w-1/2" %>
+      <div class="flex-1 text-center">
+        <p class="h3 mb-4">Like your first project</p>
+        <%= link_to "see projects", projects_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

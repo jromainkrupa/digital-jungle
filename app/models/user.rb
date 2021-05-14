@@ -59,6 +59,10 @@ class User < ApplicationRecord
     project.likes.where(user_id: id).any?
   end
 
+  def liked_projects
+    likes.map { |like| like.project }
+  end
+
   private
 
   def send_welcome_email

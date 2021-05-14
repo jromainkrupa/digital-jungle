@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     get "/choose-universe",to: "pages#choose_universe"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
     get "/pitch-list",to: "pages#pitch_list"
+    get "/favorites", to: "users#favorites"
+    get "/investor-ranking", to: "users#ranking"
     resources :investments, only: [:index]
     resources :projects, only: [:index, :show] do
       resource :like
