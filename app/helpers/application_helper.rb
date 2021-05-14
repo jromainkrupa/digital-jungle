@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Turbo::StreamsHelper
+  include Turbo::FramesHelper
   def render_svg(name, options = {})
     options[:title] ||= name.underscore.humanize
     options[:aria] = true
