@@ -6,7 +6,7 @@ class CreateSlackChannelJob < ApplicationJob
     # return if forbidden_name?(project)
     channel_name = name_sanitizer(project.name)
     channel_id = SlackService.new.create_channel(channel_name)
-    p channel_id
+
     project.update(channel_id: channel_id) unless channel_id.empty?
   end
 
@@ -19,5 +19,4 @@ class CreateSlackChannelJob < ApplicationJob
   def name_sanitizer(project_name)
     project_name.strip.gsub(" ","-")
   end
-
 end
