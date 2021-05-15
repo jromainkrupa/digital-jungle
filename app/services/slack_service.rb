@@ -21,13 +21,16 @@ class SlackService
     response_json["profile"]["real_name"]
   end
 
-  # def create_channel(name)
-  #   query = { "name" => name }
-  #   response = self.class.post('conversations.create', query: query, headers: authorization_headers)
-  #   p response.body
-  #   # response_json = JSON.parse(response.body)
-  #   # p response_json["channel"]["id"]
-  # end
+  def create_channel(channel_name)
+    query = { "name" => channel_name }
+    response = self.class.post('/conversations.create', query: query, headers: authorization_headers)
+    response_json = JSON.parse(response.body)
+    if response_json["ok"]
+      response_json["channel"]["id"]
+    else
+      false
+    end
+  end
 
   private
 

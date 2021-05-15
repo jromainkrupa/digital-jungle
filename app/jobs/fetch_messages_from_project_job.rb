@@ -1,6 +1,7 @@
 class FetchMessagesFromProjectJob < ApplicationJob
   queue_as :default
 
+  # Called from the slack job scheduler
   def perform(project, limit)
     return if project.channel_id.nil?
     messages = fetch_project_messages_from_slack(project, limit)

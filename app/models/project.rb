@@ -11,6 +11,8 @@ class Project < ApplicationRecord
   validates :description, presence: true, uniqueness: true, length: {minimum:50, maximum:150}
   validate :owner_must_be_entrepreneur
 
+  after_create :create_slack_channel
+
   def publishable_pitch
     self.pitches.map {|pitch| pitch if pitch.is_publishable? }.compact.first
   end
@@ -28,5 +30,9 @@ class Project < ApplicationRecord
         errors.add :owner_must_be_entrepreneur, 'should be an entrepreneur to create a project'
       end
     end
+  end
+
+  def create_slack_channel
+    CreateSlackChannelJob.perform_later(self)
   end
 end
