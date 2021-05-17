@@ -5,5 +5,4 @@ class SlackJobsSchedulerJob < ApplicationJob
     # date = 
     # FetchMessagesFromProjectJob.set(wait_until: date).perform_later(@project, 5)
   end
-
 end
