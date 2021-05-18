@@ -3,7 +3,8 @@ module Entrepreneur
     before_action :set_project, only: [:show, :edit, :update, :destroy]
    
     def new
-      @project = Project.new
+      @project = current_user.projects.new
+      authorize [:entrepreneur, @project]
     end
 
     def create
@@ -11,6 +12,8 @@ module Entrepreneur
       @user.update(is_entrepreneur: true, next_action: :connect_slack )
       @project = Project.new(project_params)
       @project.user = @user
+
+      authorize [:entrepreneur, @project]
 
       if @project.save
         redirect_to entrepreneur_project_path(@project), notice: "Project was successfully created."
@@ -36,16 +39,18 @@ module Entrepreneur
     end
 
     def show
+
     end
 
     def index
-      @projects = Project.where(user: current_user)
+      @projects = policy_scope([:entrepreneur, Project.where(user: current_user)])
     end
 
     private
 
     def set_project
       @project = Project.find(params[:id])
+      authorize [:entrepreneur, @project]
     end
 
     def project_params

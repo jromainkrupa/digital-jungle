@@ -18,7 +18,8 @@ class Project < ApplicationRecord
   end
 
   def total_amount_invested
-    amount = self.investments.map { |investment| investment.amount }.sum
+    # amount = self.investments.map { |investment| investment.amount }.sum
+    amount = self.investments.sum(&:amount) 
     number_to_human(amount,format: '%n %u', precision: 4, units: { thousand: 'K€', million: 'M€', billion: 'B€' })
   end
 

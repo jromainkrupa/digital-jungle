@@ -73,3 +73,5 @@ gem "sidekiq-failures", "~> 1.0"
 
 
 gem "hotwire-rails", "~> 0.1.3"
+
+gem "pundit", "~> 2.1"

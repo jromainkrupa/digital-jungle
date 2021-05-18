@@ -1,6 +1,3 @@
-require 'httparty'
-require 'json'
-
 class SlackService
   include HTTParty
   base_uri 'https://slack.com/api'
