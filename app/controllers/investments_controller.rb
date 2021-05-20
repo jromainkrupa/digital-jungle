@@ -2,17 +2,19 @@ class InvestmentsController < ApplicationController
   before_action :set_project, only: [:new, :create]
   
   def index
-    @investments = Investment.where(user_id: current_user)
+    @investments = policy_scope(Investment.where(user_id: current_user))
   end
 
   def new
-    @investment = Investment.new
+    @investment = @project.investments.new(user_id: current_user.id)
+    authorize @investment
   end
 
   def create
-    @investment         = Investment.new(investment_params)
+    @investment = Investment.new(investment_params)
     @investment.project = @project
-    @investment.user    = current_user
+    @investment.user = current_user
+    authorize @investment
     if @investment.save
       redirect_to investments_path, notice: "Investment was successfully created."
     else

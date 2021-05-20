@@ -1,7 +1,16 @@
 module Entrepreneur
   class ProjectsController < ApplicationController
     before_action :set_project, only: [:show, :edit, :update, :destroy]
-   
+    
+        
+    def index
+      @projects = policy_scope([:entrepreneur, Project.where(user: current_user)])
+    end
+    
+    def show
+    
+    end
+    
     def new
       @project = current_user.projects.new
       authorize [:entrepreneur, @project]
@@ -38,13 +47,6 @@ module Entrepreneur
       redirect_to entrepreneur_projects_url, notice: "project was successfully destroyed."
     end
 
-    def show
-
-    end
-
-    def index
-      @projects = policy_scope([:entrepreneur, Project.where(user: current_user)])
-    end
 
     private
 

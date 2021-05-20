@@ -2,22 +2,25 @@ module Entrepreneur
   class PitchesController < ApplicationController
     before_action :set_project, only: [:show, :index, :destroy, :new, :create, :edit, :update]
     before_action :set_pitch, only: [:show, :edit, :update, :destroy]
+    after_action :skip_authorization, only: [:index]
 
     def index
       @pitches = @project.pitches
     end
 
     def show
-      
+      authorize @pitch
     end
 
     def new
-      @pitch = Pitch.new
+      @pitch = @project.pitches.new
+      authorize [:entrepreneur, @pitch]
     end
 
     def create
       @pitch = Pitch.new(pitch_params)
       @pitch.project = @project
+      authorize [:entrepreneur, @pitch]
       if @pitch.save
         redirect_to entrepreneur_project_pitch_path(@project, @pitch), notice: "Pitch was successfully created."
       else

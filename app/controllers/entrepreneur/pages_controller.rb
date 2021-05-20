@@ -1,6 +1,7 @@
 module Entrepreneur
   class PagesController < ApplicationController
     def tutorial
+      skip_authorization
       if params[:done] == "true" && !current_user.watched_tutorial?
         current_user.watched_tutorial = true
         current_user.next_action = :create_project

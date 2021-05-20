@@ -1,5 +1,7 @@
 class LikesController < ApplicationController
   before_action :set_project
+  after_action :skip_authorization
+  
   def create
     @like = @project.likes.where(user_id: current_user.id).first_or_create(is_like: params[:is_like])
     respond_to do |format|
