@@ -12,6 +12,7 @@ class FetchMessagesFromProjectJob < ApplicationJob
   private
 
   def fetch_project_messages_from_slack(project, limit)
+    
     SlackService.new.get_channel_last_messages(project.channel_id, limit)
   end
 
