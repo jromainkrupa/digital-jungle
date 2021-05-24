@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = policy_scope(Project.includes(:pitches).where(pitches: {is_publishable: true}))
+    @projects = policy_scope(Project.includes(:pitches).where(pitches: {is_publishable: true}).includes(:investments))
   end
 
   def show
