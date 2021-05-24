@@ -16,6 +16,7 @@ describe User, type: :model do
                         is_entrepreneur: false)
       expect(user).to be_valid
     end
+
     it "is should set a balance at 1M€ when created" do
       user = User.create(first_name: "Jean",
         last_name: "Krupa",
@@ -65,6 +66,17 @@ describe User, type: :model do
       user.valid?
       expect(user.errors[:email]).to include('has already been taken')
     end
-  end
 
+    it "can become an entrepreneur" do     
+      user = User.create(first_name: "Jean",
+                        last_name: "Krupa",
+                        email: "jkrupa@hotmail.fr",
+                        password:"azerty",
+                        balance: 100,
+                        is_entrepreneur: false)
+      user.update(is_entrepreneur: true)
+      user.valid?
+      expect(user).to be_valid
+    end
+  end
 end
