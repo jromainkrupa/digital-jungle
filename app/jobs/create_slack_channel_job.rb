@@ -5,7 +5,9 @@ class CreateSlackChannelJob < ApplicationJob
   def perform(project)
     # return if forbidden_name?(project)
     channel_name = name_sanitizer(project.name)
-    channel_id = SlackService.new.create_channel(channel_name)
+
+    response_json = SlackService.new("post",'/conversations.create') {|e| {"name": channel_name } }.call
+    channel_id = response_json["channel"]["id"]
 
     project.update(channel_id: channel_id) unless channel_id.empty?
   end

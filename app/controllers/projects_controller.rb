@@ -7,6 +7,5 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     authorize @project
     @project_messages = ProjectMessage.where("project_id = ?", params[:id]).last(5)
-    FetchMessagesFromProjectJob.perform_later(@project, 5)
   end
 end
