@@ -110,6 +110,8 @@ GEM
     factory_bot_rails (6.1.0)
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
+    faker (2.13.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.0)
     forest_liana (6.3.2)
       arel-helpers
@@ -361,6 +363,7 @@ DEPENDENCIES
   devise-i18n (~> 1.9)
   dotenv-rails
   factory_bot_rails
+  faker
   forest_liana (~> 6.3)
   hotwire-rails (~> 0.1.3)
   inline_svg (~> 1.7)

@@ -12,10 +12,10 @@ class FetchMessagesFromProjectJob < ApplicationJob
 
   def fetch_project_messages_from_slack(project, limit)
     messages_response_json = SlackService.new("get",'/conversations.history') {|e| {"channel": project.channel_id, "limit"=>limit} }.call
-    get_text_and_user(messages_response_json["messages"])
+    parse_data_from(messages_response_json["messages"])
   end
 
-  def get_text_and_user(messages)
+  def parse_data_from(messages)
     messages.map { |message| {message: message["text"], user: get_user_infos(message["user"])} }
   end
 

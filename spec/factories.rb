@@ -34,11 +34,11 @@ FactoryBot.define do
   end
   factory :user do
     first_name   { 'Jean' }
-    last_name    { 'Krupa' }
-    email        { 'c@c.com' }
+    last_name    { Faker::Name.unique.name }
+    email        { Faker::Internet.email }
     phone_number { '0695500784' }
     is_entrepreneur { true }
-    password     { 'c@c.com' }
+    password     { Faker::Internet.password }
   end
 
   factory :project do
