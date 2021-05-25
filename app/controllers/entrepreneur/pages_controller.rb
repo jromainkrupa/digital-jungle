@@ -1,5 +1,5 @@
 module Entrepreneur
-  class PagesController < ApplicationController
+  class PagesController < BaseController
     def tutorial
       skip_authorization
       if params[:done] == "true" && !current_user.watched_tutorial?

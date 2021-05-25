@@ -1,5 +1,5 @@
 module Entrepreneur
-  class PitchesController < ApplicationController
+  class PitchesController < BaseController
     before_action :set_project, only: [:show, :index, :destroy, :new, :create, :edit, :update]
     before_action :set_pitch, only: [:show, :edit, :update, :destroy]
     after_action :skip_authorization, only: [:index]

@@ -1,5 +1,5 @@
 module Entrepreneur
-  class ProjectsController < ApplicationController
+  class ProjectsController < BaseController
     before_action :set_project, only: [:show, :edit, :update, :destroy]
     
         

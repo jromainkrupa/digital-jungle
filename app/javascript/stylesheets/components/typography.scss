@@ -38,10 +38,10 @@ h5,
 }
 
 .link {
-  @apply text-primary-500;
+  @apply text-roman-500;
 
   &:hover,
   &:focus {
-    @apply text-primary-600;
+    @apply text-roman-600;
   }
 }
