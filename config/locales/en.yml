@@ -30,6 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  investor: "investissor"
+  entrepreneur: "entrepreneur"
+  free: "free"
   sign_up: "Sign up"
   sign_in: "Sign in"
   upload: "Upload Avatar"
@@ -37,7 +40,11 @@ en:
     home:
     landing_entrepreneur:
     choose_universe:
-      universe-title: "Choose your universe"
-    contributor_tutorial:
+      title: "I want to be"
+      body: "Choose the role you want to have on youpitch and discover the art of pitching"
+      investor-description: "By being an investor you will be able to see, like, invest and give feedbacks to entrepreneur's pitch. At the end of every Batch, we will elected the best investor."
+      entrepreneur-description: "As an entrepreuneur, you will be able to receive help from the community, test your idea, publish your pitch."
+      continue-as: "Continue as an %{type}"
+      contributor_tutorial:
       welcome: "Welcome %{name}!"
   slogan: "Find the next big thing"

@@ -1,8 +1,8 @@
 .btn {
-  @apply inline-flex text-sm font-semibold text-center px-4 py-0 rounded no-underline items-center justify-between;
+  @apply inline-flex text-sm font-semibold text-center px-4 py-0 rounded-lg no-underline items-center justify-between;
 
-  height: 40px;
-  line-height: 40px;
+  height: 45px;
+  line-height: 45px;
   transition: ease 0.3s background, ease 0.3s transform, ease 0.2s color;
 
   &:hover,

@@ -24,3 +24,10 @@ body {
   @apply block w-full overflow-x-auto;
   -webkit-overflow-scrolling: touch;
 }
+
+p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}

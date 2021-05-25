@@ -1,18 +1,59 @@
-<div class="container px-4 mx-auto my-10 lg:px-0">
-  <div class="w-full m-auto lg:w-1/2">
-  <p class="text-center text-gray-900 mb-1">(don't worry you can change this later)</p>
-    <div class="p-4 bg-gray-900 text-center rounded-lg shadow-sm lg:p-10">
-      <h1 class="mb-2 text-white"><%= t(".universe-title") %></h1>
-      <div class="flex flex-col items-center justify-center text-center mt-12">
-        <div class="w-64">
-          <p class="text-gray-400">Pour voir les projets et donner mon avis, je continue en tant que :</p>
-          <%= link_to "Contributeur", user_registration_path(choice: "contributeur"),method: :put, class: 'btn btn-primary mt-4 ' %>
-        </div>
-        <div class="w-64 mt-8 ">
-          <p class="text-gray-400">Pour pitcher mon projet, je continue en tant que :</p>
-          <%= link_to "Entrepreneur", user_registration_path(choice: "entrepreneur"),method: :put, class: 'btn btn-primary mt-4' %>
+<!-- This example requires Tailwind CSS v2.0+ -->
+<main class="overflow-x-hidden relative">
+  <div class="absolute transform -rotate-90 -top-28 left-12 md:hidden " style="z-index:-1;">
+    <%= render_svg "leaf_corner_left", class:"absolute" %>
+  </div>
+  <div class="pt-16 sm:pt-16 lg:pt-24">
+    <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
+        <h1 class="h2 text-roman-500"><%= t(".title") %></h1>
+        <p class="subtitle mt-4"><%= t(".body") %></p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-12 pb-12 bg-white sm:mt-12 sm:pb-16 lg:mt-20 lg:pb-24">
+    <div class="relative">
+      <div class="absolute inset-0 h-3/4"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+          
+          <div class="flex relative flex-col z-10 rounded-xl shadow">
+            <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6 text-center rounded-xl">
+              <div class="">
+                <h2 class="h3"><%= t("investor").capitalize %></h2>
+              </div>
+              <h4 class="text-roman-500 mt-8"><%= t("free").capitalize %></h2>
+            </div>
+            <div class="flex-1 text-center flex flex-col justify-between px-6 pt-2 pb-8 bg-white rounded-xl space-y-6 sm:p-10 sm:pt-2">
+              <p class="mt-6"><%= t(".investor-description") %></p>
+              <div class="rounded-md">
+                <%= link_to t(".continue-as", type:"Investor"), user_registration_path(choice: "contributeur"),method: :put, class: 'btn btn-primary btn-expanded mt-12' %>
+              </div>
+            </div>
+            <div class="absolute hidden md:block md:transform-none md:-bottom-10 md:-left-16" style="z-index:-1;">
+              <%= render_svg "leaf_corner_left", class:"absolute" %>
+            </div>
+          </div>
+
+          <div class="flex flex-col relative z-10 rounded-xl shadow">
+            <div class="px-6 py-8 bg-white rounded-xl sm:p-10 sm:pb-6 text-center">
+              <div>
+                <h2 class="h3"><%= t("entrepreneur").capitalize %></h2>
+              </div>
+              <h4 class="text-roman-500 mt-8">240 € HT</h2>
+            </div>
+            <div class="flex-1 text-center rounded-xl flex flex-col justify-between px-6 pt-2 pb-8 bg-white space-y-6 sm:p-10 sm:pt-2">
+              <p class="mt-6"><%= t(".entrepreneur-description") %></p>
+              <div class="rounded-md">
+                <%= link_to t(".continue-as", type:"Entrepreneur"), user_registration_path(choice: "entrepreneur"),method: :put, class: 'btn btn-primary btn-expanded mt-12' %>
+              </div>
+            </div>
+            <div class="absolute transform rotate-90 -bottom-32 right-24 md:transform-none md:-top-16 md:-right-20" style="z-index:-1;">
+              <%= render_svg "leaf_corner_right", class:"" %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</main>

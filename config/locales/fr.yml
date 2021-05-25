@@ -1,11 +1,16 @@
 fr:
-  hello: "bonjour tout le monde"
-  sign_up: "Créez un compte"
+  investor: "investisseur"
+  entrepreneur: "entrepreneur"
+  free: "gratuit"
+  sign_up: "Créer un compte"
   sign_in: "Se connecter"
   pages:
     home:
     choose_universe:
-      universe-title: "Choisi ton univers"
+      title: "Je veux être"
+      body: "Choisis le rôle que tu veux avoir sur Youpitch et découvre l’art du pitch"
+      investor-description: "En devenant Investisseur vous pourrez voir, liker, investir et donner des feedbacks aux pitchs des entrepreneurs. A la fin de chaque Batch d'entrepreneur, le meilleur investisseur gagne!"
+      entrepreneur-description: "Nous allons vous accompagner dans la jungle de l'entrepreunariat en vous préparant à pitcher votre projet. Vous pourrez publiez votre pitch et recevoir des feedbacks, des likes, des investissements."
     contributor_tutorial:
       welcome: "Bienvenu %{name}!"
   slogan: "Trouvez la prochaine pépite"
