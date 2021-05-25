@@ -10,6 +10,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "Arial", "sans-serif"],
+      },
       colors: {
         primary: {
           50: "#F6F7FF",
@@ -72,6 +75,57 @@ module.exports = {
           700: "#0cbf98",
           800: "#0a997a",
           900: "#087d63",
+        },
+        gold: {
+          DEFAULT: "#DCBA7D",
+        },
+        rock: {
+          DEFAULT: "#E5E4CD",
+        },
+        smoke: {
+          DEFAULT: "#ADB77C",
+        },
+        hippie: {
+          DEFAULT: "#6A8A50",
+        },
+        clover: {
+          50: "#f5f6f4",
+          100: "#ebeee9",
+          200: "#cdd4c8",
+          300: "#afbaa7",
+          400: "#738765",
+          500: "#375323",
+          600: "#324b20",
+          700: "#293e1a",
+          800: "#213215",
+          900: "#1b2911",
+        },
+        marshland: {
+          50: "#f2f3f2",
+          100: "#e6e7e6",
+          200: "#c0c2c0",
+          300: "#9a9d9a",
+          400: "#4f544f",
+          500: "#030A03",
+          600: "#030903",
+          700: "#020802",
+          800: "#020602",
+          900: "#010501",
+        },
+        terracotta: {
+          DEFAULT: "#A9271D",
+        },
+        roman: {
+          50: "#fdf7f7",
+          100: "#fbefee",
+          200: "#f5d6d5",
+          300: "#eebdbb",
+          400: "#e28c89",
+          500: "#D55A56",
+          600: "#c0514d",
+          700: "#a04441",
+          800: "#803634",
+          900: "#682c2a",
         },
       },
     },

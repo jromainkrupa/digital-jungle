@@ -30,29 +30,29 @@
 }
 
 .btn-primary {
-  @apply bg-aquamarine-500 text-gray-800;
+  @apply bg-roman-500 text-white;
 
   &:hover,
   &:focus {
-    @apply bg-aquamarine-600 text-gray-900;
+    @apply bg-roman-600 text-white;
   }
 
   &.outline {
-    @apply bg-transparent border border-aquamarine-500 text-aquamarine-500 border-aquamarine-500 shadow-none;
+    @apply bg-transparent border border-roman-500 text-roman-500 border-roman-500 shadow-none;
 
     &:hover,
     &:focus {
-      @apply border-aquamarine-600 text-aquamarine-600 underline;
+      @apply border-roman-600 text-roman-600 underline;
     }
   }
 }
 
 .btn-secondary {
-  @apply bg-gray-500 text-gray-900;
+  @apply bg-gray-500 text-white;
 
   &:hover,
   &:focus {
-    @apply bg-aquamarine-600 text-white;
+    @apply bg-roman-600 text-white;
   }
 
   &.outline {
@@ -127,11 +127,11 @@
 }
 
 .btn-link {
-  @apply text-aquamarine-500 bg-transparent;
+  @apply text-roman-500 bg-transparent;
 
   &:hover,
   &:focus {
-    @apply underline text-aquamarine-600;
+    @apply underline text-roman-600;
 
     transform: none;
   }
