@@ -1,8 +1,8 @@
 <div class="bg-gray-900">
+  <!-- hero-section  -->
   <div class="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 lg:pt-16">
     <div class="lg:grid lg:grid-cols-12 lg:gap-8">
       <div data-controller="type" class="sm:text-center md:max-w-2xl md:mx-auto md:my-auto lg:col-span-6 lg:text-left">
-
         <h1 class="mt-1 text-white block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
           <%= t(".hero-section.title") %>
         </h1>
@@ -19,316 +19,90 @@
       </div>
       <div class="hidden sm:block relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex md:items-center">
         <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-          <%# <div data-controller="lottie">
-            <lottie-player data-action="click->lottie#open"
-              autoplay
-              mode="normal"
-              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
-              style="width: 320px"
-            ></lottie-player>
-          </div> %>
           <%= render_svg "mountain",styles:"w-full" %>
         </div>
       </div>
     </div>
   </div>
+
   <div class="divider bg-gray8-00">
-    <svg class="bg-gray-900" viewBox="0 0 1695 57" preserveAspectRatio="none">
-      <path d="M0 23c135.4 19 289.6 28.5 462.5 28.5C721.9 51.5 936.7 1 1212.2 1 1395.8.9 1556.7 8.3 1695 23v34H0V23z" fill="rgba(255, 255, 255, 1)" fill-rule="evenodd"></path>
-    </svg>
+    <%= render_svg "waves_divider" %>
   </div>
+
+  <!-- press-logo  -->
   <div class="bg-white">
     <div class="max-w-7xl mx-auto pt-4 ">
       <h4 class="text-center my-8"><%= t(".press-logos.title") %></h4>
       <div class="logos logos--fill">
-        <div class="">
-          <%= image_tag "logos/logo_analytics.png",class:"logos__logo" %>
-        </div>
-        <div class="">
-          <%= image_tag "logos/logo_slack.png",class:"logos__logo" %>
-        </div>
-        <div class="">
-          <%= image_tag "logos/logo_notion.png",class:"logos__logo" %>
-        </div>
-        <div class="">
-          <%= image_tag "logos/logo_typeform.png",class:"logos__logo" %>
-        </div>
-        <div class="">
-          <%= image_tag "logos/logo_hotjar.png",class:"logos__logo" %>
-        </div>
+        <% 4.times do |i| %>
+          <div class="">
+            <%= image_tag t(".press-logos.logos-images.logo-#{i}"), class:"logos__logo" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
-
+<!-- features  -->
 <div class="relative bg-white pt-16 pb-8 overflow-hidden">
-  <div class="relative">
-    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
-        <div>
-          <div class="mt-6">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-              <%= t(".features.first.header.title") %>
-            </h2>
-            <p class="mt-4 text-lg text-gray-500">
-              <%= t(".features.first.header.description") %>
-            </p>
-          </div>
-        </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
-          <dl class="mt-8 space-y-10">
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <!-- Heroicon name: outline/globe-alt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.first.bullet-points.first.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.first.bullet-points.first.description") %>
-              </dd>
-            </div>
 
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.first.bullet-points.second.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.first.bullet-points.first.description") %>              
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <!-- Heroicon name: outline/lightning-bolt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.first.bullet-points.third.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.first.bullet-points.third.description") %>
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-      <div class="mt-12 sm:mt-16 lg:mt-0">
-        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <%= image_tag "mockups/learn.png",class:"w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none", alt:"lectures in idea on rails" %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-24">
-    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
-        <div>
-          <div class="mt-6">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-              <%= t(".features.second.header.title") %>
-            </h2>
-            <p class="mt-4 text-lg text-gray-500">
-              <%= t(".features.second.header.description") %>
-            </p>
-          </div>
-        </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
-          <blockquote>
-            <div>
-              <p class="text-base text-gray-500">
-                &ldquo;<%= t(".features.second.testimonial.description") %>&rdquo;
+  <% 4.times do |i| %>
+    <div class="relative <%= i == 0 ? "" : "mt-24" %>">
+      <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+          <div>
+            <div class="mt-6">
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
+                <%= t(".features.feature-#{i}.header.title") %>
+              </h2>
+              <p class="mt-4 text-lg text-gray-500">
+                <%= t(".features.feature-#{i}.header.description") %>
               </p>
             </div>
-            <footer class="mt-3">
-              <div class="flex items-center space-x-3">
-                <div class="flex-shrink-0">
-                  <img class="h-6 w-6 rounded-full" src="https://media-exp1.licdn.com/dms/image/C4E03AQGCyiHS-yH5aQ/profile-displayphoto-shrink_200_200/0/1605188429540?e=1625097600&v=beta&t=JuIPA9Wgs7YFyKO7eO84tZr51JZMkjyTc_gHteodrUc" alt="oussama amar">
-                </div>
-                <div class="text-base font-medium text-gray-700">
-                  <%= t(".features.second.testimonial.author") %>
-                </div>
-              </div>
-            </footer>
-          </blockquote>
+          </div>
+            <!-- feeature's bullet-points  -->
+            <div class="mt-8 border-t border-gray-200 pt-6">
+              <dl class="mt-8 space-y-10">
+                <% 3.times do |n| %>
+                  <div class="relative">
+                    <dt>
+                      <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
+                        <%= render_svg t(".features.feature-#{i}.bullet-points.bullet-#{n}.svg") %>                  
+                      </div>
+                      <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                        <%= t(".features.feature-#{i}.bullet-points.bullet-#{n}.title") %>
+                      </p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">
+                      <%= t(".features.feature-#{i}.bullet-points.bullet-#{n}.description") %>
+                    </dd>
+                  </div>
+                <% end %>
+              </dl>
+            </div>
         </div>
-      </div>
-      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <%= image_tag "mockups/entrepreneur_dashboard.png",class:"w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none", alt:"todolist in idea on rails" %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-24">
-    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
-        <div>
-          <div class="mt-6">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-              <%= t(".features.third.header.title") %>
-            </h2>
-            <p class="mt-4 text-lg text-gray-500">
-              <%= t(".features.third.header.description") %>
-            </p>
+
+        <!-- feature's image  -->
+        <% if i.even? %>
+        <div class="mt-12 sm:mt-16 lg:mt-0">
+          <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+            <%= image_tag t(".features.feature-#{i}.mockup"),class:"w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none", alt:"lectures in idea on rails" %>
           </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
-          <dl class="mt-10 space-y-10">
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <!-- Heroicon name: outline/globe-alt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.third.bullet-points.first.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.third.bullet-points.first.description") %> 
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.third.bullet-points.second.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.third.bullet-points.second.description") %>              
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <!-- Heroicon name: outline/lightning-bolt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.third.bullet-points.third.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.third.bullet-points.third.description") %>
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-      <div class="mt-12 sm:mt-16 lg:mt-0">
-        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <%= image_tag "mockups/youpitch_app.png",class:"w-full rounded-xl lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none", alt:"youpitch app" %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-24">
-    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
-        <div>
-          <div class="mt-6">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-              <%= t(".features.fourth.header.title") %>
-            </h2>
-            <p class="mt-4 text-lg text-gray-500">
-              <%= t(".features.fourth.header.description") %>
-            </p>
+        <% else %>
+        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+          <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+            <%= image_tag t(".features.feature-#{i}.mockup"),class:"w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none", alt:"todolist in idea on rails" %>
           </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
-          <dl class="mt-10 space-y-10">
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <!-- Heroicon name: outline/globe-alt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.fourth.bullet-points.first.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.fourth.bullet-points.first.description") %>
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <!-- Heroicon name: outline/scale -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.fourth.bullet-points.second.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.fourth.bullet-points.second.description") %>
-              </dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                  <!-- Heroicon name: outline/lightning-bolt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  <%= t(".features.fourth.bullet-points.third.title") %>
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                <%= t(".features.fourth.bullet-points.third.description") %> 
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <%= image_tag "mockups/community.png",class:"w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none", alt:"todolist in idea on rails" %>
-        </div>
+        <% end %>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
 
-<!-- RELEASE THE POWER OF PURE FOCUS -->
+<!-- CTA -->
 <div class="bg-gray-900">
   <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
     <h2 class="tracking-tight ">
@@ -345,7 +119,7 @@
   </div>
 </div>
 
-<!-- WHAT WILL I DO -->
+<!-- GRID -->
 <div class="relative bg-white py-8 sm:py-12 lg:py-16">
   <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
     <h2 class="text-base font-semibold tracking-wider text-aquamarine-700 uppercase">
@@ -357,6 +131,8 @@
     <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
       <%= t(".grid.headers.sub-title") %>
     </p>
+
+    <!-- grid's items -->
     <div class="mt-12">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <% 6.times do |i| %>
@@ -383,7 +159,7 @@
   </div>
 </div>
 
-<!-- RELEASE THE POWER OF PURE FOCUS -->
+<!-- CTA 2 -->
 <div class="bg-gray-900">
   <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
     <h2 class="tracking-tight ">
@@ -399,6 +175,9 @@
     </div>
   </div>
 </div>
+
+
+<!-- pricing  -->
 <div class="bg-gray-100">
   <div class="pt-12 sm:pt-16 lg:pt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,74 +289,21 @@
 <div class="bg-gray-900">
   <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
     <h2 class="text-3xl font-extrabold text-white">
-      Frequently asked questions
+      <%= t(".FAQ.title") %>
     </h2>
     <div class="mt-6 border-t border-indigo-300 border-opacity-25 pt-10">
       <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            How can I make nobody steal my idea ?
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            By using our plateform, we garuanty full transparency regarding the core team youpitch. What you pitch should not be all the details of your project. Just enough to start a conversation. After that it's up to you to decide what do you want to share or not. 
-          </dd>
-        </div>
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            Can I sign ask for a NDA (non disclosure aggreement)
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            You can ask youpitch team to do so. But you should not ask something like this to the users. If you doubt remind yourself this: THE IDEA IS POINTLESS, THE EXECUTION IS EVERYTHING.
-          </dd>
-        </div>
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            What video format should I use ?
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            We explain everything in our notion template. We validate every video before publishing to maintain a high quality standard. 
-          </dd>
-        </div>
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            How long my pitch should last ?
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            Your pitch should be within 1 min to maximum 2 min. 
-          </dd>
-        </div>
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            I already have a company and a product can I pitch it ? 
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            Sure, and if you want you can demo your product ! The only condition is that your company should have been created maximum 3 years ago. And you should not try to sell your product.
-          </dd>
-        </div>
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            Shall I pitch in english or my native language ?
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            If your market will be national, pitch it in you own language. If you feel confortable with english we recommend you to do so. Subtitles are added to all our videos. 
-          </dd>
-        </div>
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            Is that real money people invest ?
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            No, for now we don't have this feature. Every contributors receive 1 M€ of fake money to spend on their favourites project. 
-          </dd>
-        </div>
-        <div>
-          <dt class="text-lg leading-6 font-medium text-white">
-            How can I compete for the "best pitch fo the month"?
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            As soon as you decide to publish your pitch, you compete. The pitch that receive the most, investments. will receive the title and the prize. 
-          </dd>
-        </div>
+        <!-- faq question/asnwer block -->
+        <% 8.times do |i| %>
+          <div>
+            <dt class="text-lg leading-6 font-medium text-white">
+              <%= t(".FAQ.items.item-#{i}.question") %>
+            </dt>
+            <dd class="mt-2 text-base text-indigo-200">
+              <%= t(".FAQ.items.item-#{i}.answer") %> 
+            </dd>
+          </div>
+        <% end %>
       </dl>
     </div>
   </div>
