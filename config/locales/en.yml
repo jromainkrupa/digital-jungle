@@ -38,7 +38,98 @@ en:
   upload: "Upload Avatar"
   pages:
     home:
+
     landing_entrepreneur:
+      hero-section:
+        title: "Pitch your idea and receive feedbacks| from the community."
+        tagline: "yoopitch is a plateform to help you build an amazing pitch and publish it to an expert audience. You will receive feedbacks, support and may become the best pitch of the month."
+        cta-primary: "Start the journey"
+        cta-secondary:
+      press-logos:
+        title: "Learn, Build and Publish your pitch, we manage the tools for you"
+      features:
+        first:
+          header:
+            title: "Don't think, act!"
+            description: "Business plans, swots, competitors analysis are useless. You want to create your company ? 1st thing to do is to pitch: for customers, employees, investors, you mum... We will show you how to. You just have to follow the steps and get ready to receive feedbacks from other entrepreneurs, potentials users, investors."
+          bullet-points:
+            first:
+              title: "Learn how to pitch"
+              description: "You will have access to a great content build by experts to learn how to pitch well."
+            second:
+              title: "Build with support"
+              description: "We give you access to notion framework to step by step build your pitch. Our team is there all along the way to help you."
+            third:
+              title: "Publish"
+              description: "You will choose when you want to be published, and be able to select your audience size. Once it's done we will share it with the community and open a slack channel for you to discuss with your investors, fans, contributors..."
+        second:
+          header:
+            title: "Save month"
+            description: "By presenting your product, idea, business or service in a very early stage. You will be able to receive crucial feedbacks. Talking to potential users is the best exercise to make sure you will solve a real pain with your solution. Thanks to our community, you will save months in reasearch, development. Thus, you will have real metrics for your idea. Number of likes, investments, comments..."
+          testimonial:
+            description: "Too many founders simply don’t understand what’s important and when. At the beginning, it’s only two things: talking to clients and building a product they love. Everything else is just a distraction."
+            author: "Oussama Ammar, founder of The Family"
+        third:
+          header:
+            title: "Save thousands"
+            description: "Interacting with web developers and web agencies before creating a prototype can be costly. You don't even really know if your product or service will solve your customer pain. Don't waste your money, test your concept by pitching it."
+          bullet-points:
+            first:
+              title: "Receive metrics for your project"
+              description: "Access datas & statistics: number of likes, number of views, number of comments, money invested."
+            second:
+              title: "The visibility you deserve"
+              description: "It's frustrating, to see amazing projects that don't have the visibility they deserve. We changed that! Everyone has the same chance on youpitch."
+            third:
+              title: "Become the pitch of the month"
+              description: "The more contributors likes, comments and invest in your project, the more likely to become the pitch of the month."
+        fourth:
+          header:
+            title: "A community like you"
+            description: "The community is here to help you and we all share the same passion for entrepreneurship."
+          bullet-points:
+            first:
+              title: "Feedback and help"
+              description: "You can receive direct feedback from potential users, partners and customers. The community is helpful."
+            second:
+              title: "A team of experts to help"
+              description: "The team consists of experts ready to help you if you need assistance or want to go further."
+            third:
+              title: "Investors & Incubators"
+              description: "You need funding ? We are partner to many VCs, private investors, incubators and funds."
+      cta:
+        title: "Test your idea"
+        description: "free trial"
+        cta-primary: "create your project"
+      grid:
+        headers:
+          over-title: "LEARN BUILD SHARE"
+          title: "What will I get ?"
+          sub-title: "By the end you will have:"
+        item-0:
+          svg: "icons/micro"
+          title: "A prompter for your pitch"
+          description: "We will guide to write the perfect pitch, to be able to train yourself before recording."
+        item-1:
+          svg: "icons/camera"
+          title: "A video of your pitch"
+          description: "We will guide you step by step to create the perfect video for your pitch. You will be able to focus on the content not the design."
+        item-2:
+          svg: "icons/message"
+          title: "A slack channel"
+          description: "We will create a slack channel on our slack community, just for you. So you can discuss directly with the contributors about your project."
+        item-3:
+          svg: "icons/histogram"
+          title: "Metrics of your project"
+          description: "We will gather all the datas we have regarding your project: likes, comments, shares, views, investments... To help you decide if you should pivot or persevere."
+        item-4:
+          svg: "icons/question"
+          title: "Help & Support"
+          description: "Our team of expert is there to answer all your questions regarding the plateform or your project. We can help you for the next steps of your project: build your MVP, find a Cofounder, raise money..."
+        item-5:
+          svg: "icons/user-group"
+          title: "Exposure"
+          description: "We gather a large a community of experts and passionates. You may find VC, developpers, beta testers, future customers."
     choose_universe:
       title: "I want to be"
       body: "Choose the role you want to have on youpitch and discover the art of pitching"
