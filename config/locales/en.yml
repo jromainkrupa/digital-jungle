@@ -41,7 +41,7 @@ en:
     home:
     landing_entrepreneur:
       hero-section:
-        title: "Pitch your idea and receive feedbacks| from the community."
+        title_html: "Pitch your <span>idea</span> and receive <span>feedbacks</span> from the community."
         tagline: "yoopitch is a plateform to help you build an amazing pitch and publish it to an expert audience. You will receive feedbacks, support and may become the best pitch of the month."
         cta-primary: "Start the journey"
         cta-secondary:
