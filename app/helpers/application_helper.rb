@@ -5,7 +5,7 @@ module ApplicationHelper
     options[:title] ||= name.underscore.humanize
     options[:aria] = true
     options[:nocomment] = true
-    options[:class] = options.fetch(:styles, "h-6 w-6 text-gray-800")
+    options[:class] = options.fetch(:styles, "fill-current h-6 w-6")
 
     filename = "#{name}.svg"
     inline_svg_tag(filename, options)

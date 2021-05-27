@@ -90,6 +90,18 @@ module.exports = {
         gold: {
           DEFAULT: "#DCBA7D",
         },
+        goldish: {
+          50: "#fefefd",
+          100: "#fcfcfa",
+          200: "#f9f8f3",
+          300: "#f5f4eb",
+          400: "#edecdc",
+          500: "#e5e4cd",
+          600: "#cecdb9",
+          700: "#acab9a",
+          800: "#89897b",
+          900: "#707064",
+        },
         rock: {
           DEFAULT: "#E5E4CD",
         },

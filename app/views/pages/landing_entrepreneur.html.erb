@@ -1,310 +1,371 @@
-<div class="bg-clover-500">
-  <!-- hero-section  -->
-  <div class="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 lg:pt-16">
-    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-      <div data-controller="type" class="sm:text-center md:max-w-2xl md:mx-auto md:my-auto lg:col-span-6 lg:text-left">
-        <h1 class="mt-1 block text-4xl text-white tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-          <%= t(".hero-section.title_html") %>
-        </h1>
-        <p class="mt-3 text-base text-white sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-          <%= t(".hero-section.tagline") %>
+<header class="">
+  <nav class="flex flex-wrap items-center justify-between px-12 py-2 bg-goldish-300 text-sm">
+    <div class="flex items-center flex-shrink-0 mr-6">
+      <%= link_to root_path, class:"flex items-center" do %>
+      <%#= render_svg "logo", styles: "h-12 w-12" %>
+      <span class="h3 ml-4 mt-1 text-clover-700">you<span class="text-clover-700">pitch</span></span> 
+      <% end %>
+    </div>
+  </nav>
+
+    <!-- hero-section  -->
+  <div class="bg-goldish-300">
+    <div class="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 lg:pt-16">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-20">
+        <div data-controller="type" class="sm:text-center md:max-w-2xl md:mx-auto md:my-auto  lg:text-left">
+          <h1 class="mt-1 block text-4xl text-hippie font-extrabold sm:text-5xl xl:text-5xl">
+            <%= t(".hero-section.title_html") %>
+          </h1>
+          <p class="mt-3 text-base text-clover-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+            <%= t(".hero-section.tagline") %>
+          </p>
+          <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div class="">
+                <%= link_to t(".hero-section.cta-primary"), new_user_registration_path, class: "btn btn-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden relative sm:block relative z-30 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0  lg:flex md:items-center">
+          <div class="relative mx-auto w-full z-22 rounded-lg">
+            <%#= render_svg "mountain",styles:"w-full" %>
+            <div class="rounded-xl shadow overflow-hidden">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/3xU050kMbHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="absolute transform md:block md:-top-16 md:-right-16" style="z-index:-1;transform:rotate(150deg);">
+              <%= render_svg "leaf_video_corner_left", styles:"w-full" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divide pt-12">
+      <%= render_svg "waves_divider", styles: "" %>
+    </div>
+
+    <!-- press-logo  -->
+    <!--
+    <div class="bg-white pt-12">
+      <div class="max-w-7xl mx-auto pt-4 ">
+        <p class="text-center text-clover-700 text-xl font-bold">
+          <span class="my-8"><%= t(".press-logos.title") %></span>
         </p>
-        <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="">
-              <%= link_to t(".hero-section.cta-primary"), new_user_registration_path, class: "btn btn-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hidden sm:block relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex md:items-center">
-        <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
-          <%= render_svg "mountain",styles:"w-full" %>
+        <div class="logos logos--fill mt-12">
+          <% t(".press-logos.logos-images").each do |logo_path| %>
+            <%= image_tag logo_path, class:"logos__logo" %>
+          <% end %>
         </div>
       </div>
     </div>
+    -->
   </div>
+</header>
 
-  <div class="divider bg-clover-500">
-    <%= render_svg "waves_divider" %>
-  </div>
+<main>
+  <section>
+      <!-- GRID -->
+    <div class="relative bg-white py-8 sm:py-12 lg:py-16">
+      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+        <h2 class="text-base font-semibold tracking-wider text-roman-500 uppercase">
+          <%= t(".grid.headers.over-title") %>
+        </h2>
+        <p class="mt-2 text-3xl font-extrabold text-clover-700 tracking-tight sm:text-4xl">
+          <%= t(".grid.headers.title") %>
+        </p>
+        <p class="mt-5 max-w-prose mx-auto text-xl text-clover-600">
+          <%#= t(".grid.headers.sub-title") %>
+        </p>
 
-  <!-- press-logo  -->
-  <div class="bg-white">
-    <div class="max-w-7xl mx-auto pt-4 ">
-      <h4 class="text-center my-8"><%= t(".press-logos.title") %></h4>
-      <div class="logos logos--fill">
-        <% 4.times do |i| %>
-          <div class="">
-            <%= image_tag t(".press-logos.logos-images.logo-#{i}"), class:"logos__logo" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- features  -->
-<div class="relative bg-white pt-16 pb-8 overflow-hidden">
-
-  <% 4.times do |i| %>
-    <div class="relative <%= i == 0 ? "" : "mt-24" %>">
-      <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
-          <div>
-            <div class="mt-6">
-              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-                <%= t(".features.feature-#{i}.header.title") %>
-              </h2>
-              <p class="mt-4 text-lg text-gray-500">
-                <%= t(".features.feature-#{i}.header.description") %>
-              </p>
-            </div>
-          </div>
-            <!-- feeature's bullet-points  -->
-            <div class="mt-8 border-t border-gray-200 pt-6">
-              <dl class="mt-8 space-y-10">
-                <% 3.times do |n| %>
-                  <div class="relative">
-                    <dt>
-                      <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-aquamarine-500 text-gray-800">
-                        <%= render_svg t(".features.feature-#{i}.bullet-points.bullet-#{n}.svg") %>                  
-                      </div>
-                      <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                        <%= t(".features.feature-#{i}.bullet-points.bullet-#{n}.title") %>
-                      </p>
-                    </dt>
-                    <dd class="mt-2 ml-16 text-base text-gray-500">
-                      <%= t(".features.feature-#{i}.bullet-points.bullet-#{n}.description") %>
-                    </dd>
+        <!-- grid's items -->
+        <div class="mt-12">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <% 6.times do |i| %>
+              <div class="pt-6">
+                <div class="flow-root bg-goldish-200 h-full rounded-lg px-6 pb-8">
+                  <div class="-mt-6">
+                    <div class="">
+                      <span class="inline-flex items-center justify-center p-3 bg-roman-500 text-clover-700 rounded-md shadow-lg">
+                        <%#= render_svg t(".grid.item-#{i}.svg"), styles: "text-white" %>
+                        <span class="h3 text-white"><%= i + 1 %></span>
+                      </span>
+                    </div>
+                    <h3 class="mt-8 text-lg font-medium text-clover-700 tracking-tight">
+                      <%= t(".grid.item-#{i}.title") %>
+                    </h3>
+                    <p class="mt-5 text-base text-clover-600">
+                      <%= t(".grid.item-#{i}.description") %>
+                    </p>
                   </div>
-                <% end %>
-              </dl>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- features  -->
+  <section>
+    <div class="relative bg-white pt-24 pb-8 overflow-hidden">
+
+      <% 3.times do |i| %>
+        <div class="relative <%= i == 0 ? "" : "mt-24" %>">
+          <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+            <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+              <div>
+                <div class="mt-6">
+                  <h2 class="text-3xl font-extrabold tracking-tight text-clover-700">
+                    <%= t(".features.feature-#{i}.header.title") %>
+                  </h2>
+                  <p class="mt-4 text-lg text-clover-600">
+                    <%= t(".features.feature-#{i}.header.description") %>
+                  </p>
+                </div>
+              </div>
+                <!-- feeature's bullet-points  -->
+                <div class="mt-8 border-t border-gray-200 pt-6">
+                  <dl class="mt-8 space-y-10">
+                    <% 3.times do |n| %>
+                      <div class="relative">
+                        <dt>
+                          <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-roman-500">
+                            <%= render_svg t(".features.feature-#{i}.bullet-points.bullet-#{n}.svg"), styles: "text-white" %>                  
+                          </div>
+                          <p class="ml-16 text-lg leading-6 font-medium text-clover-700">
+                            <%= t(".features.feature-#{i}.bullet-points.bullet-#{n}.title") %>
+                          </p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-clover-600">
+                          <%= t(".features.feature-#{i}.bullet-points.bullet-#{n}.description") %>
+                        </dd>
+                      </div>
+                    <% end %>
+                  </dl>
+                </div>
             </div>
-        </div>
 
-        <!-- feature's image  -->
-        <% if i.even? %>
-        <div class="mt-12 sm:mt-16 lg:mt-0">
-          <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-            <%= image_tag t(".features.feature-#{i}.mockup"),class:"w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none", alt:"lectures in idea on rails" %>
+            <!-- feature's image  -->
+            <% if i.even? %>
+            <div class="mt-12 sm:mt-16 lg:mt-0">
+              <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <%= image_tag t(".features.feature-#{i}.mockup"),class:"w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none", alt:"lectures in idea on rails" %>
+              </div>
+            </div>
+            <% else %>
+            <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+              <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <%= image_tag t(".features.feature-#{i}.mockup"),class:"w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none", alt:"todolist in idea on rails" %>
+              </div>
+            </div>
+            <% end %>
           </div>
         </div>
-        <% else %>
-        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-          <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-            <%= image_tag t(".features.feature-#{i}.mockup"),class:"w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none", alt:"todolist in idea on rails" %>
+      <% end %>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mt-12">
+    <div class="bg-goldish-300">
+      <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <h2 class="tracking-tight ">
+          <span class="block text-3xl sm:text-4xl font-bold text-clover-700"><%= t(".cta.title") %></span>
+          <span class="block text-xl sm:text-2xl font-medium text-gray-400"><%= t(".cta.description") %></span>
+        </h2>
+        <div class="mt-8 flex justify-center">
+          <div class="inline-flex rounded-md shadow">
+            <div class="">
+              <%= link_to t(".cta.cta-primary"), new_user_registration_path, class: "btn btn-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
+            </div>
           </div>
         </div>
-        <% end %>
       </div>
     </div>
-  <% end %>
-</div>
+  </section>
 
-<!-- CTA -->
-<div class="bg-gray-900">
-  <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-    <h2 class="tracking-tight ">
-      <span class="block text-3xl sm:text-4xl font-bold text-white"><%= t(".cta.title") %></span>
-      <span class="block text-xl sm:text-2xl font-medium text-gray-400"><%= t(".cta.description") %></span>
-    </h2>
-    <div class="mt-8 flex justify-center">
-      <div class="inline-flex rounded-md shadow">
-        <div class="">
-          <%= link_to t(".cta.cta-primary"), new_user_registration_path, class: "btn btn-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
+  <!-- pricing  -->
+  <section>
+    <div class="bg-white">
+      <div class="pt-12 sm:pt-16 lg:pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-clover-700 sm:text-4xl lg:text-5xl">
+              Un pricing clair et sans surprise
+            </h2>
+            <p class="mt-4 text-xl text-clover-600">
+              Si vous n'êtes pas satisfait nous remboursons intégralement.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="mt-8 bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
+        <div class="relative">
+          <div class="absolute inset-0 h-1/2 bg-goldish-100"></div>
+          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
+              <div class="flex-1 bg-white px-6 py-8 lg:p-12">
+                <h3 class="text-2xl font-extrabold text-clover-700 sm:text-3xl">
+                  Early bird access
+                </h3>
+                <p class="mt-6 text-base text-clover-600">
+                  Parceque c'est le début pour nous aussi. On veut être certain d'apporter un maximum de valeur à nos utilisateurs avant de faire payer plein tarif.
+                </p>
+                <div class="mt-8">
+                  <div class="flex items-center">
+                    <h4 class="flex-shrink-0 pr-4 bg-white text-sm tracking-wider font-semibold uppercase text-roman-500">
+                      Qu'est ce que j'ai de concret ?
+                    </h4>
+                    <div class="flex-1 border-t-2 border-gray-200"></div>
+                  </div>
+                  <ul class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
+                    <li class="flex items-start lg:col-span-1">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        Un accès à la plateforme à vie
+                      </p>
+                    </li>
 
-<!-- GRID -->
-<div class="relative bg-white py-8 sm:py-12 lg:py-16">
-  <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-    <h2 class="text-base font-semibold tracking-wider text-aquamarine-700 uppercase">
-      <%= t(".grid.headers.over-title") %>
-    </h2>
-    <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-      <%= t(".grid.headers.title") %>
-    </p>
-    <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-      <%= t(".grid.headers.sub-title") %>
-    </p>
+                    <li class="flex items-start lg:col-span-1">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        Support de la team
+                      </p>
+                    </li>
 
-    <!-- grid's items -->
-    <div class="mt-12">
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <% 6.times do |i| %>
-          <div class="pt-6">
-            <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-              <div class="-mt-6">
-                <div class="">
-                  <span class="inline-flex items-center justify-center p-3 bg-aquamarine-500 text-gray-800 rounded-md shadow-lg">
-                    <%= render_svg t(".grid.item-#{i}.svg")%>
+                    <li class="flex items-start lg:col-span-1">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        Participation au concours de Pitch
+                      </p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                      <div class=" flex-shrink-0 ">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        Access au Slack à vie
+                      </p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                      <div class=" flex-shrink-0 ">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        Un mockup et prototype
+                      </p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                      <div class=" flex-shrink-0 ">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        Une landing page
+                      </p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                      <div class=" flex-shrink-0 ">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        Une roadmap
+                      </p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                      <div class=" flex-shrink-0 ">
+                        <!-- Heroicon name: solid/check-circle -->
+                        <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <p class="ml-3 text-sm text-clover-700">
+                        La possibilité de réaliser votre rêve
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="py-8 px-6 text-center bg-goldish-300 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
+                <p class="text-lg leading-6 font-medium text-clover-700">
+                  early bird access
+                </p>
+                <div class="mt-4 flex items-center justify-center text-5xl font-extrabold text-clover-700">
+                  <span>
+                    850 €
+                  </span>
+                  <span class="ml-3 text-xl font-medium text-clover-600">
+                    HT
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                  <%= t(".grid.item-#{i}.title") %>
-                </h3>
-                <p class="mt-5 text-base text-gray-500">
-                  <%= t(".grid.item-#{i}.description") %>
+                <p class="text-lg line-through leading-6 font-medium text-clover-700">
+                  2000 € HT
                 </p>
+                <div class="mt-6">
+                  <div class="rounded-md shadow">
+                    <%= link_to "Start now", new_user_registration_path, class: "flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-roman-500 hover:bg-roman-600" %>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA 2 -->
-<div class="bg-gray-900">
-  <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-    <h2 class="tracking-tight ">
-      <span class="block text-3xl sm:text-4xl font-bold text-white">Not Convince yet ?</span>
-      <span class="block text-xl sm:text-2xl font-medium text-gray-400">Be an entreprenor: act, don't think.</span>
-    </h2>
-    <div class="mt-8 flex justify-center">
-      <div class="inline-flex rounded-md shadow">
-        <div class="">
-          <%= link_to "Start the journey", new_user_registration_path, class: "btn btn-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-
-<!-- pricing  -->
-<div class="bg-gray-100">
-  <div class="pt-12 sm:pt-16 lg:pt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl">
-          Simple no-tricks pricing
+  <!-- FAQ -->
+  <section>
+    <div class="bg-goldish-300">
+      <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-clover-700">
+          <%= t(".FAQ.title") %>
         </h2>
-        <p class="mt-4 text-xl text-gray-600">
-          If you're not satisfied, contact us within the first 14 days and we'll send you a full refund.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="mt-8 bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
-    <div class="relative">
-      <div class="absolute inset-0 h-1/2 bg-gray-100"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
-          <div class="flex-1 bg-white px-6 py-8 lg:p-12">
-            <h3 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">
-              Early bird access
-            </h3>
-            <p class="mt-6 text-base text-gray-500">
-              Because it's the beginning for us too, we want to make sure we bring a lot of value to our users before charging them. So it's free for early birds.
-            </p>
-            <div class="mt-8">
-              <div class="flex items-center">
-                <h4 class="flex-shrink-0 pr-4 bg-white text-sm tracking-wider font-semibold uppercase text-aquamarine-500">
-                  What's included
-                </h4>
-                <div class="flex-1 border-t-2 border-gray-200"></div>
+        <div class="mt-6 border-t border-clover-700 border-opacity-25 pt-10">
+          <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
+            <!-- faq question/asnwer block -->
+            <% t(".FAQ.items").each do |element| %>
+              <div>
+                <dt class="text-lg leading-6 font-medium text-clover-700">
+                  <%= element[:question] %>
+                </dt>
+                <dd class="mt-2 text-base text-clover-600">
+                  <%= element[:answer] %> 
+                </dd>
               </div>
-              <ul class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
-                <li class="flex items-start lg:col-span-1">
-                  <div class="flex-shrink-0">
-                    <!-- Heroicon name: solid/check-circle -->
-                    <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <p class="ml-3 text-sm text-gray-700">
-                    Private slack acccess
-                  </p>
-                </li>
-
-                <li class="flex items-start lg:col-span-1">
-                  <div class="flex-shrink-0">
-                    <!-- Heroicon name: solid/check-circle -->
-                    <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <p class="ml-3 text-sm text-gray-700">
-                    Team support
-                  </p>
-                </li>
-
-                <li class="flex items-start lg:col-span-1">
-                  <div class="flex-shrink-0">
-                    <!-- Heroicon name: solid/check-circle -->
-                    <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <p class="ml-3 text-sm text-gray-700">
-                    Entry to pitch competition
-                  </p>
-                </li>
-
-                <li class="flex items-start lg:col-span-1">
-                  <div class=" flex-shrink-0 ">
-                    <!-- Heroicon name: solid/check-circle -->
-                    <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-gray-900" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <p class="ml-3 text-sm text-gray-700">
-                    Access to notion
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="py-8 px-6 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
-            <p class="text-lg leading-6 font-medium text-gray-900">
-              early bird access
-            </p>
-            <div class="mt-4 flex items-center justify-center text-5xl font-extrabold text-gray-900">
-              <span>
-                0 €
-              </span>
-              <span class="ml-3 text-xl font-medium text-gray-500">
-                TTC
-              </span>
-            </div>
-            <div class="mt-6">
-              <div class="rounded-md shadow">
-                <%= link_to "Start now", new_user_registration_path, class: "flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-aquamarine-500 hover:bg-aquamarine-600" %>
-              </div>
-            </div>
-          </div>
+            <% end %>
+          </dl>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+</main>
 
-<!-- FAQ -->
-<div class="bg-gray-900">
-  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-extrabold text-white">
-      <%= t(".FAQ.title") %>
-    </h2>
-    <div class="mt-6 border-t border-indigo-300 border-opacity-25 pt-10">
-      <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
-        <!-- faq question/asnwer block -->
-        <% 8.times do |i| %>
-          <div>
-            <dt class="text-lg leading-6 font-medium text-white">
-              <%= t(".FAQ.items.item-#{i}.question") %>
-            </dt>
-            <dd class="mt-2 text-base text-indigo-200">
-              <%= t(".FAQ.items.item-#{i}.answer") %> 
-            </dd>
-          </div>
-        <% end %>
-      </dl>
-    </div>
-  </div>
-</div>
+<%= render partial: "shared/footer" %>

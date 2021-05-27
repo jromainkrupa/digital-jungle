@@ -43,16 +43,16 @@ en:
       hero-section:
         title_html: "Pitch your <span>idea</span> and receive <span>feedbacks</span> from the community."
         tagline: "yoopitch is a plateform to help you build an amazing pitch and publish it to an expert audience. You will receive feedbacks, support and may become the best pitch of the month."
-        cta-primary: "Start the journey"
+        cta-primary: "Start the adventure"
         cta-secondary:
 
       press-logos:
         title: "Learn, Build and Publish your pitch, we manage the tools for you"
         logos-images:
-          logo-0: "logos/logo_analytics.png"
-          logo-1: "logos/logo_slack.png"
-          logo-2: "logos/logo_notion.png"
-          logo-3: "logos/logo_typeform.png"
+          - "logos/logo_analytics.png"
+          - "logos/logo_slack.png"
+          - "logos/logo_notion.png"
+          - "logos/logo_typeform.png"
 
       features:
         feature-0:
@@ -62,17 +62,13 @@ en:
             description: "Business plans, swots, competitors analysis are useless. You want to create your company ? 1st thing to do is to pitch: for customers, employees, investors, you mum... We will show you how to. You just have to follow the steps and get ready to receive feedbacks from other entrepreneurs, potentials users, investors."
           bullet-points:
             bullet-0:
-              svg: "icons/globe"
+              svg: "icons/micro"
               title: "Learn how to pitch"
               description: "You will have access to a great content build by experts to learn how to pitch well."
             bullet-1:
               svg: "icons/desktop"
               title: "Build with support"
               description: "We give you access to notion framework to step by step build your pitch. Our team is there all along the way to help you."
-            bullet-2:
-              svg: "icons/light-bulb"
-              title: "Publish"
-              description: "You will choose when you want to be published, and be able to select your audience size. Once it's done we will share it with the community and open a slack channel for you to discuss with your investors, fans, contributors..."
 
         feature-1:
           mockup: "mockups/entrepreneur_dashboard.png"
@@ -169,30 +165,22 @@ en:
       FAQ:
         title: "Frequently asked questions"
         items:
-          item-0:
-            question: "How can I make nobody steal my idea ?"
+          - question: "How can I make nobody steal my idea ?"
             answer: "By using our plateform, we garuanty full transparency regarding the core team youpitch. What you pitch should not be all the details of your project. Just enough to start a conversation. After that it's up to you to decide what do you want to share or not."
-          item-1:
-            question: "Can I sign ask for a NDA (non disclosure aggreement)"
-            answer: "You can ask youpitch team to do so. But you should not ask something like this to the users. If you doubt remind yourself this: THE IDEA IS POINTLESS, THE EXECUTION IS EVERYTHING."
-          item-2:
-            question: "What video format should I use ?"
-            answer: "We explain everything in our notion template. We validate every video before publishing to maintain a high quality standard."
-          item-3:
-            question: "How long my pitch should last ?"
-            answer: "Your pitch should be within 1 min to maximum 2 min."
-          item-4:
-            question: "I already have a company and a product can I pitch it ?"
-            answer: "Sure, and if you want you can demo your product ! The only condition is that your company should have been created maximum 3 years ago. And you should not try to sell your product."
-          item-5:
-            question: "Shall I pitch in english or my native language ?"
-            answer: "If your market will be national, pitch it in you own language. If you feel confortable with english we recommend you to do so. Subtitles are added to all our videos."
-          item-6:
-            question: "Is that real money people invest ?"
-            answer: "No, for now we don't have this feature. Every contributors receive 1 M€ of fake money to spend on their favourites project."
-          item-7:
-            question: "How can I compete for the best pitch fo the month ?"
-            answer: "As soon as you decide to publish your pitch, you compete. The pitch that receive the most, investments. will receive the title and the prize."
+          - question: "Can I sign ask for a NDA (non disclosure aggreement- )"
+            answer: "You can ask youpitch team to do so.   But you should not ask something like this to the users. If you doubt remind yourself this: THE IDEA IS POINTLESS, THE EXECUTION IS EVERYTHING."
+          - question: "What video format should I use - - ?"
+            answer: "We explain everything in our noti    on template. We validate every video before publishing to maintain a high quality standard."
+          - question: "How long my pitch should last -- -  ?"
+            answer: "Your pitch should be within 1 mi     n to maximum 2 min."
+          - question: "I already have a company and a-- -   product can I pit- ch it ?"
+            answer: "Sure, and if you want you can d      emo your product !  The only condition is that your company should have been created maximum 3 years ago. And you should not try to sell your product."
+          - question: "Shall I pitch in english or m- - y native language --  ?"
+            answer: "If your market will be national    , pitc  h it in yo  u own language. If you feel confortable with english we recommend you to do so. Subtitles are added to all our videos."
+          - question: "Is that real money people inv- est - - - ?"
+            answer: "No, for now we don't have this   feat      ure. Every contributors receive 1 M€ of fake money to spend on their favourites project."
+          - question: "How can I compete for the best pi- - - tch fo the month - ?"
+            answer: "As soon as you decide to publish yo      ur pitch, you compete. The pitch that receive the most, investments. will receive the title and the prize."
 
     choose_universe:
       title: "I want to be"

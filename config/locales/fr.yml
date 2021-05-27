@@ -1,16 +1,176 @@
-fr:
-  investor: "investisseur"
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  investor: "investissor"
   entrepreneur: "entrepreneur"
-  free: "gratuit"
-  sign_up: "Créer un compte"
-  sign_in: "Se connecter"
+  free: "free"
+  sign_up: "Sign up"
+  sign_in: "Sign in"
+  upload: "Upload Avatar"
+
   pages:
     home:
+    landing_entrepreneur:
+      hero-section:
+        title_html: "Devenez <span>entrepreneur</span>, et lancer votre startup en <span>3 semaines</span> "
+        tagline: "Youpitch est un programme de intensif pour aider les entrepreneurs non développeurs à créer un produit et lancer leurs sartup."
+        cta-primary: "Commencer l'aventure"
+        cta-secondary:
+
+      press-logos:
+        title: "Prochaine expédition le 1er Septembre."
+        logos-images:
+          - "logos/logo_figma.png"
+          - "logos/logo_slack.png"
+          - "logos/logo_notion.png"
+          - "logos/logo_umso.svg"
+
+      features:
+        feature-0:
+          mockup: "mockups/learn.png"
+          header:
+            title: "Gagnez des mois, économisez des €"
+            description: "Faire un business plan est inutile. Ne perdez pas pas votre temps et rester focus sur votre produit en apprenant, construisant et itérant."
+          bullet-points:
+            bullet-0:
+              svg: "icons/micro"
+              title: "100% focus sur votre produit"
+              description: "A la fin des 3 semaines, vous saurez si votre produit fonctionne, aurez des metrics clairs, aurez tous les contacts nécéssaires pour la suite de votre projet."
+            bullet-1:
+              svg: "icons/desktop"
+              title: "Des conseils d'experts"
+              description: "Vous aurez accès à une communauté d'expert: developpeur web, UX/UI designer, Product Manager, Entrepreneurs, Designer..."
+            bullet-2:
+              svg: "icons/desktop"
+              title: "3 semaines vs 6 mois"
+              description: "La plupart des programme d'incubation vous font travailler 6 mois sur un business plan. On prefère passer 3 semaines sur votre produit."
+
+        feature-1:
+          mockup: "mockups/entrepreneur_dashboard.png"
+          header:
+            title: "Rentrer dans l'univers des startups"
+            description: "Vous ne serez plus tout seul avec votre idée. Nous allons vous accompagnez dans la jungle de l'entrepreunariat et du digital."
+          bullet-points:
+            bullet-0:
+              svg: "icons/user-group"
+              title: "Une communauté comme vous"
+              description: "La communauté de youpitch est composée de la core team, d'entrepreneurs, d'experts et de passionés d'entrepreunariat."
+            bullet-1:
+              svg: "icons/light"
+              title: "Visibilité = croissance"
+              description: "En présentant votre idée à la communauté, vous pourrez trouver: un cofondateur, un CTO, un graphiste, un investisseur, des beta testeurs, vos premiers clients.."
+            bullet-2:
+              svg: "icons/light"
+              title: "La tech démystifiée"
+              description: "Lancer une boite dans la tech sans en connaitre les codes s'avère compliqué. Nous vulgarisons la tech pour en donner l'accès au plus grand nombre."
+
+        feature-2:
+          mockup: "mockups/youpitch_app.png"
+          header:
+            title: "Des metrics pour votre projet"
+            description: "Avoir de l'ambition c'est génial, avoir des datas pour conforter son ambition c'est encore mieux. "
+          bullet-points:
+            bullet-0:
+              svg: "icons/desktop"
+              title: "Quantifier la traction sur votre projet"
+              description: "Accédez au nombre de likes, de vues, montants investis dans votre projet."
+            bullet-1:
+              svg: "icons/desktop"
+              title: "Concours de pitch"
+              description: "Lors de votre demo day. Les utilisateurs de notre plateform pourront liker, commenter, contribuer et investir dans votre projet (de l'argent fictif)"
+            bullet-2:
+              svg: "icons/desktop"
+              title: "Une valorisation de votre projet"
+              description: "Notre algorithme vous permettra d'obtenir une valorisation de votre projet."
+
+      cta:
+        title: "Lancer votre startup"
+        description: "Prochaine expédition le 1er Septembre."
+        cta-primary: "S'inscrire pour l'aventure"
+
+      grid:
+        headers:
+          over-title: "Apprendre, construire, Iterer"
+          title: "Comment ça marche ?"
+          sub-title:
+        item-0:
+          svg: "icons/micro"
+          title: "Rejoignez le prochain batch"
+          description: "Postulez pour le prochain batch. Chaque Batch est composé au maximum de 8 projets. Le programme est 100% digital."
+        item-1:
+          svg: "icons/camera"
+          title: "Apprendre et construire son pitch"
+          description: "Présenter, pitcher est au coeur du programme. La première étape est de pitcher son idée/produit auprès de la core team et challenger son idée."
+        item-2:
+          svg: "icons/message"
+          title: "UX/UI Design"
+          description: "Vous pourrez vous former à l'UX et l'UI auprès d'experts pour commencer à travailler sur votre produit."
+        item-3:
+          svg: "icons/histogram"
+          title: "Maquettes et prototypes"
+          description: "Nous créerons ensemble une première maquette de votre produit pour tester votre produit auprès d'utlisateurs."
+        item-4:
+          svg: "icons/user-group"
+          title: "Landing Page"
+          description: "Nous créerons ensemble une landing page pour commencer à marketer votre business et avoir vos premiers utilisateurs"
+        item-5:
+          svg: "icons/question"
+          title: "Démo Day"
+          description: "Une fois prêt, vous serez guidé pour enregistrer une video de votre pitch et démonstration produit. Votre présentation sera publiée pendant 1 mois auprès de la communauté."
+
+      FAQ:
+        title: "Frequently asked questions"
+        items:
+          - question: "La formation est elle en live ou en video"
+            answer: "Au choix, nous effectuons un cours chaque matin à 9h sur un sujet. Mais les videos des cours sont aussi disponibles sur la plateforme"
+          - question: "Est-ce que je peux avoir une NDA (clause de confidentialité)"
+            answer: "Nous pouvons en signer une en tant que société. En revanche, votre demo day sera public."
+          - question: "Je n'y connais rien du tout"
+            answer: "Parfait! Toute l'équipe est là pour vous aider"
+          - question: "Doit on présenter notre projet même s'il n'est pas terminé ?"
+            answer: "Il sera terminé 😉"
+          - question: "J'ai déjà une société, mais je souhaiterai avoir de l'aide pour un nouveau produit, est-ce possible ?"
+            answer: "Bien entendu! Vous êtes le bienvenu"
+          - question: "Dans quel langue est le contenu des cours ? Doit t'on pitcher en anglais ?"
+            answer: "Le contenu video est en Français et Anglais. Nos équipes sont francophones et anglophones. Vous pourrez choisir votre langue de prédilection."
+          - question: "Durant le concours de pitch est-ce que c'est de l'argent réel que les contributeurs investissent?"
+            answer: "Non pas pour le moment. Chaque contributeur recoit 1M€ / batch pour investir dans leur projets favoris."
+
     choose_universe:
-      title: "Je veux être"
-      body: "Choisis le rôle que tu veux avoir sur Youpitch et découvre l’art du pitch"
-      investor-description: "En devenant Investisseur vous pourrez voir, liker, investir et donner des feedbacks aux pitchs des entrepreneurs. A la fin de chaque Batch d'entrepreneur, le meilleur investisseur gagne!"
-      entrepreneur-description: "Nous allons vous accompagner dans la jungle de l'entrepreunariat en vous préparant à pitcher votre projet. Vous pourrez publiez votre pitch et recevoir des feedbacks, des likes, des investissements."
-    contributor_tutorial:
-      welcome: "Bienvenu %{name}!"
-  slogan: "Trouvez la prochaine pépite"
+      title: "I want to be"
+      body: "Choose the role you want to have on youpitch and discover the art of pitching"
+      investor-description: "By being an investor you will be able to see, like, invest and give feedbacks to entrepreneur's pitch. At the end of every Batch, we will elected the best investor."
+      entrepreneur-description: "As an entrepreuneur, you will be able to receive help from the community, test your idea, publish your pitch."
+      continue-as: "Continue as an %{type}"
+      contributor_tutorial:
+      welcome: "Welcome %{name}!"
+  slogan: "Find the next big thing"
