@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   
   root to: "pages#home"
   get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
+  get "/landing-pitch-app",to: "pages#landing_pitch_app"
   get "/landing-contributor",to: "pages#landing_contributor"
 
   authenticated :user do 

@@ -55,77 +55,50 @@ en:
           - "logos/logo_typeform.png"
 
       features:
-        feature-0:
+        - title: "Gagnez des mois, économisez des €"
           mockup: "mockups/learn.png"
-          header:
-            title: "Don't think, act!"
-            description: "Business plans, swots, competitors analysis are useless. You want to create your company ? 1st thing to do is to pitch: for customers, employees, investors, you mum... We will show you how to. You just have to follow the steps and get ready to receive feedbacks from other entrepreneurs, potentials users, investors."
-          bullet-points:
-            bullet-0:
+          description: "Faire un business plan est inutile. Ne perdez pas pas votre temps et rester focus sur votre produit en apprenant, construisant et itérant."
+
+          bullets:
+            - title: "100% focus sur votre produit"
               svg: "icons/micro"
-              title: "Learn how to pitch"
-              description: "You will have access to a great content build by experts to learn how to pitch well."
-            bullet-1:
+              description: "A la fin des 3 semaines, vous saurez si votre produit fonctionne, aurez des metrics clairs, aurez tous les contacts nécéssaires pour la suite de votre projet."
+            - title: "Des conseils d'experts"
               svg: "icons/desktop"
-              title: "Build with support"
-              description: "We give you access to notion framework to step by step build your pitch. Our team is there all along the way to help you."
+              description: "Vous aurez accès à une communauté d'expert: developpeur web, UX/UI designer, Product Manager, Entrepreneurs, Designer..."
+            - title: "3 semaines vs 6 mois"
+              svg: "icons/desktop"
+              description: "La plupart des programme d'incubation vous font travailler 6 mois sur un business plan. On prefère passer 3 semaines sur votre produit."
 
-        feature-1:
+        - title: "Rentrer dans l'univers des startups"
           mockup: "mockups/entrepreneur_dashboard.png"
-          header:
-            title: "Save month"
-            description: "By presenting your product, idea, business or service in a very early stage. You will be able to receive crucial feedbacks. Talking to potential users is the best exercise to make sure you will solve a real pain with your solution. Thanks to our community, you will save months in reasearch, development. Thus, you will have real metrics for your idea. Number of likes, investments, comments..."
-          bullet-points:
-            bullet-0:
-              svg: "icons/globe"
-              title: "Learn how to pitch"
-              description: "You will have access to a great content build by experts to learn how to pitch well."
-            bullet-1:
-              svg: "icons/desktop"
-              title: "Build with support"
-              description: "We give you access to notion framework to step by step build your pitch. Our team is there all along the way to help you."
-            bullet-2:
-              svg: "icons/light-bulb"
-              title: "Publish"
-              description: "You will choose when you want to be published, and be able to select your audience size. Once it's done we will share it with the community and open a slack channel for you to discuss with your investors, fans, contributors..."
+          description: "Vous ne serez plus tout seul avec votre idée. Nous allons vous accompagnez dans la jungle de l'entrepreunariat et du digital."
 
-        feature-2:
+          bullets:
+            - title: "Une communauté comme vous"
+              svg: "icons/user-group"
+              description: "La communauté de youpitch est composée de la core team, d'entrepreneurs, d'experts et de passionés d'entrepreunariat."
+            - title: "Visibilité = croissance"
+              svg: "icons/light"
+              description: "En présentant votre idée à la communauté, vous pourrez trouver: un cofondateur, un CTO, un graphiste, un investisseur, des beta testeurs, vos premiers clients.."
+            - title: "La tech démystifiée"
+              svg: "icons/light"
+              description: "Lancer une boite dans la tech sans en connaitre les codes s'avère compliqué. Nous vulgarisons la tech pour en donner l'accès au plus grand nombre."
+
+        - title: "Des metrics pour votre projet"
           mockup: "mockups/youpitch_app.png"
-          header:
-            title: "Save thousands"
-            description: "Interacting with web developers and web agencies before creating a prototype can be costly. You don't even really know if your product or service will solve your customer pain. Don't waste your money, test your concept by pitching it."
-          bullet-points:
-            bullet-0:
-              svg: "icons/desktop"
-              title: "Receive metrics for your project"
-              description: "Access datas & statistics: number of likes, number of views, number of comments, money invested."
-            bullet-1:
-              svg: "icons/desktop"
-              title: "The visibility you deserve"
-              description: "It's frustrating, to see amazing projects that don't have the visibility they deserve. We changed that! Everyone has the same chance on youpitch."
-            bullet-2:
-              svg: "icons/desktop"
-              title: "Become the pitch of the month"
-              description: "The more contributors likes, comments and invest in your project, the more likely to become the pitch of the month."
 
-        feature-3:
-          mockup: "mockups/community.png"
-          header:
-            title: "A community like you"
-            description: "The community is here to help you and we all share the same passion for entrepreneurship."
-          bullet-points:
-            bullet-0:
+          description: "Avoir de l'ambition c'est génial, avoir des datas pour conforter son ambition c'est encore mieux. "
+          bullets:
+            - title: "Quantifier la traction sur votre projet"
               svg: "icons/desktop"
-              title: "Feedback and help"
-              description: "You can receive direct feedback from potential users, partners and customers. The community is helpful."
-            bullet-1:
+              description: "Accédez au nombre de likes, de vues, montants investis dans votre projet."
+            - title: "Concours de pitch"
               svg: "icons/desktop"
-              title: "A team of experts to help"
-              description: "The team consists of experts ready to help you if you need assistance or want to go further."
-            bullet-2:
+              description: "Lors de votre demo day. Les utilisateurs de notre plateform pourront liker, commenter, contribuer et investir dans votre projet (de l'argent fictif)"
+            - title: "Une valorisation de votre projet"
               svg: "icons/desktop"
-              title: "Investors & Incubators"
-              description: "You need funding ? We are partner to many VCs, private investors, incubators and funds."
+              description: "Notre algorithme vous permettra d'obtenir une valorisation de votre projet."
 
       cta:
         title: "Test your idea"
@@ -137,50 +110,50 @@ en:
           over-title: "LEARN BUILD SHARE"
           title: "What will I get ?"
           sub-title: "By the end you will have:"
-        item-0:
-          svg: "icons/micro"
-          title: "A prompter for your pitch"
-          description: "We will guide to write the perfect pitch, to be able to train yourself before recording."
-        item-1:
-          svg: "icons/camera"
-          title: "A video of your pitch"
-          description: "We will guide you step by step to create the perfect video for your pitch. You will be able to focus on the content not the design."
-        item-2:
-          svg: "icons/message"
-          title: "A slack channel"
-          description: "We will create a slack channel on our slack community, just for you. So you can discuss directly with the contributors about your project."
-        item-3:
-          svg: "icons/histogram"
-          title: "Metrics of your project"
-          description: "We will gather all the datas we have regarding your project: likes, comments, shares, views, investments... To help you decide if you should pivot or persevere."
-        item-4:
-          svg: "icons/question"
-          title: "Help & Support"
-          description: "Our team of expert is there to answer all your questions regarding the plateform or your project. We can help you for the next steps of your project: build your MVP, find a Cofounder, raise money..."
-        item-5:
-          svg: "icons/user-group"
-          title: "Exposure"
-          description: "We gather a large a community of experts and passionates. You may find VC, developpers, beta testers, future customers."
+        items:
+          - title: "Rejoignez le prochain batch"
+            svg: "icons/micro"
+            description: "Postulez pour le prochain batch. Chaque Batch est composé au maximum de 8 projets. Le programme est 100% digital."
+
+          - title: "Apprendre et construire son pitch"
+            svg: "icons/camera"
+            description: "Présenter, pitcher est au coeur du programme. La première étape est de pitcher son idée/produit auprès de la core team et challenger son idée."
+
+          - title: "UX/UI Design"
+            svg: "icons/message"
+            description: "Vous pourrez vous former à l'UX et l'UI auprès d'experts pour commencer à travailler sur votre produit."
+
+          - title: "Maquettes et prototypes"
+            svg: "icons/histogram"
+            description: "Nous créerons ensemble une première maquette de votre produit pour le tester auprès d'utlisateurs."
+
+          - title: "Landing Page"
+            svg: "icons/user-group"
+            description: "Nous créerons ensemble une landing page pour commencer à marketer votre business et avoir vos premiers utilisateurs"
+
+          - title: "Démo Day"
+            svg: "icons/question"
+            description: "Nous Enregistreront une video de votre pitch et démonstration produit. Votre présentation sera publiée sur yoopitch pendant 1 mois auprès de la communauté."
 
       FAQ:
         title: "Frequently asked questions"
         items:
           - question: "How can I make nobody steal my idea ?"
             answer: "By using our plateform, we garuanty full transparency regarding the core team youpitch. What you pitch should not be all the details of your project. Just enough to start a conversation. After that it's up to you to decide what do you want to share or not."
-          - question: "Can I sign ask for a NDA (non disclosure aggreement- )"
-            answer: "You can ask youpitch team to do so.   But you should not ask something like this to the users. If you doubt remind yourself this: THE IDEA IS POINTLESS, THE EXECUTION IS EVERYTHING."
-          - question: "What video format should I use - - ?"
-            answer: "We explain everything in our noti    on template. We validate every video before publishing to maintain a high quality standard."
-          - question: "How long my pitch should last -- -  ?"
-            answer: "Your pitch should be within 1 mi     n to maximum 2 min."
-          - question: "I already have a company and a-- -   product can I pit- ch it ?"
-            answer: "Sure, and if you want you can d      emo your product !  The only condition is that your company should have been created maximum 3 years ago. And you should not try to sell your product."
-          - question: "Shall I pitch in english or m- - y native language --  ?"
-            answer: "If your market will be national    , pitc  h it in yo  u own language. If you feel confortable with english we recommend you to do so. Subtitles are added to all our videos."
-          - question: "Is that real money people inv- est - - - ?"
-            answer: "No, for now we don't have this   feat      ure. Every contributors receive 1 M€ of fake money to spend on their favourites project."
-          - question: "How can I compete for the best pi- - - tch fo the month - ?"
-            answer: "As soon as you decide to publish yo      ur pitch, you compete. The pitch that receive the most, investments. will receive the title and the prize."
+          - question: "Can I sign ask for a NDA (non disclosure aggreement)"
+            answer: "You can ask youpitch team to do so. But you should not ask something like this to the users. If you doubt remind yourself this: THE IDEA IS POINTLESS, THE EXECUTION IS EVERYTHING."
+          - question: "What video format should I use ?"
+            answer: "We explain everything in our notion template. We validate every video before publishing to maintain a high quality standard."
+          - question: "How long my pitch should last?"
+            answer: "Your pitch should be within 1 mi n to maximum 2 min."
+          - question: "I already have a company and a product can I pitch it ?"
+            answer: "Sure, and if you want you can d emo your product ! The only condition is that your company should have been created maximum 3 years ago. And you should not try to sell your product."
+          - question: "Shall I pitch in english or my native language ?"
+            answer: "If your market will be national, pitch it in you own language. If you feel confortable with english we recommend you to do so. Subtitles are added to all our videos."
+          - question: "Is that real money people invest ?"
+            answer: "No, for now we don't have this feature. Every contributors receive 1 M€ of fake money to spend on their favourites project."
+          - question: "How can I compete for the best pitch fo the month ?"
+            answer: "As soon as you decide to publish your pitch, you compete. The pitch that receive the most, investments. will receive the title and the prize."
 
     choose_universe:
       title: "I want to be"

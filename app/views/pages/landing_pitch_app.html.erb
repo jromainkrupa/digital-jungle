@@ -83,7 +83,7 @@
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <% t(".grid.items").each_with_index do |element, index| %>
               <div class="pt-6">
-                <div class="flow-root bg-goldish-200 h-full rounded-lg px-6 pb-8">
+                <div class="flow-root <%= index == t(".grid.items").size - 1 ? "bg-clover-500" : "bg-goldish-200" %> h-full rounded-lg px-6 pb-8">
                   <div class="-mt-6">
                     <div class="">
                       <span class="inline-flex items-center justify-center p-3 bg-roman-500 text-clover-700 rounded-md shadow-lg">
@@ -91,10 +91,10 @@
                         <span class="h3 text-white"><%= index + 1 %></span>
                       </span>
                     </div>
-                    <h3 class="mt-8 text-lg font-medium text-clover-700 tracking-tight">
+                    <h3 class="mt-8 text-lg font-medium <%= index == t(".grid.items").size - 1 ? "text-white" : "text-clover-700" %> tracking-tight">
                       <%= element[:title] %>
                     </h3>
-                    <p class="mt-5 text-base text-clover-600">
+                    <p class="mt-5 text-base <%= index == t(".grid.items").size - 1 ? "text-gray-100" : "text-clover-600" %>">
                       <%= element[:description] %>
                     </p>
                   </div>

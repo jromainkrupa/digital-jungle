@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :landing_entrepreneur, :landing_contributor]
+  skip_before_action :authenticate_user!, only: [:home, :landing_entrepreneur, :landing_contributor, :landing_pitch_app]
   def choose_universe
     @tasks = ["grocery","stuff","prepare livecode", "show rails to students"]
   end
