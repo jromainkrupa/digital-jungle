@@ -1,13 +1,4 @@
 <header class="">
-  <nav class="flex flex-wrap items-center justify-between px-4 py-2 bg-goldish-300 text-sm">
-    <div class="flex items-center flex-shrink-0 mr-6">
-      <%= link_to root_path, class:"flex items-center" do %>
-      <%#= render_svg "logo", styles: "h-12 w-12" %>
-      <span class="h3 ml-4 mt-1 text-clover-700">you<span class="text-clover-700">pitch</span></span> 
-      <% end %>
-    </div>
-  </nav>
-
     <!-- hero-section  -->
   <div class="bg-goldish-300">
     <div class="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 lg:pt-16">
@@ -184,8 +175,47 @@
       </div>
     </div>
   </section>
+  
+  <section>
+    <div class="bg-white">
+      <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <div>
+          <h2 class="text-base font-semibold text-roman-500 uppercase tracking-wide">
+            <%= t(".why.over-title") %>
+          </h2>
+          <p class="mt-2 text-3xl font-extrabold text-clover-700">
+            <%= t(".why.title") %>
+          </p>
+          <p class="mt-4 text-lg text-clover-600">
+            <%= t(".why.description") %>
+          </p>
+        </div>
+        <div class="mt-12 lg:mt-0 lg:col-span-2">
+          <dl class="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
+            <% t(".why.features").each do |feature| %>
+              <div class="relative">
+                <dt>
+                  <!-- Heroicon name: outline/check -->
+                  <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-clover-700">
+                    <%= feature[:title] %>
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-clover-600">
+                  <%= feature[:description] %>
+                </dd>
+              </div>
+            <% end %>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- pricing  -->
+  <!-- 
   <section>
     <div class="bg-white">
       <div class="pt-12 sm:pt-16 lg:pt-20">
@@ -222,7 +252,7 @@
                   <ul class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
                     <li class="flex items-start lg:col-span-1">
                       <div class="flex-shrink-0">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -234,7 +264,7 @@
 
                     <li class="flex items-start lg:col-span-1">
                       <div class="flex-shrink-0">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -246,7 +276,7 @@
 
                     <li class="flex items-start lg:col-span-1">
                       <div class="flex-shrink-0">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -257,7 +287,7 @@
                     </li>
                     <li class="flex items-start lg:col-span-1">
                       <div class=" flex-shrink-0 ">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -268,7 +298,7 @@
                     </li>
                     <li class="flex items-start lg:col-span-1">
                       <div class=" flex-shrink-0 ">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -279,7 +309,7 @@
                     </li>
                     <li class="flex items-start lg:col-span-1">
                       <div class=" flex-shrink-0 ">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -290,7 +320,7 @@
                     </li>
                     <li class="flex items-start lg:col-span-1">
                       <div class=" flex-shrink-0 ">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -301,7 +331,7 @@
                     </li>
                     <li class="flex items-start lg:col-span-1">
                       <div class=" flex-shrink-0 ">
-                        <!-- Heroicon name: solid/check-circle -->
+                        
                         <svg class="h-5 w-5 text-clover-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-clover-700" aria-hidden="true">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -340,8 +370,10 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- pricing 2 -->
+
   <section>
     <div class="bg-goldish-200">
       <div class="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
@@ -391,7 +423,7 @@
                         <% t(".pricing.plans.hobby.features").each do |feature| %>
                           <li class="flex items-start">
                             <div class="flex-shrink-0">
-                              <!-- Heroicon name: outline/check -->
+                              
                               <svg class="flex-shrink-0 h-6 w-6 text-roman-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                               </svg>
@@ -446,7 +478,7 @@
                       <% t(".pricing.plans.growth.features").each do |feature| %>
                         <li class="flex items-start">
                           <div class="flex-shrink-0">
-                            <!-- Heroicon name: outline/check -->
+                            
                             <svg class="flex-shrink-0 h-6 w-6 text-roman-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
@@ -493,7 +525,7 @@
                         <% t(".pricing.plans.scale.features").each do |feature| %>
                           <li class="flex items-start">
                             <div class="flex-shrink-0">
-                              <!-- Heroicon name: outline/check -->
+                     
                               <svg class="flex-shrink-0 h-6 w-6 text-roman-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                               </svg>
@@ -518,7 +550,6 @@
         </div>
       </div>
     </div>
-
   </section>
 
   <!-- FAQ -->

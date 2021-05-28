@@ -1,21 +1,43 @@
-<% content_for :sidebar_block do %>
-  <div class="bg-gray-900 my-8 py-8 rounded max-w-2xl m-auto text-center flex flex-col items-center justify-center">
-
-    <h1 class="mb-2 text-white">Bienvenu <%= current_user.first_name %>!</h1>
-
-    <p class="mb-6 text-gray-400 leading-normal text-xl">Regarde ce tutoriel de l'espace</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/17XZGUX_9iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="mt-12">
-      <p class="mb-6 text-gray-200 leading-normal"> Que veux tu faire maintenant ?</p>
-      <div class="flex  items-center justify-center text-center">
-        <% if !current_user.watched_tutorial %>
-          <%= link_to "mark as seen", entrepreneur_tutorial_path(done: true), method: :post, class: 'btn btn-primary ml-8' %>
-        <% else %>
-          <p class="btn bg-gray-500 text-gray-900">seen</p>
-        <% end %>
-      </div>
+<div class="px-4 py-4 text-center md:text-left my-8 md:py-8 max-w-6xl mx-auto">
+  <div class="px-4 relative md:flex md:items-center md:justify-between bg-white shadow rounded-xl py-4 md:px-12">
+    <div>
+      <h1 class="text-clover-700 h2"><%= t(".hi") %> <%=  current_user.first_name %>!</p>
+      <p class="text-smoke mt-2 font-medium "><%= t(".subtitle") %></p>
+    </div>
+    <div class="mt-4 md:mt-0">
+      <%= link_to t("buttons.discover-jungle"), projects_path, class:"btn btn-primary" %>
+      <%= link_to t("buttons.see-my-profile"), edit_user_registration_path(current_user), class:"btn btn-primary outline ml-4" %>
+    </div>
+    <div class="absolute transform rotate-90 -bottom-32 right-24 md:rotate-90 md:-bottom-24 md:-right-12" style="z-index:-1;">
+      <%= render_svg "leaf_corner_right", styles:"w-full" %>
     </div>
   </div>
-  <% end %>
 
-<%= render "entrepreneur/shared/sidebar_block", nav_page: "learn" %>
+  <div class="lg:grid relative lg:grid-cols-3 lg:gap-12 mt-12 items-end">
+    <div class="bg-white px-2 rounded-xl shadow py-8 md:px-12 lg:col-span-2  ">
+      <h2 class="text-clover-700"><%= t("step", number: 1) %></h2>
+      <p class="mt-2 text-clover-600"><%= t("how-does-it-works") %>?</p>
+      <div class="-px-2 rounded-xl overflow-hidden my-8 md:my-10">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/17XZGUX_9iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="flex justify-center items-center md:justify-start text-center">
+        <% if !current_user.watched_tutorial %>
+          <%= link_to t(".mark-as-seen"), entrepreneur_tutorial_path(done: true), method: :post, class: 'btn btn-primary ' %>
+        <% else %>
+          <p class="btn bg-clover-500 text-white"><%= t("seen") %></p>
+        <% end %>
+      </div>
+      <div class="absolute hidden md:block md:transform-none md:-bottom-10 md:-left-16" style="z-index:-1;">
+        <%= render_svg "leaf_corner_left", styles:"w-full" %>
+      </div>
+    </div>
+
+    <div class="mt-4 relative md:mt-0 py-8 bg-white rounded-xl shadow py-8 px-12 lg:col-span-1">
+      <div class="absolute -top-32 right-0" style="z-index:1;">
+        <%= render_svg "parot", styles:"w-full" %>
+      </div>
+      <h3 class="text-clover-700 h4"><%= t(".help_html") %></h3>
+      <p class="text-clover-700 mt-8"><%= t(".help-explainer") %></p>
+    </div>
+  </div>
+</div>

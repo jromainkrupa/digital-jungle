@@ -33,9 +33,27 @@ en:
   investor: "investissor"
   entrepreneur: "entrepreneur"
   free: "free"
+  step: "Etape %{number}"
   sign_up: "Sign up"
   sign_in: "Sign in"
   upload: "Upload Avatar"
+  how-does-it-works: "Comment ça marche"
+  seen: "vu"
+  buttons:
+    discover-jungle: "Découvrez la jungle"
+    see-my-profile: "Voir mon profil"
+  entrepreneur:
+    pages:
+      tutorial:
+        hi: "Salut"
+        subtitle: "Prochain Elon Musk"
+        mark-as-seen: "marquer comme vue"
+        help_html: "Besoin d'un <br>coup de main"
+        help-explainer: "A tous moment dans le process vous pouvez demander de l'aide soit au peroquet \"Pitchy\" ou plus efficace connecté vous à Slack et posez votre question sur le canal help"
+
+
+
+
 
   pages:
     home:
@@ -288,6 +306,29 @@ en:
               - "UX/UI Design et prototype produit"
               - "Création Landing page & lancement"
               - "Pitch Produit"
+
+      why:
+        over-title: "Une plateforme pour tous"
+        title: "Pourquoi utiliser youpitch ?"
+        description: "Une société n'est pas créée lorsque les statuts sont déposés ou le site web est developpé. Une société existe lorsque qu'un entrepreneur pitch son idée."
+        features:
+          - title: "Améliorer son projet"
+            description: "Grâce aux feedbacks de la core team, des experts, de la communauté. Vous pourrez rendre votre projet plus aboutit."
+          - title: "Ne pas être seul"
+            description: "Entreprendre est difficile, le sentiment de solitude est l'un des plus éprouvant. Rejoignez la communauté!"
+          - title: "Valider une idée"
+            description: "Cela fait des années que vous avez une idée de boite mais ne savez si cela va fonctionner ? Tester votre idée en la pitchant."
+          - title: "Trouver des financements"
+            description: "Rassurez votre investisseurs en montrant que vous êtes dans l'action et que vous avez des retours positifs sur votre projet."
+          - title: "Trouver un/des associés"
+            description: "La communauté est large, si votre projet plait vous pourriez trouver un Cofondateur."
+          - title: "Entrer dans l'univers du digital"
+            description: "Votre projet est digital mais vous ne savez pas coder ? Notre équipe est là pour vous accompagner."
+          - title: "Lancer un nouveau produit"
+            description: "Vous êtes une société et shouaitez tester un marché nouveau ? youpitch est fait pour vous, evaluez les retours de vos utilisateurs"
+          - title: "Gagner un concours"
+            description: "Le meilleur projet devient pitch du mois et gagne un MVP gratuit "
+
       FAQ:
         title: "Frequently asked questions"
         items:

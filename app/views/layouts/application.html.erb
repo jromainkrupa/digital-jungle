@@ -18,7 +18,7 @@
 
 <body class="linear-background">
   <%= render partial: "shared/flashes" %>
-  <%= render partial: "shared/navbar" unless current_page?(choose_universe_url) || current_page?(landing_entrepreneur_url) || current_page?(landing_pitch_app_url) %>
+  <%= render partial: "shared/navbar" unless current_page?(choose_universe_url)  %>
     <%= yield %>
 
 </body>
