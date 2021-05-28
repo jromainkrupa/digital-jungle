@@ -29,7 +29,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+fr:
   investor: "investisseur"
   free: "Gratuit"
   step: "Etape %{number}"
@@ -48,8 +48,14 @@ en:
         subtitle: "Prochain Elon Musk"
         mark-as-seen: "marquer comme vue"
         help_html: "Besoin d'un <br>coup de main"
-        help-explainer: 'A tous moment dans le process vous pouvez demander de l''aide soit au peroquet "Pitchy" ou plus efficace connecté vous à Slack et posez votre question sur le canal help'
-
+        help-explainer: 'A tous moment dans le process vous pouvez demander de l''''aide soit au peroquet "Pitchy" ou plus efficace connecté vous à Slack et posez votre question sur le canal help'
+    projects:
+      new:
+        tagline: "Aibnb est la première marketplace permettant aux voyageurs de réserver une chambre auprès de locaux plutôt qu'a l'hotel."
+        subtitle: "Raconte nous ton projet"
+        step-subtitle: "C'est parti pour l'avanture!"
+        help_html: "Besoin d'un <br>coup de main"
+        help-explainer: 'A tous moment dans le process vous pouvez demander de l''''aide soit au peroquet "Pitchy" ou plus efficace connecté vous à Slack et posez votre question sur le canal help'
   pages:
     home:
     landing_entrepreneur:
