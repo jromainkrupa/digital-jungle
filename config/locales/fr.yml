@@ -33,7 +33,7 @@ fr:
   investor: "investisseur"
   free: "Gratuit"
   step: "Etape %{number}"
-  sign_up: "S'inscrire'"
+  sign_up: "S'inscrire"
   sign_in: "Se connecter"
   upload: "Upload Avatar"
   how-does-it-works: "Comment ça marche"
@@ -48,14 +48,31 @@ fr:
         subtitle: "Prochain Elon Musk"
         mark-as-seen: "marquer comme vue"
         help_html: "Besoin d'un <br>coup de main"
-        help-explainer: 'A tous moment dans le process vous pouvez demander de l''''aide soit au peroquet "Pitchy" ou plus efficace connecté vous à Slack et posez votre question sur le canal help'
+        help-explainer: "A tous moment dans le process vous pouvez demander de l'aide soit au peroquet Pitchy ou plus efficace... connecté vous à Slack et posez votre question sur le canal help"
+
+      tutorial_slack:
+        hi: "Salut"
+        step-subtitle: "Essayons d’établir un contact avec le camp"
+        question-1: "Pourquoi rejoindre Slack"
+        answer-1: "Slack est l'outil principal pour pouvoir communiquer avec la team, votre batch et lorsque votre pitch sera publié les experts et investisseurs."
+        question-2: "Comment ça fonctionne"
+        answer-2: "ton channel"
+        join-slack: "Si ce n'est pas déjà fait rejoins vite le Slack et recherche ton canal pour rejoindre la conversation on t'a laissé un petit message secret 🤫"
+        join-slack-button: "Rejoindre Slack"
+        next-step: "C'est fait!"
+        help-explainer: "A tous moment dans le process vous pouvez demander de l'aide soit au peroquet Pitchy ou plus efficace... connecté vous à Slack et posez votre question sur le canal help"
+
+      congrats:
+        title: "Bravo"
+        description: "Tu viens d’entrer dans la jungle avec succès ! Clique sur continuer pour commencer ton exploration et apprendre à pitcher"
+        cta: "Continuer l'aventure"
     projects:
       new:
         tagline: "Aibnb est la première marketplace permettant aux voyageurs de réserver une chambre auprès de locaux plutôt qu'a l'hotel."
         subtitle: "Raconte nous ton projet"
-        step-subtitle: "C'est parti pour l'avanture!"
+        step-subtitle: "C'est parti pour l'aventure!"
         help_html: "Besoin d'un <br>coup de main"
-        help-explainer: 'A tous moment dans le process vous pouvez demander de l''''aide soit au peroquet "Pitchy" ou plus efficace connecté vous à Slack et posez votre question sur le canal help'
+        help-explainer: "A tous moment dans le process vous pouvez demander de l'aide soit au peroquet Pitchy ou plus efficace connecté vous à Slack et posez votre question sur le canal help"
   pages:
     home:
     landing_entrepreneur:

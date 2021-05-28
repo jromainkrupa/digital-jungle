@@ -25,7 +25,7 @@ module Entrepreneur
       authorize [:entrepreneur, @project]
 
       if @project.save
-        redirect_to entrepreneur_project_path(@project), notice: "Project was successfully created."
+        redirect_to entrepreneur_project_tutorial_slack_path(@project), notice: "Project was successfully created."
       else
         render :new, status: :unprocessable_entity
       end

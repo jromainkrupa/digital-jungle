@@ -1,0 +1,30 @@
+<div class="px-4 py-4 text-center md:text-left my-8 md:py-8 max-w-6xl mx-auto">
+  <div class="px-4 relative md:flex md:items-center md:justify-between bg-white shadow rounded-xl py-4 md:px-12">
+    <div>
+      <h1 class="text-clover-700 h2"><%= t(".hi") %> <%=  current_user.first_name %>!</p>
+      <p class="text-smoke mt-2 font-medium "><%= @project.name %></p>
+    </div>
+    <div class="mt-4 md:mt-0">
+      <%= link_to t("buttons.discover-jungle"), projects_path, class:"btn btn-primary" %>
+      <%= link_to t("buttons.see-my-profile"), edit_user_registration_path(current_user), class:"btn btn-primary outline ml-4" %>
+    </div>
+    <div class="absolute transform rotate-90 -bottom-32 right-24 md:rotate-90 md:-bottom-24 md:-right-12" style="z-index:-1;">
+      <%= render_svg "leaf_corner_right", styles:"w-full" %>
+    </div>
+  </div>
+
+  <div class="mt-16 mx-auto max-w-xl text-center bg-white relative px-2 rounded-xl shadow py-8 md:px-12" >
+    <%= render_svg "hands_in_leaves", styles: "w-40 h-40 mx-auto" %>
+    <h2 class="text-clover-700"><%= t(".title") %>!</h2>
+    <p class="mt-2 text-clover-600"><%= t(".description") %></p>
+
+    <div class="mt-12 flex justify-center items-center text-center">
+        <%= link_to t(".cta"), entrepreneur_project_congrats_path(@project), class:"btn btn-primary" %>
+    </div>
+    <div class="absolute hidden md:block md:transform-none md:-bottom-10 md:-left-16" style="z-index:1;">
+      <%#= render_svg "leaf_corner_left", styles:"" %>
+    </div>
+
+  </div>
+
+</div>

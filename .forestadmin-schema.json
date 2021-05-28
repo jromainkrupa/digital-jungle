@@ -999,11 +999,11 @@
       }, {
         "message": null,
         "type": "is longer than",
-        "value": 50
+        "value": 30
       }, {
         "message": null,
         "type": "is shorter than",
-        "value": 150
+        "value": 200
       }]
     }, {
       "field": "created_at",

@@ -12,5 +12,13 @@ module Entrepreneur
         end
       end
     end
+
+    def tutorial_slack
+      @project = Project.find(params[:project_id])
+    end
+
+    def congrats
+      @project = Project.find(params[:project_id])
+    end
   end
 end

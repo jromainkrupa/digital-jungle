@@ -32,10 +32,11 @@ Rails.application.routes.draw do
   authenticated :user, lambda {|u| u.is_entrepreneur?} do
     namespace :entrepreneur do
       resources :projects, only: %i[index new create edit update destroy show] do
+        get "/tutorial-slack",   to: "pages#tutorial_slack"
+        get "/congrats",   to: "pages#congrats"
         resources :pitches, only: %i[index show new create edit update destroy]
       end
       get  "/tutorial",   to: "pages#tutorial"
-      post "/tutorial",   to: "pages#tutorial"
       get  "/dashboard",  to: "pages#dashboard"
       get  "/statistics", to: "pages#statistics"
     end
