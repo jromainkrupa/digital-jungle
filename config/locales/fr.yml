@@ -30,12 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  investor: "investissor"
-  entrepreneur: "entrepreneur"
-  free: "free"
+  investor: "investisseur"
+  free: "Gratuit"
   step: "Etape %{number}"
-  sign_up: "Sign up"
-  sign_in: "Sign in"
+  sign_up: "S'inscrire'"
+  sign_in: "Se connecter"
   upload: "Upload Avatar"
   how-does-it-works: "Comment ça marche"
   seen: "vu"
@@ -49,11 +48,7 @@ en:
         subtitle: "Prochain Elon Musk"
         mark-as-seen: "marquer comme vue"
         help_html: "Besoin d'un <br>coup de main"
-        help-explainer: "A tous moment dans le process vous pouvez demander de l'aide soit au peroquet \"Pitchy\" ou plus efficace connecté vous à Slack et posez votre question sur le canal help"
-
-
-
-
+        help-explainer: 'A tous moment dans le process vous pouvez demander de l''aide soit au peroquet "Pitchy" ou plus efficace connecté vous à Slack et posez votre question sur le canal help'
 
   pages:
     home:
@@ -348,11 +343,11 @@ en:
             answer: "Non pas pour le moment. Chaque contributeur recoit 1M€ / batch pour investir dans leur projets favoris."
 
     choose_universe:
-      title: "I want to be"
-      body: "Choose the role you want to have on youpitch and discover the art of pitching"
-      investor-description: "By being an investor you will be able to see, like, invest and give feedbacks to entrepreneur's pitch. At the end of every Batch, we will elected the best investor."
-      entrepreneur-description: "As an entrepreuneur, you will be able to receive help from the community, test your idea, publish your pitch."
+      title: "Je veux être"
+      body: "Choisis le rôle que tu veux avoir sur Youpitch et découvre l’art du pitch"
+      investor-description: "En étant investisseur, vous recrevrez des PitchCoins et pourrez liker, investir et donner des feedbacks aux investisseurs. A la fin de chaque Batch l'investisseur ayant misé sur le projet gagnant est déclaré vainqueur."
+      entrepreneur-description: "En tant qu'entrepreneur, vous pourrez apprendre à pitcher, tester votre idée, publier votre pitch. Le meilleur pitch est élu pitch du mois et gagne un MVP access!"
       continue-as: "Continue as an %{type}"
       contributor_tutorial:
-      welcome: "Welcome %{name}!"
+      welcome: "Bienvenu%{name}!"
   slogan: "Find the next big thing"

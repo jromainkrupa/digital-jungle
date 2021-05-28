@@ -6,7 +6,7 @@ module Entrepreneur
         current_user.watched_tutorial = true
         current_user.next_action = :create_project
         if current_user.save
-          redirect_to entrepreneur_dashboard_path, notice: "First next accomplished congratulations!" 
+          redirect_to new_entrepreneur_project_path, notice: "First step accomplished congratulations!" 
         else
           render :tutorial, status: :unprocessable_entity
         end
