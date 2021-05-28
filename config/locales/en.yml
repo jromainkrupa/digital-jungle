@@ -135,6 +135,43 @@ en:
             svg: "icons/question"
             description: "Nous Enregistreront une video de votre pitch et démonstration produit. Votre présentation sera publiée sur yoopitch pendant 1 mois auprès de la communauté."
 
+      pricing:
+        headers:
+          title: "Un pricing clair et sans surprises"
+          description: "Si vous n'êtes pas satisfait nous remboursons intégralement."
+        plans:
+          hobby:
+            title: "gratuit"
+            price: "0"
+            devise: "€"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "toto"
+              - "tata"
+
+          growth:
+            title: "growth"
+            price: "340"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "toto"
+              - "tata"
+
+          scale:
+            title: "growth"
+            price: "340"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "toto"
+              - "tata"
+
       FAQ:
         title: "Frequently asked questions"
         items:

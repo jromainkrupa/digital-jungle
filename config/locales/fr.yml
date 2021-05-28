@@ -166,35 +166,35 @@ en:
           - "logos/logo_umso.svg"
 
       features:
-        - title: "Gagnez des mois, économisez des €"
+        - title: "Donner de la visibilité à votre projet"
           mockup: "mockups/learn.png"
           description: "Faire un business plan est inutile. Ne perdez pas pas votre temps et rester focus sur votre produit en apprenant, construisant et itérant."
           bullets:
-            - title: "100% focus sur votre produit"
+            - title: "Trouvez des prospects, clients, utilisateurs"
               svg: "icons/micro"
               description: "A la fin des 3 semaines, vous saurez si votre produit fonctionne, aurez des metrics clairs, aurez tous les contacts nécéssaires pour la suite de votre projet."
-            - title: "Des conseils d'experts"
+            - title: "S'entourer d'experts, mentors."
               svg: "icons/desktop"
               description: "Vous aurez accès à une communauté d'expert: developpeur web, UX/UI designer, Product Manager, Entrepreneurs, Designer..."
-            - title: "3 semaines vs 6 mois"
+            - title: "Toucher une large communauté"
               svg: "icons/desktop"
               description: "La plupart des programme d'incubation vous font travailler 6 mois sur un business plan. On prefère passer 3 semaines sur votre produit."
 
-        - title: "Rentrer dans l'univers des startups"
+        - title: "Vous ne serez plus seul"
           mockup: "mockups/entrepreneur_dashboard.png"
           description: "Vous ne serez plus tout seul avec votre idée. Nous allons vous accompagnez dans la jungle de l'entrepreunariat et du digital."
           bullets:
-            - title: "Une communauté comme vous"
+            - title: "Une team d'experts produit et business"
               svg: "icons/user-group"
               description: "La communauté de youpitch est composée de la core team, d'entrepreneurs, d'experts et de passionés d'entrepreunariat."
-            - title: "Visibilité = croissance"
+            - title: "Trouvez un associé, Investisseur, developpeur..."
               svg: "icons/light"
               description: "En présentant votre idée à la communauté, vous pourrez trouver: un cofondateur, un CTO, un graphiste, un investisseur, des beta testeurs, vos premiers clients.."
             - title: "La tech démystifiée"
               svg: "icons/light"
               description: "Lancer une boite dans la tech sans en connaitre les codes s'avère compliqué. Nous vulgarisons la tech pour en donner l'accès au plus grand nombre."
 
-        - title: "Des metrics pour votre projet"
+        - title: "Testez votre idée"
           mockup: "mockups/youpitch_app.png"
           description: "Avoir de l'ambition c'est génial, avoir des datas pour conforter son ambition c'est encore mieux. "
           bullets:
@@ -203,8 +203,8 @@ en:
               description: "Accédez au nombre de likes, de vues, montants investis dans votre projet."
             - title: "Concours de pitch"
               svg: "icons/desktop"
-              description: "Lors de votre demo day. Les utilisateurs de notre plateform pourront liker, commenter, contribuer et investir dans votre projet (de l'argent fictif)"
-            - title: "Une valorisation de votre projet"
+              description: "Lors de votre demo day. Les utilisateurs de notre plateform pourront liker, commenter, contribuer et investir dans votre projet (des PitchCoins)"
+            - title: "Des feedbacks constructifs"
               svg: "icons/desktop"
               description: "Notre algorithme vous permettra d'obtenir une valorisation de votre projet."
 
@@ -243,6 +243,51 @@ en:
             svg: "icons/histogram"
             description: "Nous enregistreront une video de votre pitch. Votre présentation sera publiée pendant 1 mois auprès de la communauté pour qu'ils likes, donnents des feedbacks, investissent des PitchCoins"
 
+      pricing:
+        headers:
+          title: "Un pricing clair et sans surprises"
+          description: "Si vous n'êtes pas satisfait nous remboursons intégralement."
+        plans:
+          hobby:
+            title: "Pitcher"
+            price: "49"
+            devise: "€"
+            frequency: "/mois"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Accès à la plateforme"
+              - "Accès au Slack"
+              - "Statistiques du pitch"
+
+          growth:
+            title: "growth"
+            price: "340"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Offre Pitcher + "
+              - "Accès à la plateforme et Slack à vie"
+              - "Coaching de la core team"
+              - "Review des experts"
+              - "Statisiques du pitch"
+              - "Une roadmap"
+              - "Préparer ma prochaine étape"
+
+          scale:
+            title: "MVP"
+            price: "1200"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "En savoir plus"
+            features:
+              - "Offre Growth +"
+              - "UX/UI Design et prototype produit"
+              - "Création Landing page & lancement"
+              - "Pitch Produit"
       FAQ:
         title: "Frequently asked questions"
         items:

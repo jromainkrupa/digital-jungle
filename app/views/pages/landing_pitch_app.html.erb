@@ -1,5 +1,5 @@
 <header class="">
-  <nav class="flex flex-wrap items-center justify-between px-12 py-2 bg-goldish-300 text-sm">
+  <nav class="flex flex-wrap items-center justify-between px-4 py-2 bg-goldish-300 text-sm">
     <div class="flex items-center flex-shrink-0 mr-6">
       <%= link_to root_path, class:"flex items-center" do %>
       <%#= render_svg "logo", styles: "h-12 w-12" %>
@@ -339,6 +339,186 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- pricing 2 -->
+  <section>
+    <div class="bg-goldish-200">
+      <div class="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
+        <div class="text-center">
+          <h2 class="text-lg leading-6 font-semibold text-clover-600 uppercase tracking-wider">
+            Pricing
+          </h2>
+          <p class="mt-2 text-3xl font-extrabold text-clover-700 sm:text-4xl lg:text-5xl">
+            <%= t(".pricing.headers.title") %>
+          </p>
+          <p class="mt-3 max-w-4xl mx-auto text-xl text-clover-600 sm:mt-5 sm:text-2xl">
+            <%= t(".pricing.headers.description") %>
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
+        <div class="relative z-0">
+          <div class="absolute inset-0 h-5/6 bg-goldish-200 lg:h-2/3"></div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative lg:grid lg:grid-cols-7">
+              <div class="mx-auto max-w-md lg:mx-0 lg:max-w-none lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3">
+                <div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-l-lg">
+                  <div class="flex-1 flex flex-col">
+                    <div class="bg-white px-6 py-10">
+                      <div>
+                        <h3 class="text-center text-2xl font-medium text-clover-700" id="tier-hobby">
+                          <%= t(".pricing.plans.hobby.title") %>
+                        </h3>
+                        <div class="mt-4 flex items-center justify-center">
+                          <span class="px-3 flex items-start text-6xl tracking-tight text-clover-700">
+                            <span class="font-extrabold">
+                               <%= t(".pricing.plans.hobby.price") %>
+                            </span>
+                            <span class="mt-2 mr-2 text-4xl font-medium">
+                              <%= t(".pricing.plans.hobby.devise") %>
+                            </span>
+                          </span>
+                          <span class="text-xl font-medium text-clover-600">
+                            <%= t(".pricing.plans.hobby.frequency", default: "") %>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+                      <ul class="space-y-4">
+                        <% t(".pricing.plans.hobby.features").each do |feature| %>
+                          <li class="flex items-start">
+                            <div class="flex-shrink-0">
+                              <!-- Heroicon name: outline/check -->
+                              <svg class="flex-shrink-0 h-6 w-6 text-roman-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                            <p class="ml-3 text-base font-medium text-clover-600">
+                              <%= feature %>
+                            </p>
+                          </li>
+                        <% end %>
+                      </ul>
+                      <div class="mt-8">
+                        <div class="rounded-lg shadow-md">
+                          <%= link_to t(".pricing.plans.hobby.cta"), new_user_registration_path(plan: "hobby"), class: "block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-roman-500 hover:bg-gray-50" %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-10 max-w-lg mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-4">
+                <div class="relative z-10 rounded-lg shadow-xl">
+                  <div class="pointer-events-none absolute inset-0 rounded-lg border-2 border-clover-500" aria-hidden="true"></div>
+                  <div class="absolute inset-x-0 top-0 transform translate-y-px">
+                    <div class="flex justify-center transform -translate-y-1/2">
+                      <span class="inline-flex rounded-full bg-clover-500 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
+                        Most popular
+                      </span>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-t-lg px-6 pt-12 pb-10">
+                    <div>
+                      <h3 class="text-center text-3xl font-semibold text-clover-700 sm:-mx-6" id="tier-growth">
+                         <%= t(".pricing.plans.growth.title") %>
+                      </h3>
+                      <div class="mt-4 flex items-center justify-center">
+                        <span class="px-3 flex items-start text-6xl tracking-tight text-clover-700 sm:text-6xl">
+                          <span class="font-extrabold">
+                            <%= t(".pricing.plans.growth.price") %>
+                          </span>
+                          <span class="mt-2 mr-2 text-4xl font-medium">
+                            <%= t(".pricing.plans.growth.devise") %>
+                          </span>
+                        </span>
+                        <span class="text-2xl font-medium text-clover-600">
+                          <%= t(".pricing.plans.growth.frequency", default: "")%>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-t-2 border-gray-100 rounded-b-lg pt-10 pb-8 px-6 bg-gray-50 sm:px-10 sm:py-10">
+                    <ul class="space-y-4">
+                      <% t(".pricing.plans.growth.features").each do |feature| %>
+                        <li class="flex items-start">
+                          <div class="flex-shrink-0">
+                            <!-- Heroicon name: outline/check -->
+                            <svg class="flex-shrink-0 h-6 w-6 text-roman-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <p class="ml-3 text-base font-medium text-clover-600">
+                            <%= feature %>
+                          </p>
+                        </li>
+                      <% end %>
+                    </ul>
+                    <div class="mt-10">
+                      <div class="rounded-lg shadow-md">
+                        <%= link_to t(".pricing.plans.growth.cta", default: ""), new_user_registration_path(plan: "growth"), class: "block w-full text-center rounded-lg border border-transparent bg-roman-500 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-roman-700" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-10 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:row-end-3">
+                <div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-r-lg">
+                  <div class="flex-1 flex flex-col">
+                    <div class="bg-white px-6 py-10">
+                      <div>
+                        <h3 class="text-center text-2xl font-medium text-clover-700" id="tier-hobby">
+                          <%= t(".pricing.plans.scale.title") %>
+                        </h3>
+                        <div class="mt-4 flex items-center justify-center">
+                          <span class="px-3 flex items-start text-6xl tracking-tight text-clover-700">
+                            <span class="font-extrabold">
+                               <%= t(".pricing.plans.scale.price") %>
+                            </span>
+                            <span class="mt-2 mr-2 text-4xl font-medium">
+                              <%= t(".pricing.plans.scale.devise") %>
+                            </span>
+                          </span>
+                          <span class="text-xl font-medium text-clover-600">
+                            <%= t(".pricing.plans.scale.frequency", default: "") %>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+                      <ul class="space-y-4">
+                        <% t(".pricing.plans.scale.features").each do |feature| %>
+                          <li class="flex items-start">
+                            <div class="flex-shrink-0">
+                              <!-- Heroicon name: outline/check -->
+                              <svg class="flex-shrink-0 h-6 w-6 text-roman-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                            <p class="ml-3 text-base font-medium text-clover-600">
+                              <%= feature %>
+                            </p>
+                          </li>
+                        <% end %>
+                      </ul>
+                      <div class="mt-8">
+                        <div class="rounded-lg shadow-md">
+                          <%= link_to t(".pricing.plans.scale.cta"), new_user_registration_path(plan: "MVP"), class: "block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-roman-500 hover:bg-gray-50" %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- FAQ -->
