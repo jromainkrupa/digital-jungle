@@ -40,6 +40,21 @@ fr:
       updated: "Votre mot de passe a été édité avec succès, vous êtes maintenant connecté."
       updated_not_active: "Votre mot de passe a été changé avec succès."
     registrations:
+      edit:
+        are_you_sure: Etes vous sûre?
+        cancel_my_account: Supprimer mon compte
+        currently_waiting_confirmation_for_email: "En attente de confirmation pour: %{email}"
+        leave_blank_if_you_don_t_want_to_change_it: "laisser vide si vous ne souhaitez pas le changer"
+        title: Editer Profil
+        unhappy: Pas content?
+        update: Update
+        we_need_your_current_password_to_confirm_your_changes: nous avons besoin de votre mot de passe actuel pour sauvegarder vos changements
+        saving: "Sauvegarde..."
+      new:
+        sign_up: Sign up
+        login_html: "Or %{link}"
+        terms_html: "I accept the %{terms} &amp; %{privacy}"
+        submitting: "Submitting..."
       destroyed: "Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt."
       signed_up: "Bienvenue, vous êtes connecté."
       signed_up_but_inactive: "Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte n'est pas encore activé."

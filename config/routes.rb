@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
   
   root to: "pages#home"
+  resources :projects, only: [:index]
   get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
   get "/landing-pitch-app",to: "pages#landing_pitch_app"
   get "/landing-contributor",to: "pages#landing_contributor"
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
     get "/favorites", to: "users#favorites"
     get "/investor-ranking", to: "users#ranking"
     resources :investments, only: [:index]
-    resources :projects, only: [:index, :show] do
+    resources :projects, only: [:show] do
       resource :like
       resources :investments, only: [:new, :create]
     end
@@ -37,6 +38,7 @@ Rails.application.routes.draw do
         resources :pitches, only: %i[index show new create edit update destroy]
       end
       get  "/tutorial",   to: "pages#tutorial"
+      post  "/tutorial",   to: "pages#tutorial"
       get  "/dashboard",  to: "pages#dashboard"
       get  "/statistics", to: "pages#statistics"
     end
