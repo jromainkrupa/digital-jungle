@@ -1,0 +1,17 @@
+  <section class="mt-12">
+    <div class="bg-goldish-300">
+      <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <h2 class="tracking-tight ">
+          <span class="block text-3xl sm:text-4xl font-bold text-clover-700"><%= t("#{path}.cta.title") %></span>
+          <span class="block text-xl sm:text-2xl font-medium text-gray-400"><%= t("#{path}.cta.description") %></span>
+        </h2>
+        <div class="mt-8 flex justify-center">
+          <div class="inline-flex rounded-md shadow">
+            <div class="">
+              <%= link_to t("#{path}.cta.cta-primary"), new_user_registration_path, class: "btn btn-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

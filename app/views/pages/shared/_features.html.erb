@@ -1,0 +1,58 @@
+  <section>
+    <div class="relative bg-white pt-24 pb-8 overflow-hidden">
+
+      <% t("#{path}.features").each_with_index do |feature, i| %>
+        <div class="relative <%= i == 0 ? "" : "mt-24" %>">
+          <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+            <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+              <div>
+                <div class="mt-6">
+                  <h2 class="text-3xl font-extrabold tracking-tight text-clover-700">
+                    <%= feature[:title] %>
+                  </h2>
+                  <p class="mt-4 text-lg text-clover-600">
+                    <%= feature[:description] %>
+                  </p>
+                </div>
+              </div>
+                <!-- feeature's bullet-points  -->
+                <div class="mt-8 border-t border-gray-200 pt-6">
+                  <dl class="mt-8 space-y-10">
+                    <% feature[:bullets].each do |bullet| %>
+                      <div class="relative">
+                        <dt>
+                          <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-roman-500">
+                            <%= render_svg bullet[:svg], styles: "text-white" %>                  
+                          </div>
+                          <p class="ml-16 text-lg leading-6 font-medium text-clover-700">
+                            <%= bullet[:title] %>
+                          </p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-clover-600">
+                          <%= bullet[:description] %>
+                        </dd>
+                      </div>
+                    <% end %>
+                  </dl>
+                </div>
+            </div>
+
+            <!-- feature's image  -->
+            <% if i.even? %>
+            <div class="mt-12 sm:mt-16 lg:mt-0">
+              <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <%= image_tag feature[:mockup],class:"w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none", alt:"lectures in idea on rails" %>
+              </div>
+            </div>
+            <% else %>
+            <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+              <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <%= image_tag feature[:mockup],class:"w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none", alt:"todolist in idea on rails" %>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>

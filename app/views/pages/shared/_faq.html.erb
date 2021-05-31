@@ -1,0 +1,24 @@
+  <section>
+    <div class="bg-goldish-300">
+      <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-clover-700">
+          <%= t("#{path}.FAQ.title") %>
+        </h2>
+        <div class="mt-6 border-t border-clover-700 border-opacity-25 pt-10">
+          <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
+            <!-- faq question/asnwer block -->
+            <% t("#{path}.FAQ.items").each do |element| %>
+              <div>
+                <dt class="text-lg leading-6 font-medium text-clover-700">
+                  <%= element[:question] %>
+                </dt>
+                <dd class="mt-2 text-base text-clover-600">
+                  <%= element[:answer] %> 
+                </dd>
+              </div>
+            <% end %>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>

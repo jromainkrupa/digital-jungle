@@ -1,0 +1,42 @@
+  <section>
+      <!-- GRID -->
+    <div class="relative bg-white py-8 sm:py-12 lg:py-16">
+      <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+        <h2 class="text-base font-semibold tracking-wider text-roman-500 uppercase">
+          <%= t("#{path}.grid.headers.over-title") %>
+        </h2>
+        <p class="mt-2 text-3xl font-extrabold text-clover-700 tracking-tight sm:text-4xl">
+          <%= t("#{path}.grid.headers.title") %>
+        </p>
+        <p class="mt-5 max-w-prose mx-auto text-xl text-clover-600">
+          <%#= t("#{path}.grid.headers.sub-title") %>
+        </p>
+
+        <!-- grid's items -->
+        <div class="mt-12">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <% t("#{path}.grid.items").each_with_index do |element, index| %>
+              <div class="pt-6">
+                <div class="flow-root <%= index == t("#{path}.grid.items").size - 1 ? "bg-clover-500" : "bg-goldish-200" %> h-full rounded-lg px-6 pb-8">
+                  <div class="-mt-6">
+                    <div class="">
+                      <span class="inline-flex items-center justify-center p-3 bg-roman-500 text-clover-700 rounded-md shadow-lg">
+                        <%#= render_svg t("#{path}.grid.item-#{i}.svg"), styles: "text-white" %>
+                        <span class="h3 text-white"><%= index + 1 %></span>
+                      </span>
+                    </div>
+                    <h3 class="mt-8 text-lg font-medium <%= index == t("#{path}.grid.items").size - 1 ? "text-white" : "text-clover-700" %> tracking-tight">
+                      <%= element[:title] %>
+                    </h3>
+                    <p class="mt-5 text-base <%= index == t("#{path}.grid.items").size - 1 ? "text-gray-100" : "text-clover-600" %>">
+                      <%= element[:description] %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
