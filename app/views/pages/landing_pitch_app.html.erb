@@ -1,29 +1,40 @@
-<% path = "pages.landing_pitch_app" %>
+<% locales = { 
+  path: "pages.landing_pitch_app",
+  colors: {
+    primary_background: "goldish-300",
+    secondary_background: "white",
+    primary: "roman",
+    text: "clover-600",
+    title: "clover-700",
+    primary_button: "btn btn-primary",
+    hero_text: "hippie"
+  },
+  hero_right_content: "entrepreneur_video"
+} %>
 
 <header class="">
     <!-- hero-section  -->
-  <%= render "pages/shared/entrepreneur_hero_section", path: path %>
+  <%= render "pages/shared/entrepreneur_hero_section", locales: locales %>
 </header>
 
 <main>
   <!-- grid  -->
-  <%= render "pages/shared/grid", path: path %>
+  <%= render "pages/shared/grid", locales: locales %>
 
   <!-- features  -->
-  <%= render "pages/shared/features", path: path %>
-
+  <%= render "pages/shared/features", locales: locales %>
 
   <!-- CTA -->
-  <%= render "pages/shared/cta", path: path %>
+  <%= render "pages/shared/cta", locales: locales %>
   
   <!-- why -->
-  <%= render "pages/shared/features_list", path: path %>
+  <%= render "pages/shared/features_list", locales: locales %>
 
   <!-- pricing 2 -->
-  <%= render "pages/shared/pricings", path: path %>
+  <%= render "pages/shared/pricings", locales: locales %>
 
   <!-- FAQ -->
-  <%= render "pages/shared/faq", path: path %>
+  <%= render "pages/shared/faq", locales: locales %>
 
 </main>
 

@@ -1,13 +1,13 @@
   <section>
-    <div class="relative bg-white pt-24 pb-8 overflow-hidden">
+    <div class="relative bg-<%= locales[:colors][:secondary_background]%> pt-24 pb-8 overflow-hidden">
 
-      <% t("#{path}.features").each_with_index do |feature, i| %>
+      <% t("#{locales[:path]}.features").each_with_index do |feature, i| %>
         <div class="relative <%= i == 0 ? "" : "mt-24" %>">
           <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
             <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
               <div>
                 <div class="mt-6">
-                  <h2 class="text-3xl font-extrabold tracking-tight text-clover-700">
+                  <h2 class="text-3xl font-extrabold tracking-tight text-<%= locales[:colors][:text]%>">
                     <%= feature[:title] %>
                   </h2>
                   <p class="mt-4 text-lg text-clover-600">
@@ -21,10 +21,10 @@
                     <% feature[:bullets].each do |bullet| %>
                       <div class="relative">
                         <dt>
-                          <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-roman-500">
+                          <div class="absolute flex items-center justify-center h-10 w-10 rounded-full bg-<%= locales[:colors][:primary]%>-500">
                             <%= render_svg bullet[:svg], styles: "text-white" %>                  
                           </div>
-                          <p class="ml-16 text-lg leading-6 font-medium text-clover-700">
+                          <p class="ml-16 text-lg leading-6 font-medium text-<%= locales[:colors][:text]%>">
                             <%= bullet[:title] %>
                           </p>
                         </dt>
