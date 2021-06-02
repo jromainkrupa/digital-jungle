@@ -28,7 +28,7 @@
     </div>
     <div class="form-group">
       <%= f.label :language, "langage" %>
-      <%= f.select :language, User.language_list,{}, {class: "select"} %>
+      <%= f.select :language, User.language_list,{ selected: User.language_list.second}, {class: "select"} %>
     </div>
 
     <div class="form-group">

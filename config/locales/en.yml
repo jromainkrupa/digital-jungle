@@ -193,6 +193,7 @@ en:
             answer: "As soon as you decide to publish your pitch, you compete. The pitch that receive the most, investments. will receive the title and the prize."
 
     landing_pitch_app:
+    landing_contributor:
       hero-section:
         title_html: "Apprenez à <span>pitcher</span> et testez votre <span>idée</span> auprès d'utilisateurs experts."
         tagline: "Youpitch est une plateforme  qui vous permet de pitcher votre projet auprès d'une audience d'experts et recevoir des likes, feedbacks, investissements. Bref donner la visibilité que votre projet mérite."

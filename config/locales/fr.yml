@@ -39,14 +39,14 @@ fr:
   how-does-it-works: "Comment ça marche"
   seen: "vu"
   buttons:
-    discover-jungle: "Découvrez la jungle"
-    see-my-profile: "Voir mon profil"
+    discover-jungle: "Découvres la jungle"
+    see-my-profile: "Mon profil"
   entrepreneur:
     pages:
       tutorial:
         hi: "Salut"
         subtitle: "Prochain Elon Musk"
-        mark-as-seen: "marquer comme vue"
+        mark-as-seen: "marque comme vue"
         help_html: "Besoin d'un <br>coup de main"
         help-explainer: "A tous moment dans le process vous pouvez demander de l'aide soit au peroquet Pitchy ou plus efficace... connecté vous à Slack et posez votre question sur le canal help"
 
@@ -278,6 +278,170 @@ fr:
           - title: "Lancement public 🚀"
             svg: "icons/histogram"
             description: "Nous enregistreront une video de votre pitch. Votre présentation sera publiée pendant 1 mois auprès de la communauté pour qu'ils likes, donnents des feedbacks, investissent des PitchCoins"
+
+      pricing:
+        headers:
+          title: "Un pricing clair et sans surprises"
+          description: "Si vous n'êtes pas satisfait nous remboursons intégralement."
+        plans:
+          hobby:
+            title: "Pitcher"
+            price: "49"
+            devise: "€"
+            frequency: "/mois"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Accès à la plateforme"
+              - "Accès au Slack"
+              - "Statistiques du pitch"
+
+          growth:
+            title: "growth"
+            price: "340"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Offre Pitcher + "
+              - "Accès à la plateforme et Slack à vie"
+              - "Coaching de la core team"
+              - "Review des experts"
+              - "Statisiques du pitch"
+              - "Une roadmap"
+              - "Préparer ma prochaine étape"
+
+          scale:
+            title: "MVP"
+            price: "1200"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "En savoir plus"
+            features:
+              - "Offre Growth +"
+              - "UX/UI Design et prototype produit"
+              - "Création Landing page & lancement"
+              - "Pitch Produit"
+
+      why:
+        over-title: "Une plateforme pour tous"
+        title: "Pourquoi utiliser youpitch ?"
+        description: "Une société n'est pas créée lorsque les statuts sont déposés ou le site web est developpé. Une société existe lorsque qu'un entrepreneur pitch son idée."
+        features:
+          - title: "Améliorer son projet"
+            description: "Grâce aux feedbacks de la core team, des experts, de la communauté. Vous pourrez rendre votre projet plus aboutit."
+          - title: "Ne pas être seul"
+            description: "Entreprendre est difficile, le sentiment de solitude est l'un des plus éprouvant. Rejoignez la communauté!"
+          - title: "Valider une idée"
+            description: "Cela fait des années que vous avez une idée de boite mais ne savez si cela va fonctionner ? Tester votre idée en la pitchant."
+          - title: "Trouver des financements"
+            description: "Rassurez votre investisseurs en montrant que vous êtes dans l'action et que vous avez des retours positifs sur votre projet."
+          - title: "Trouver un/des associés"
+            description: "La communauté est large, si votre projet plait vous pourriez trouver un Cofondateur."
+          - title: "Entrer dans l'univers du digital"
+            description: "Votre projet est digital mais vous ne savez pas coder ? Notre équipe est là pour vous accompagner."
+          - title: "Lancer un nouveau produit"
+            description: "Vous êtes une société et shouaitez tester un marché nouveau ? youpitch est fait pour vous, evaluez les retours de vos utilisateurs"
+          - title: "Gagner un concours"
+            description: "Le meilleur projet devient pitch du mois et gagne un MVP gratuit "
+
+      FAQ:
+        title: "Frequently asked questions"
+        items:
+          - question: "La formation est elle en live ou en video"
+            answer: "Au choix, nous effectuons un cours chaque matin à 9h sur un sujet. Mais les videos des cours sont aussi disponibles sur la plateforme"
+          - question: "Est-ce que je peux avoir une NDA (clause de confidentialité)"
+            answer: "Nous pouvons en signer une en tant que société. En revanche, votre demo day sera public."
+          - question: "Je n'y connais rien du tout"
+            answer: "Parfait! Toute l'équipe est là pour vous aider"
+          - question: "Doit on présenter notre projet même s'il n'est pas terminé ?"
+            answer: "Il sera terminé 😉"
+          - question: "J'ai déjà une société, mais je souhaiterai avoir de l'aide pour un nouveau produit, est-ce possible ?"
+            answer: "Bien entendu! Vous êtes le bienvenu"
+          - question: "Dans quel langue est le contenu des cours ? Doit t'on pitcher en anglais ?"
+            answer: "Le contenu video est en Français et Anglais. Nos équipes sont francophones et anglophones. Vous pourrez choisir votre langue de prédilection."
+          - question: "Durant le concours de pitch est-ce que c'est de l'argent réel que les contributeurs investissent?"
+            answer: "Non pas pour le moment. Chaque contributeur recoit 1M€ / batch pour investir dans leur projets favoris."
+    landing_contributor:
+      hero-section:
+        title_html: "Vous avez toujours rêvé d'être <span>investisseur</span> dans des <span>startups ?</span>"
+        tagline: "Youpitch est une plateforme qui vous permet de contribuer aux idées d'entrepreneurs. Les entrepreneurs vous pitch leur idée et vous donnez des likes, des feedbacks, et en investissez vos PitchCoins dans leur projets."
+        cta-primary: "Regarder les pitchs"
+        cta-secondary:
+
+      press-logos:
+        title: "Prochaine expédition le 1er Septembre."
+        logos-images:
+          - "logos/logo_figma.png"
+          - "logos/logo_slack.png"
+          - "logos/logo_notion.png"
+          - "logos/logo_umso.svg"
+
+      features:
+        - title: "Votre expertise valorisé"
+          mockup: "mockups/learn.png"
+          description: "En aidant et contribuant aux projets des entrepreneurs. Vous mettez en valeur votre propre expertise"
+          bullets:
+            - title: "Votre profile visible par tous"
+              svg: "icons/micro"
+              description: "Indiquez quels sont vos expertises et les autres utilisateurs de la plateforme pourront vous contacter."
+            - title: "Aider c'est cool."
+              svg: "icons/desktop"
+              description: "Partager son expérience est très enrichissant."
+            - title: "Rejoindre un projet"
+              svg: "icons/desktop"
+              description: "Vous aimeriez devenir cofondateur, CTO ou juste apporter votre aide dans votre projet préféré, c'est possible."
+
+        - title: "Plus qu'un jeu, une communauté"
+          mockup: "mockups/entrepreneur_dashboard.png"
+          description: "Devenir le meilleur investisseur de la jungle n'est pas le seul but de Youpitch. L'objectif est de réunir sous la forme d'un jeu une communauté de passioné d'entrepreunariat"
+          bullets:
+            - title: "Une team d'experts produit et business"
+              svg: "icons/user-group"
+              description: "La communauté de youpitch est composée de la core team, d'entrepreneurs, d'experts et de passionés d'entrepreunariat."
+            - title: "Trouvez un associé, Investisseur, developpeur..."
+              svg: "icons/light"
+              description: "En présentant votre idée à la communauté, vous pourrez trouver: un cofondateur, un CTO, un graphiste, un investisseur, des beta testeurs, vos premiers clients.."
+            - title: "La tech démystifiée"
+              svg: "icons/light"
+              description: "Lancer une boite dans la tech sans en connaitre les codes s'avère compliqué. Nous vulgarisons la tech pour en donner l'accès au plus grand nombre."
+
+      cta:
+        title: "Lancer votre startup"
+        description: "Prochaine expédition le 1er Septembre."
+        cta-primary: "S'inscrire pour l'aventure"
+
+      grid:
+        headers:
+          over-title: "Contribuer, liker, investir"
+          title: "Comment ça marche ?"
+          sub-title:
+        items:
+          - title: "Recevez 1 millions de PitchCoins"
+            svg: "icons/micro"
+            description: "Inscrivez-vous comme investisseur et voilà vous êtes riche d'1 millions de PitchCoins!"
+
+          - title: "Regardez les Pitchs d'entrepreneurs"
+            svg: "icons/camera"
+            description: "Mieux que la télé, regardez les entrepeuneurs vous pitcher leur idée cool non ?"
+
+          - title: "Likez votre projet préféré"
+            svg: "icons/camera"
+            description: "Chaque batch est composé de de 5 à 10 projets. Vous avez seulement 1 super like donc choisisser votre préféré."
+
+          - title: "Prolonger l'expérience avec Slack"
+            svg: "icons/camera"
+            description: "Rejoignez la communauté, posez vos questions, donnez votre avis, aidez les entrepreneurs."
+
+          - title: "Investissez vos PitchCoins"
+            svg: "icons/message"
+            description: "Investissez vos PitchCoins dans vos projets préférés. Si vous misez bien vous purriez décuplez votre mise et devenir le meilleur investisseur."
+
+          - title: "Meilleur Investisseur 🚀"
+            svg: "icons/histogram"
+            description: "A la fin de chaque Batch nous révélerons le classement des Pitchs. Vous avez eu du flair, votre projet préféré est le premier ? Bravo nous triplons vos PitchCoins et vous faisons monter dans le classement."
 
       pricing:
         headers:
