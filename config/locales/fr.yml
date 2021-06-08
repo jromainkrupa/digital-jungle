@@ -75,6 +75,51 @@ fr:
         help-explainer: "A tous moment dans le process vous pouvez demander de l'aide soit au peroquet Pitchy ou plus efficace connecté vous à Slack et posez votre question sur le canal help"
   pages:
     home:
+    pricing:
+      headers:
+        title: "Un pricing adapté à votre projet"
+        description: "Vous pouvez apprendre à être explorateur de A à Z ou choisir quelques notions d'exploration à la carte."
+      plans:
+        hobby:
+          title: "À partir de"
+          price: "175"
+          devise: "€"
+          frequency: "à partir"
+          description: ""
+          cta: "Choisir mon atelier"
+          features:
+            - "Accès à la plateforme"
+            - "Accès au Slack"
+            - "Des cours et workshop produit"
+            - "Petit groupe < 8 personnes"
+
+        growth:
+          title: "Marco Polo"
+          price: "1200"
+          devise: "€"
+          frequency: "once"
+          description: ""
+          cta: "Démarrer l'aventure"
+          features:
+            - "Accès à la plateforme et Slack à vie"
+            - "Accès aux 20 cours et 64 ateliers"
+            - "Une roadmap"
+            - "Préparer son MVP"
+            - "Démo filmée"
+
+        scale:
+          title: "Indiana Jones"
+          price: "5900"
+          devise: "€"
+          frequency: "once"
+          description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+          cta: "En savoir plus"
+          features:
+            - "Offre Marco Polo +"
+            - "Trouvez un CTO"
+            - "Trouvez des financements"
+            - "Coder son MVP"
+
     landing_entrepreneur:
       hero-section:
         title_html: "Apprenez à créer un <span>produit digital</span> et lancer votre <span>startup</span> en 1 mois."
