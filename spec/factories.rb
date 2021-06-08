@@ -1,4 +1,11 @@
 FactoryBot.define do
+  factory :workshop do
+    name { "MyString" }
+    duration { 1 }
+    content { "MyText" }
+    price { 1 }
+  end
+
   factory :like do
     user { nil }
     project { nil }
