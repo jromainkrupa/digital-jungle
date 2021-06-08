@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
   get "/landing-pitch-app",to: "pages#landing_pitch_app"
   get "/pricing",to: "pages#pricing"
+  get "/workshops",to: "pages#workshops"
   get "/landing-contributor",to: "pages#landing_contributor"
 
   authenticated :user do 
