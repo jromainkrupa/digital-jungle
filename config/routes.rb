@@ -10,11 +10,12 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
   
-  root to: "pages#landing_entrepreneur"
+  root to: "pages#landing_workshops"
   resources :projects, only: [:index]
-  #get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
+  get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
   get "/landing-pitch-app",to: "pages#landing_pitch_app"
   get "/pricing",to: "pages#pricing"
+  # get "/landing-workshops",to: "pages#landing_workshops"
   get "/landing-contributor",to: "pages#landing_contributor"
 
   authenticated :user do 
@@ -28,7 +29,6 @@ Rails.application.routes.draw do
       resource :like
       resources :investments, only: [:new, :create]
     end
-
   end
 
   authenticated :user, lambda {|u| u.is_entrepreneur?} do
