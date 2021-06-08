@@ -10,10 +10,11 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
   
-  root to: "pages#home"
+  root to: "pages#landing_entrepreneur"
   resources :projects, only: [:index]
-  get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
+  #get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
   get "/landing-pitch-app",to: "pages#landing_pitch_app"
+  get "/pricing",to: "pages#pricing"
   get "/landing-contributor",to: "pages#landing_contributor"
 
   authenticated :user do 

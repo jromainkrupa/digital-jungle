@@ -77,10 +77,19 @@ fr:
     home:
     landing_entrepreneur:
       hero-section:
-        title_html: "Devenez <span>entrepreneur</span>, et lancer votre startup en <span>3 semaines</span> "
-        tagline: "Youpitch est un programme de intensif pour aider les entrepreneurs non développeurs à créer un produit et lancer leurs startup."
+        title_html: "Apprenez à créer un <span>produit digital</span> et lancer votre <span>startup</span> en 1 mois."
+        tagline: "Devenez explorateur et frayez vous un chemin dans la jungle du digital. Entouré de vos compagnons d'expédition et vos formateurs, apprenez à créer un produit tech pas à pas."
         cta-primary: "Commencer l'aventure"
         cta-secondary:
+        features:
+          - title: "Des cours & ateliers"
+            description: "avec un peu de théorie et beaucoup de pratique."
+          - title: "Des profs & intervenants"
+            description: "aux petits oignons pour vous 7j/24h (ou presque)."
+          - title: "Une communauté"
+            description: "d'étudiants et passionnés."
+          - title: "Coaching actif"
+            description: "dédiés à VOTRE projet."
 
       press-logos:
         title: "Prochaine expédition le 1er Septembre."
@@ -140,34 +149,100 @@ fr:
 
       grid:
         headers:
-          over-title: "Apprendre, construire, Pitcher"
+          over-title: "Apprendre, construire, Itérer"
           title: "Comment ça marche ?"
-          sub-title:
+          sub-title: "Se lancer dans la tech c'est comme partir à l'aventure dans la jungle. Pour réussir cela demande de la préparation, on vous accompagne en 6 étapes."
         items:
-          - title: "Rejoignez le prochain batch"
+          - title: "Rejoindre la prochaine expédition"
             svg: "icons/micro"
-            description: "Postulez pour le prochain batch. Chaque Batch est composé au maximum de 8 projets. Le programme est 100% digital."
+            description: "S'inscrire pour le prochain batch, ça parait évident mais il ne faut pas oublier."
 
-          - title: "Apprendre et construire son pitch"
+          - title: "Apprendre à pitcher"
             svg: "icons/camera"
-            description: "Présenter, pitcher est au coeur du programme. La première étape est de pitcher son idée/produit auprès de la core team et challenger son idée."
+            description: "Parler de son projet fait parti du béaba de l'explorateur on vous apprends comment faire."
 
-          - title: "UX/UI Design"
+          - title: "UX Design"
             svg: "icons/message"
-            description: "Vous pourrez vous former à l'UX et l'UI auprès d'experts pour commencer à travailler sur votre produit."
+            description: "On défriche, on questionne l'utilisateur, on fait évoluer votre idée... bref on pose les bases de votre produit."
 
           - title: "Maquettes et prototypes"
             svg: "icons/histogram"
-            description: "Nous créerons ensemble une première maquette de votre produit pour le tester auprès d'utlisateurs."
+            description: "On réfléchit, on pense, on design votre interface produit."
 
           - title: "Landing Page"
             svg: "icons/user-group"
-            description: "Nous créerons ensemble une landing page pour commencer à marketer votre business et avoir vos premiers utilisateurs"
+            description: "Votre produit est prêt à être présenté à vos utilisateurs. Pourquoi pas faire un petit site web ?"
 
           - title: "Démo Day"
             svg: "icons/question"
-            description: "Nous Enregistreront une video de votre pitch et démonstration produit. Votre présentation sera publiée sur yoopitch pendant 1 mois auprès de la communauté."
+            description: "Ça y est vous êtes désormais Indiana Jones, on enregistre une video de votre pitch et démonstration produit."
+      why:
+        over-title: "Une formation pour tous"
+        title: "Et à la fin vous aurez:"
+        description: ""
+        features:
+          - title: "Un pitch de fou"
+            description: "Vous saurez parlez de votre idée en long en large et en travers comme Bernard (il parle vraiment très bien)."
+          - title: "Des retours utilisateurs"
+            description: "Vous saurez ce que veulent vraiment vos utilisateurs et plus encore."
+          - title: "Une maquette produit"
+            description: "."
+          - title: "Une landing page (stylé)"
+            description: "Rassurez votre investisseurs en montrant que vous êtes dans l'action et que vous avez des retours positifs sur votre projet."
+          - title: "Une vidéo démo (hyper quali)"
+            description: "La communauté est large, si votre projet plait vous pourriez trouver un Cofondateur."
+          - title: "Une meilleure compréhension du monde de la tech"
+            description: "Votre projet est digital mais vous ne savez pas coder ? Notre équipe est là pour vous accompagner."
+          - title: "Un réseau pro mais sympa"
+            description: "Vous êtes une société et shouaitez tester un marché nouveau ? youpitch est fait pour vous, evaluez les retours de vos utilisateurs"
+          - title: "Un sticker"
+            description: "Pour coller derrière ton PC et devenir supra cool."
 
+      pricing:
+        headers:
+          title: "Un pricing clair et sans surprises"
+          description: "Si vous n'êtes pas satisfait nous remboursons intégralement."
+        plans:
+          hobby:
+            title: "Pitcher"
+            price: "1200"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Accès à la plateforme"
+              - "Accès au Slack"
+              - "Statistiques du pitch"
+
+          growth:
+            title: "growth"
+            price: "250"
+            devise: "€"
+            frequency: "/session"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Offre Pitcher + "
+              - "Accès à la plateforme et Slack à vie"
+              - "Coaching de la core team"
+              - "Review des experts"
+              - "Statisiques du pitch"
+              - "Une roadmap"
+              - "Préparer ma prochaine étape"
+
+          scale:
+            title: "MVP"
+            price: "Sur devis"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "En savoir plus"
+            features:
+              - "Offre Growth +"
+              - "UX/UI Design et prototype produit"
+              - "Création Landing page & lancement"
+              - "Pitch Produit"
       FAQ:
         title: "Frequently asked questions"
         items:
