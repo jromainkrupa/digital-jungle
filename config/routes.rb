@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'workshops/new'
+  get 'workshops/index'
+  get 'workshops/edit'
   mount ForestLiana::Engine => '/forest'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
@@ -11,13 +14,11 @@ Rails.application.routes.draw do
   end
   
   root to: "pages#landing_workshops"
-  resources :projects, only: [:index]
-  get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
-  get "/landing-pitch-app",to: "pages#landing_pitch_app"
-  get "/pricing",to: "pages#pricing"
-  # get "/landing-workshops",to: "pages#landing_workshops"
-  get "/landing-contributor",to: "pages#landing_contributor"
 
+  resources :projects, only: [:index]
+  resources :workshops, only: [:show]
+
+  
   authenticated :user do 
     get "/choose-universe",to: "pages#choose_universe"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
@@ -30,7 +31,7 @@ Rails.application.routes.draw do
       resources :investments, only: [:new, :create]
     end
   end
-
+  
   authenticated :user, lambda {|u| u.is_entrepreneur?} do
     namespace :entrepreneur do
       resources :projects, only: %i[index new create edit update destroy show] do
@@ -44,4 +45,15 @@ Rails.application.routes.draw do
       get  "/statistics", to: "pages#statistics"
     end
   end
+  
+  authenticated :user, lambda {|u| u.admin?} do
+    resources :workshops, only: %i[new create edit update destroy]
+  end
+
+  # Static pages
+  get "/landing-entrepreneur",to: "pages#landing_entrepreneur"
+  get "/landing-pitch-app",to: "pages#landing_pitch_app"
+  get "/pricing",to: "pages#pricing"
+  # get "/landing-workshops",to: "pages#landing_workshops"
+  get "/landing-contributor",to: "pages#landing_contributor"
 end

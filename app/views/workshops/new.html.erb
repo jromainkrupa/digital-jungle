@@ -1,0 +1,52 @@
+<div class="container mx-auto my-8 px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="h3 text-bg-800">Créer un workshop</h1>
+    </div>
+
+    <div class="bg-white rounded shadow p-8">
+      <%= form_with(model: @workshop) do |form| %>
+        <%= render "shared/error_messages", resource: form.object %>
+        
+        <div class="form-group ">
+          <%= form.label "nom de votre projet" %>
+          <%= form.text_field :name, autofocus: true, placeholder: "Pied Piper", class: "form-control border border-gray-400" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :body, "Content of the workshop" %>
+          <%= form.rich_text_area :body, placeholder: "Some cool stuff", class: "form-control border border-gray-400" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :start_date %>
+          <%= form.datetime_select :start_date, {ampm: true, default: Time.zone.now, order: [:day, :month, :year] }, { class:"form-control border border-gray-400"} %>
+        </div>
+        
+        <div class="form-group">
+          <%= form.label :duration, "Duration in hours" %>
+          <%= form.number_field :duration, class: "form-control border border-gray-400" %>
+        </div>
+
+        <div class="form-group ">
+          <%= form.label "image du workshop" %>
+          <%= form.text_field :image_url, placeholder: "unsplahs...", class: "form-control border border-gray-400" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :capacity, "capacity" %>
+          <%= form.number_field :capacity, class: "form-control border border-gray-400" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :user, "teacher" %>
+          <%= form.collection_select :user_id, User.teachers(&:first_name),:id, :first_name %>
+        </div>
+
+        <div class="form-group flex mt-12 justify-center">
+          <%= form.button class: "btn btn-primary btn-expanded" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

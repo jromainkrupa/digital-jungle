@@ -32,6 +32,10 @@ class User < ApplicationRecord
     "#{first_name.capitalize} #{last_name.upcase}"
   end
 
+  def self.teachers
+    self.where(is_teacher: true)
+  end
+
   def self.language_list
     [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
   end

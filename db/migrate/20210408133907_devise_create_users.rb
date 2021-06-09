@@ -36,6 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :last_name
       t.string :phone_number
       t.boolean :is_entrepreneur, default: false
+      t.boolean :is_teacher, default: false
 
       t.timestamps null: false
     end

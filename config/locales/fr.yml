@@ -306,6 +306,138 @@ fr:
           - question: "Durant le concours de pitch est-ce que c'est de l'argent réel que les contributeurs investissent?"
             answer: "Non pas pour le moment. Chaque contributeur recoit 1M€ / batch pour investir dans leur projets favoris."
 
+    landing_workshops:
+      hero-section:
+        title_html: "Apprenez à <span>créer un produit digital</span> et lancer votre startup."
+        tagline: "Rejoignez nos ateliers, devenez explorateur et frayez vous un chemin dans la jungle du digital. Entouré de vos compagnons d'expédition et de vos formateurs, apprenez à créer un produit tech pas à pas."
+        cta-primary: "Commencer l'aventure"
+        cta-secondary:
+        features:
+          - title: "Des ateliers concrets"
+            description: "avec un peu de théorie et beaucoup de pratique."
+          - title: "Des profs & intervenants"
+            description: "aux petits oignons pour vous 7j/24h (ou presque)."
+          - title: "Une communauté"
+            description: "d'étudiants et passionnés."
+          - title: "Coaching actif"
+            description: "dédiés à VOTRE projet."
+      how:
+        overtitle: "Apprendre, construire, itérer"
+        title: "Nos Workshops"
+        description: "Se lancer dans la tech c'est comme partir à l'aventure dans la jungle. On y vas pas sans se preparer un peu, et c'est pour ça qu'on est là ! On vous accompagne pas à pas avec divers ateliers pour devenir un aventurier confirmé du digital."
+        cards:
+          - title: "Comment créer un produit web"
+            duration: "1 journée"
+            img_path: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            items:
+              - title: "UX Research & UX Design"
+                description: "On vous apprends à défricher, questionner l'utilisateur et faire évoluer votre idée pour construire votre produit sur de bonnes bases."
+              - title: "Maquettes et prototypes"
+                description: "On vous aide à réfléchir, penser et designer votre interface produit."
+
+          - title: "Comment présenter un son produit web"
+            duration: "1 journée"
+            img_path: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1490&q=80"
+            items:
+              - title: "Apprendre à pitcher"
+                description: "Parler de son projet fait parti du béaba de l'explorateur de la tech alors on vous apprends comment faire."
+              - title: "Landing Page"
+                description: "Ça y est ? Votre produit est prêt à être présenté à vos utilisateurs ? Pourquoi pas faire un petit site web ?"
+
+          - title: "Comment préparer un MVP"
+            duration: "1/2 journée"
+            img_path: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80"
+            items:
+              - title: "Code, low-code ou no-code"
+                description: "Connaitre et comprendre les differentes possibilitées sur le marché pour créer la première version de son produit (minimum viable product)."
+              - title: "Prioriser ses fonctionnalitées"
+                description: "Comment séléctionner les fonctionnalités essentielles à son produit."
+              - title: "Comment bien s'entourer"
+                description: "Freelance, agence, CTO, Designer, junior, senior... à qui s'adresser pour développer son projet."
+      why:
+        overtitle: "Ne pas partir les mains vides"
+        title: "Notre valeur ajoutée "
+        description: "Apprendre les principes fondamentaux de l'entreprenariat digital et repartir à la fin de chacuns de nos ateliers avec quelque chose de concret ! "
+        cards:
+          - title: "Comment créer un produit web"
+            duration: "1 journée"
+            img_path: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            teacher: "Samuel Boulery"
+            teacher_picture: "https://media-exp3.licdn.com/dms/image/C4D03AQExJV9_uC9bbQ/profile-displayphoto-shrink_200_200/0/1586883613348?e=1628726400&v=beta&t=WtoM6yDB_ONAsuBA5MfhShG-qFWYMNqgbsrbp3mFeis"
+            items:
+              - "Des techniques pour questionner et echanger avec ses utilisateurs"
+              - "Des notions sur l'élaboration d'un user flow"
+              - "Une maquette produit (avec Figma)"
+          - title: "Comment présenter un son produit web"
+            duration: "1 journée"
+            img_path: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1490&q=80"
+            teacher: "Jean-Romain Krupa"
+            teacher_picture: "https://media-exp3.licdn.com/dms/image/C4D03AQHoAxR_wO3ZPQ/profile-displayphoto-shrink_200_200/0/1614202532541?e=1628726400&v=beta&t=XZFXHTNTpKZATzopelTvLz7SY1HJXwYiYhgSZ9CXa7E"
+            items:
+              - "Des techniques pour présenter son projet avec clarté"
+              - "Des notions sur le wording & le copywriting"
+              - "Une landing page (avec Umso)"
+          - title: "Comment préparer un MVP"
+            duration: "1/2 journée"
+            img_path: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80"
+            teacher: "Samuel & Jeanro"
+            teacher_picture: "https://media-exp3.licdn.com/dms/image/C4D03AQExJV9_uC9bbQ/profile-displayphoto-shrink_200_200/0/1586883613348?e=1628726400&v=beta&t=WtoM6yDB_ONAsuBA5MfhShG-qFWYMNqgbsrbp3mFeis"
+            items:
+              - "Une idée des choix techniques possible en fonction d'un projet"
+              - "Comment éviter les pièges"
+              - "Une roadmap"
+
+      cta:
+        title: "Lancer votre startup"
+        description: "Prochaine expédition le 1er Septembre."
+        cta-primary: "S'inscrire pour l'aventure"
+
+      pricing:
+        headers:
+          title: "Un pricing clair et sans surprises"
+          description: "Si vous n'êtes pas satisfait nous remboursons intégralement."
+        plans:
+          hobby:
+            title: "Pitcher"
+            price: "1200"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Accès à la plateforme"
+              - "Accès au Slack"
+              - "Statistiques du pitch"
+
+          growth:
+            title: "growth"
+            price: "250"
+            devise: "€"
+            frequency: "/session"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "Démarrer l'aventure"
+            features:
+              - "Offre Pitcher + "
+              - "Accès à la plateforme et Slack à vie"
+              - "Coaching de la core team"
+              - "Review des experts"
+              - "Statisiques du pitch"
+              - "Une roadmap"
+              - "Préparer ma prochaine étape"
+
+          scale:
+            title: "MVP"
+            price: "Sur devis"
+            devise: "€"
+            frequency: "once"
+            description: "Vous n'avez besoin d'aucun conseils et souhaitez juste publier votre pitch sur notre plateform."
+            cta: "En savoir plus"
+            features:
+              - "Offre Growth +"
+              - "UX/UI Design et prototype produit"
+              - "Création Landing page & lancement"
+              - "Pitch Produit"
+
     landing_pitch_app:
       hero-section:
         title_html: "Apprenez à <span>pitcher</span> et testez votre <span>idée</span> auprès d'utilisateurs experts."

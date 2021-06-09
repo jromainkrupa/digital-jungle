@@ -4,4 +4,8 @@ class PagesController < ApplicationController
     @tasks = ["grocery","stuff","prepare livecode", "show rails to students"]
   end
 
+  def landing_workshops
+    @workshops = Workshop.all
+  end
+
 end

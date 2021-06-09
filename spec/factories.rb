@@ -1,4 +1,10 @@
 FactoryBot.define do
+  factory :workshop do
+    name { "MyString" }
+    start_date { "2021-06-08 17:23:05" }
+    duration { 1 }
+  end
+
   factory :like do
     user { nil }
     project { nil }
