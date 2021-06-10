@@ -20,15 +20,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  def update
-    if params[:choice]
-    resource.update(is_entrepreneur: is_entrepreneur_choice)
-    redirect_to_good_tutorial(resource)
-    else
-      super
-    end
+  # def update
+  #   if params[:choice]
+  #   resource.update(is_entrepreneur: is_entrepreneur_choice)
+  #   redirect_to_good_tutorial(resource)
+  #   else
+  #     super
+  #   end
 
-  end
+  # end
 
   # DELETE /resource
   # def destroy
@@ -44,21 +44,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
   private
-  def redirect_to_good_tutorial(resource)
-    if resource.is_entrepreneur
-      redirect_to entrepreneur_tutorial_path
-    else
-      redirect_to contributor_tutorial_path
-    end
-  end
+  # def redirect_to_good_tutorial(resource)
+  #   if resource.is_entrepreneur
+  #     redirect_to entrepreneur_tutorial_path
+  #   else
+  #     redirect_to contributor_tutorial_path
+  #   end
+  # end
 
-  def is_entrepreneur_choice
-    if params[:choice] == 'contributeur'
-      false
-    elsif params[:choice] == 'entrepreneur'
-      true
-    end
-  end
+  # def is_entrepreneur_choice
+  #   if params[:choice] == 'contributeur'
+  #     false
+  #   elsif params[:choice] == 'entrepreneur'
+  #     true
+  #   end
+  # end
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
