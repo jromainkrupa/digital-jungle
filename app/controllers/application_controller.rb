@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  http_basic_authenticate_with name: ENV["STAGING_LOGIN"], password: ENV["STAGING_PASSWORD"] if Rails.env.staging?
   before_action :set_locale
   before_action :store_user_location!, if: :storable_location?
   # The callback which stores the current location must be added before you authenticate the user 

@@ -1,3 +1,5 @@
+return if Rails.env.production?
+
 p "model destruction..."
 Workshop.destroy_all
 User.destroy_all
