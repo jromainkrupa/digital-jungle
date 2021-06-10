@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :balance, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
 
   enum next_action: {
     tutorial: 0,
