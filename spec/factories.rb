@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :workshop_booking do
+    user { nil }
+    workshop { nil }
+  end
+
   factory :workshop do
     name { "MyString" }
     start_date { "2021-06-08 17:23:05" }

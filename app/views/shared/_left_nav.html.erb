@@ -3,10 +3,10 @@
 <%#= nav_link_to "Investments", project_investments_path(@project), class: 'nav-link' %>
 <% if user_signed_in? && pages_without_navbar %>
 
-  <%= link_to "All projects", projects_path, class: 'nav-link' %>
-  <%= link_to "My investments", investments_path, class: 'nav-link' %>
-  <%= link_to "My favorites", favorites_path, class: 'nav-link' %>
-  <%= link_to "Investor ranking", investor_ranking_path, class: 'nav-link' %>
+  <%#= link_to "All projects", projects_path, class: 'nav-link' %>
+  <%#= link_to "My investments", investments_path, class: 'nav-link' %>
+  <%#= link_to "My favorites", favorites_path, class: 'nav-link' %>
+  <%#= link_to "Investor ranking", investor_ranking_path, class: 'nav-link' %>
   <%#= nav_link_to t(".pricing"), pricing_path, class: "nav-link" %>
 <% else %>
   <%#= link_to "pricing", pricing_path, class: 'nav-link' %>

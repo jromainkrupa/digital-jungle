@@ -16,10 +16,13 @@ Rails.application.routes.draw do
   root to: "pages#landing_workshops"
 
   resources :projects, only: [:index]
-  resources :workshops, only: [:show]
+  resources :workshops, only: [:show] do 
+    resources :workshop_bookings, only: [:create]
+  end
 
   
   authenticated :user do 
+
     get "/choose-universe",to: "pages#choose_universe"
     get "/contributor-tutorial",to: "pages#contributor_tutorial"
     get "/pitch-list",to: "pages#pitch_list"
