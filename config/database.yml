@@ -81,7 +81,7 @@ test:
 #
 staging:
   <<: *default
-  database: digital_jungle_production
+  database: digital_jungle_staging
   username: digital_jungle
   password: <%= ENV['DATABASE_URL'] %>
 
