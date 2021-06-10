@@ -1,13 +1,12 @@
 class WorkshopsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_workshop, only: [:show,:edit,:update]
 
   def index
     @workshops = policy_scope Workshop.all
   end
 
   def show
-    @workshop = Workshop.find(params[:id])
-    authorize @workshop
   end
 
   def new
@@ -29,6 +28,7 @@ class WorkshopsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
@@ -41,7 +41,12 @@ class WorkshopsController < ApplicationController
 
   private 
 
+  def set_workshop
+    @workshop = Workshop.find(params[:id])
+    authorize @workshop
+  end
+
   def workshop_params
-    params.require(:workshop).permit(:name, :body, :start_date, :duration, :image_url, :capacity, :user_id)
+    params.require(:workshop).permit(:name, :body,:value_added, :start_date, :duration, :image_url, :capacity, :user_id)
   end
 end

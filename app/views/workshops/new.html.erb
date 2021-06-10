@@ -19,6 +19,11 @@
         </div>
 
         <div class="form-group">
+          <%= form.label :value_added, "Value added of the workshop" %>
+          <%= form.rich_text_area :value_added, placeholder: "Some cool stuff", class: "form-control border border-gray-400" %>
+        </div>
+
+        <div class="form-group">
           <%= form.label :start_date %>
           <%= form.datetime_select :start_date, {ampm: true, default: Time.zone.now, order: [:day, :month, :year] }, { class:"form-control border border-gray-400"} %>
         </div>
