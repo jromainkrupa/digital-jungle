@@ -1,3 +1,55 @@
+<div class="h-screen ">
+  <header class="relative bg-cover w-full h-1/4 bg-center" style="background-image:linear-gradient(180deg, rgba(3, 10, 3, 0.64) -6.12%, rgba(3, 10, 3, 0) 122.24%), url('<%= @workshop.image_url %>');">
+    <div class="w-full ">
+      <%= render "shared/transparent_navbar" %>
+    </div>
+    <div class="bg-white absolute z-50 -bottom-0 px-8 py-6 rounded-t-xl" style="left:40%; width:40%">
+      <h1 class="h3 mt-2 text-clover-900">
+        <%= @workshop.name %>
+      </h1>
+      <p class="mt-1">Avec<span class="font-medium"> <%= @workshop.user.full_name %></span></p>
+      <div class="w-5/6 mx-auto absolute bottom-0 border border-b "></div>
+    </div>
+  </header>
+
+  <main class="relative linear-background">
+    <div class="w-1/4 absolute mt-24 flex flex-col" style="left:10%;">
+      <div class="flex items-center justify-start">
+        <%= render_svg "icons/calendar", styles:"h-4 w-4" %>
+        <p class="font-semibold ml-4"><%= l(@workshop.start_date, format: '%d %B %Y - %Hh%M' ) %></p>
+      </div>
+      <div class="flex mt-4 items-center justify-start">
+        <%= render_svg "icons/location", styles:"h-4 w-4" %>
+        <p class="font-semibold ml-4"><%= @workshop.address %></p>
+      </div>
+      <div class="flex mt-4 items-center justify-start">
+        <%= render_svg "icons/clock", styles:"h-4 w-4" %>
+        <p class="font-semibold ml-4"><%= @workshop.duration % 7 == 0 ? "1 journée" : "1/2 journée" %></p>
+      </div>
+      
+      <div class="mt-24">
+        <p class="text-lg font-semibold ">Places disponibles: <%= @workshop.capacity - @workshop.users.size %></p class="text-lg ">
+        <p class="mt-2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+      </div>
+
+    </div>
+
+    <div class="bg-white absolute -top-1 px-8 py-6 rounded-b-xl shadow" style="left:40%; width:40%">
+      <h3 class="mt-2 ">Au programme</h3>
+      <p class="text-base mt-4  text-gray-500">
+        <%= @workshop.body %>
+      </p>
+      <h3 class="mt-8">À la fin vous repartez avec:</h3>
+      <p class="text-base mt-4 text-gray-500">
+        <%= @workshop.value_added %>
+      </p>
+      <div class="mt-8">
+        <%= link_to "S'inscrire", workshop_workshop_bookings_path(@workshop), method: :post, class: "btn btn-primary btn-expanded"   %>
+      </div>
+    </div>
+  </main>
+
+</div>
 <main>
   <div class="w-full bg-white shadow border-white border-b-2 py-8 px-4 sm:px-6 lg:px-8">
       <h1 class="h2 mt-2 text-clover-800">
@@ -39,11 +91,11 @@
       <div class="flex-shrink-0">
         <img class="h-64 w-full rounded-xl object-cover" src="<%= @workshop.image_url%>" alt="">
       </div>
-      <h3 class="mt-8 ">Le programme</h3>
+      <h3 class="mt-8 ">Au programme</h3>
       <p class="text-base mt-4  text-gray-500">
         <%= @workshop.body %>
       </p>
-      <h3 class="mt-8">Ce que vous aurez à la fin</h3>
+      <h3 class="mt-8">À la fin vous repartez avec:</h3>
       <p class="text-base mt-4 text-gray-500">
         <%= @workshop.value_added %>
       </p>
