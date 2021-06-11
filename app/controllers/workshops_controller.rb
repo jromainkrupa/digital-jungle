@@ -7,6 +7,7 @@ class WorkshopsController < ApplicationController
   end
 
   def show
+    @workshops = Workshop.where.not(id: @workshop.id)
   end
 
   def new
