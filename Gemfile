@@ -79,3 +79,5 @@ gem 'hotwire-rails', '~> 0.1.3'
 gem 'pundit', '~> 2.1'
 
 gem "i18n-tasks", "~> 0.9.34"
+
+gem "browser", "~> 5.3"

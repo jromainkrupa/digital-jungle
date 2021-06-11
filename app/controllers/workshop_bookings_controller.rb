@@ -5,10 +5,13 @@ class WorkshopBookingsController < ApplicationController
 
     authorize @workshop_booking
 
-    if @workshop_booking.save
-      redirect_to workshop_path(@workshop), notice: "Vous êtes bien inscrit au workshop."
-    else
-      render :back, status: :unprocessable_entity
+    respond_to do |format|
+      if @workshop_booking.save
+        format.html.phone { redirect_to workshop_path(@workshop), notice: "Vous êtes bien inscrit au workshop." }
+        format.html { redirect_to workshop_path(@workshop), notice: "Vous êtes bien inscrit au workshop." }
+      else
+        format.html { render :back, status: :unprocessable_entity }
+      end
     end
   end
 

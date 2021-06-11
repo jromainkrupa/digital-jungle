@@ -1,6 +1,7 @@
 require 'action_text'
 
 class ApplicationController < ActionController::Base
+  include DetectDevice
   helper ActionText::Engine.helpers
   http_basic_authenticate_with name: ENV["STAGING_LOGIN"], password: ENV["STAGING_PASSWORD"] if Rails.env.staging?
   before_action :set_locale
