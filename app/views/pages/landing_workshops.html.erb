@@ -88,12 +88,9 @@
             </div>
           </div>
           <% end %>
-
-
         </div>
       </div>
     </div>
-  
   </section>
 
   <!-- CTA -->
@@ -101,38 +98,5 @@
 
   <!-- pricing 2 -->
   <%= render "pages/shared/single_price", locales: locales %>
-
-
-
 </main>
-
 <%= render partial: "shared/footer" %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<% @workshops.each do |workshop| %>
-  <div class="bg-white shadow rounded-xl p-8">
-    <div>
-      <h3 class="h3 text-clover-700"><%= workshop.name %></h3>
-      <div class="mt-4">
-        <%= workshop.body %>
-      </div>
-    </div>
-    <div>
-      <p><%= workshop.start_date %></p>
-      <%= workshop.duration %>
-    </div>
-  </div>
-<% end %>
