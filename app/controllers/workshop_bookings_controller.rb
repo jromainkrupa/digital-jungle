@@ -5,8 +5,6 @@ class WorkshopBookingsController < ApplicationController
 
     authorize @workshop_booking
 
-    raise
-
     respond_to do |format|
       if @workshop_booking.save
         format.html.phone { redirect_to workshop_booking_path(@workshop), notice: "Vous êtes bien inscrit au workshop." }
