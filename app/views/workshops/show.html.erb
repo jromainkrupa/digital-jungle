@@ -60,7 +60,11 @@
         <%= @workshop.value_added %>
       </p>
       <div class="mt-8">
-        <%= link_to "S'inscrire", workshop_workshop_bookings_path(@workshop), method: :post, class: "btn btn-primary btn-expanded" %>
+      <% if current_user.workshop_bookings.where(workshop: @workshop).present? %>
+        <p class="font-semibold text-roman-500">Vous êtes inscrit</p>
+      <% else %>
+        <%= link_to "Postulez", workshop_workshop_bookings_path(@workshop), method: :post, class: "btn btn-primary btn-expanded" %>
+      <% end %>
       </div>
     </div>
   </section>
