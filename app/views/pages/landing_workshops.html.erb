@@ -1,6 +1,7 @@
 <% locales = { 
   path: "pages.landing_workshops",
   colors: {
+    #logo_color: "red-500",
     primary_background: "goldish-300",
     secondary_background: "white",
     primary: "roman",
@@ -12,11 +13,11 @@
   hero_right_content: "entrepreneur_video"
 } %>
 
-<%= render partial: "shared/navbar" %>
 
 
-<header class="">
-    <!-- hero-section  -->
+<header class="bg-goldish-300">
+    <!-- hero-section  -->  
+  <%= render "shared/navbar", locales: locales %>
   <%= render "pages/shared/hero_section_without_image", locales: locales %>
 </header>
 

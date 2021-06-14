@@ -1,7 +1,22 @@
+<% locales = { 
+  #path: "pages.landing_workshops",
+  colors: {
+    logo_color: "white",
+    # primary_background: "goldish-300",
+    # secondary_background: "white",
+    # primary: "roman",
+    # text: "clover-600",
+    # title: "clover-700",
+    # primary_button: "btn btn-primary",
+    # hero_text: "hippie-500"
+  },
+  #hero_right_content: "entrepreneur_video"
+} %>
+
 <div class="h-screen ">
   <section class="relative bg-cover w-full h-1/3 bg-center" style="background-image:linear-gradient(180deg, rgba(3, 10, 3, 0.64) -6.12%, rgba(3, 10, 3, 0) 122.24%), url('<%= @workshop.image_url %>');">
     <div class="w-full ">
-      <%= render "shared/navbar" %>
+      <%= render "shared/navbar", locales: locales %>
     </div>
     <div class="bg-white absolute z-50 -bottom-0 px-8 py-6 rounded-t-xl" style="left:45%; width:35%">
       <h1 class="h3 mt-2 text-clover-900">
