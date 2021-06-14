@@ -3,6 +3,8 @@ module.exports = {
     enabled: ["production", "staging"].includes(process.env.NODE_ENV),
     content: [
       "./**/*.html.erb",
+      "./**/**/*.html.erb",
+      "./**/*.html+phone.erb",
       "./app/helpers/**/*.rb",
       "./app/javascript/**/*.js",
     ],
