@@ -5,14 +5,20 @@ class WorkshopBookingsController < ApplicationController
 
     authorize @workshop_booking
 
+    raise
+
     respond_to do |format|
       if @workshop_booking.save
-        format.html.phone { redirect_to workshop_path(@workshop), notice: "Vous êtes bien inscrit au workshop." }
-        format.html { redirect_to workshop_path(@workshop), notice: "Vous êtes bien inscrit au workshop." }
+        format.html.phone { redirect_to workshop_booking_path(@workshop), notice: "Vous êtes bien inscrit au workshop." }
+        format.html { redirect_to workshop_booking_path(@workshop_booking), notice: "Vous êtes bien inscrit au workshop." }
       else
-        format.html { render :back, status: :unprocessable_entity }
+        format.html { redirect_to @workshop, notice: "Something went wrong" }
       end
     end
+  end
+
+  def show
+    @workshop_booking = WorkshopBooking.find(params[:id])
   end
 
   private 

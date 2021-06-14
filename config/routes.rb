@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     get "/pitch-list",to: "pages#pitch_list"
     get "/favorites", to: "users#favorites"
     get "/investor-ranking", to: "users#ranking"
+    resources :workshop_bookings, only: [:show]
     resources :investments, only: [:index]
     resources :projects, only: [:show] do
       resource :like
