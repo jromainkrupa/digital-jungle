@@ -7,7 +7,6 @@ class WorkshopBookingsController < ApplicationController
 
     respond_to do |format|
       if @workshop_booking.save
-        format.html.phone { redirect_to workshop_booking_path(@workshop), notice: "Vous êtes bien inscrit au workshop." }
         format.html { redirect_to workshop_booking_path(@workshop_booking), notice: "Vous êtes bien inscrit au workshop." }
       else
         format.html { redirect_to @workshop, notice: "Something went wrong" }
@@ -17,6 +16,7 @@ class WorkshopBookingsController < ApplicationController
 
   def show
     @workshop_booking = WorkshopBooking.find(params[:id])
+    authorize @workshop_booking
   end
 
   private 
