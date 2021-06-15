@@ -1,10 +1,10 @@
-<nav class="flex flex-wrap items-center justify-between px-4 py-2 bg-transparent border-b text-sm" data-controller="toggle">
+<nav class="flex flex-wrap items-center justify-between mx-auto max-w-7xl px-4 lg:px-8 py-2 bg-transparent text-sm" data-controller="toggle">
   <div class="flex items-center flex-shrink-0 mr-6">
       <%= link_to root_path, class:"flex items-center" do %>
         <% if locales[:colors][:logo_color] %>
-          <span class="h3 ml-4 mt-1 text-<%= locales[:colors][:logo_color] %>">digital<span class="text-<%= locales[:colors][:logo_color] %>">jungle</span></span> 
+          <span class="h3 mt-1 text-<%= locales[:colors][:logo_color] %>">digital<span class="text-<%= locales[:colors][:logo_color] %>">jungle</span></span> 
         <% else %>
-          <span class="h3 ml-4 mt-1 text-clover-700">digital<span class="text-hippie">jungle</span></span> 
+          <span class="h3 mt-1 text-clover-700">digital<span class="text-hippie">jungle</span></span> 
         <% end %>
       <% end %>
   </div>

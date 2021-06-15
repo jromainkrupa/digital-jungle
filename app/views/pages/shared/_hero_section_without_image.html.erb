@@ -1,5 +1,5 @@
   <div class="bg-<%= locales[:colors][:primary_background] %>"> 
-    <div class="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 lg:pt-24">
+    <div class="pt-10 mx-auto max-w-7xl  mx-auto sm:pt-12 lg:pt-24">
       <div data-controller="type" class="sm:text-center md:max-w-2xl md:mx-auto md:my-auto ">
         <h1 class="mt-1 block text-4xl font-extrabold sm:text-5xl xl:text-5xl text-<%= locales[:colors][:hero_text]%>">
           <%= t("#{locales[:path]}.hero-section.title_html") %>
@@ -9,7 +9,7 @@
         </p>
       </div>
       <div class="py-12">
-        <div class="max-w-xl mx-auto text-center px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="max-w-xl mx-auto text-center lg:max-w-7xl">
           <dl class="items-start grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">
             <% t("#{locales[:path]}.hero-section.features").each_with_index do |element, index| %>
               <div class="">

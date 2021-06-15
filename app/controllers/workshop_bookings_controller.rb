@@ -16,6 +16,10 @@ class WorkshopBookingsController < ApplicationController
 
   def show
     @workshop_booking = WorkshopBooking.find(params[:id])
+    @workshop_bookings = current_user.workshop_bookings
+    @next_workshop = @workshop_bookings.map(&:workshop).sort_by(&:start_date).first
+    @workshops = Workshop.all
+
     authorize @workshop_booking
   end
 
