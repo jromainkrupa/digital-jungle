@@ -24,11 +24,11 @@
 
 <main class="flex flex-col items-center">
   <div class="mx-4 lg:mx-8 " style="min-width:75%">
-    <div class="grid-cols-5 mx-auto bg-red-500 grid w-5/6">
-      <div class=" flex flex-col py-24 col-span-2" style="">
+    <div class="grid-cols-5 mx-auto  grid w-5/6">
+      <div class=" flex flex-col py-24 col-span-2 pr-24" style="">
         <div class="flex items-center justify-start">
           <%= render_svg "icons/calendar", styles:"h-4 w-4" %>
-          <p class="font-semibold ml-4"><%= l(@workshop.start_date, format: '%d %B %Y - %Hh%M' ) %></p>
+          <p class="font-semibold ml-4"><%= @workshop.start_date.strftime('%d %B %Y - %Hh%M') %></p>
         </div>
         <div class="flex mt-4 items-center justify-start">
           <%= render_svg "icons/location", styles:"h-4 w-4" %>
@@ -39,7 +39,7 @@
           <p class="font-semibold ml-4"><%= @workshop.duration % 7 == 0 ? "1 journée" : "1/2 journée" %></p>
         </div>
         
-        <div class="mt-24">
+        <div class="mt-24 ">
           <p class="text-lg font-semibold ">Places disponibles: <%= @workshop.capacity - @workshop.users.size %></p class="text-lg ">
           <p class="mt-2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
         </div>
@@ -68,12 +68,11 @@
         <% end %>
         </div>
       </div>
-
     </div>
 
-    <section class="mt-12">
+    <section class="mt-24">
       <hr class="bg-clover-800 w-5/6 mx-auto">
-      <h3 class="mt-6 text-center">Découvrez nos autres ateliers</h3>
+      <h3 class="mt-12 text-center">Découvrez nos autres ateliers</h3>
       <div class="pt-16 pb-32 grid grid-cols-2 gap-8 w-4/6 mx-auto">
         <% @workshops.each do |workshop| %>
           <div class="flex flex-col rounded-lg shadow overflow-hidden">
