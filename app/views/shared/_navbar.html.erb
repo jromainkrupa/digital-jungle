@@ -76,7 +76,9 @@
             <div class="overflow-hidden bg-gray-900 border rounded shadow-sm">
               <%#= link_to t(".signed_in_as_html", user: current_account.name), current_account, class: 'border-b no-underline block px-6 py-3 text-gray-800 bg-white hover:bg-primary-100 transition ease-in-out duration-200 whitespace-nowrap' %>
               <%= link_to "profile", edit_user_registration_path, class: 'no-underline block px-6 py-3 text-gray-400 hover:bg-primary-100 hover:text-gray-800 bg-white hover:text-white-100 transition ease-in-out duration-200 whitespace-nowrap' %>
-              <%= link_to "investments", investments_path, class: 'no-underline block px-6 py-3 text-gray-400 bg-white hover:bg-primary-100 hover:text-gray-800 hover:text-white-100 transition ease-in-out duration-200 whitespace-nowrap' %>
+              <%= link_to "mes workshops", workshop_bookings_path, class: 'no-underline block px-6 py-3 text-gray-400 hover:bg-primary-100 hover:text-gray-800 bg-white hover:text-white-100 transition ease-in-out duration-200 whitespace-nowrap' %>
+
+              <%#= link_to "investments", investments_path, class: 'no-underline block px-6 py-3 text-gray-400 bg-white hover:bg-primary-100 hover:text-gray-800 hover:text-white-100 transition ease-in-out duration-200 whitespace-nowrap' %>
               <%#= link_to t(".password"), account_password_path, class: 'no-underline block px-6 py-3 text-gray-800 bg-white  hover:bg-primary-100 transition ease-in-out duration-200 whitespace-nowrap' %>
               <%#= link_to t(".connected_accounts"), user_connected_accounts_path, class: 'no-underline block px-6 py-3 text-gray-800 bg-white  hover:bg-primary-100 transition ease-in-out duration-200 whitespace-nowrap' if Devise.omniauth_configs.any? %>
               <%#= link_to t(".billing"),  subscription_path, class: 'no-underline block px-6 py-3 text-gray-800 bg-white  hover:bg-primary-100 transition ease-in-out duration-200 whitespace-nowrap' if Jumpstart.config.payments_enabled? %>

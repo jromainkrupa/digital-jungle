@@ -28,12 +28,12 @@ Rails.application.routes.draw do
     get "/pitch-list",to: "pages#pitch_list"
     get "/favorites", to: "users#favorites"
     get "/investor-ranking", to: "users#ranking"
-    resources :workshop_bookings, only: [:show]
-    resources :investments, only: [:index]
-    resources :projects, only: [:show] do
-      resource :like
-      resources :investments, only: [:new, :create]
-    end
+    resources :workshop_bookings, only: [:index]
+    # resources :investments, only: [:index]
+    # resources :projects, only: [:show] do
+    #   resource :like
+    #   resources :investments, only: [:new, :create]
+    # end
   end
   
   authenticated :user, lambda {|u| u.is_entrepreneur?} do

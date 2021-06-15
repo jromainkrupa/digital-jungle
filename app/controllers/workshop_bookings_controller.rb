@@ -7,20 +7,18 @@ class WorkshopBookingsController < ApplicationController
 
     respond_to do |format|
       if @workshop_booking.save
-        format.html { redirect_to workshop_booking_path(@workshop_booking), notice: "Vous êtes bien inscrit au workshop." }
+        format.html { redirect_to workshop_bookings_path, notice: "Vous êtes bien inscrit au workshop." }
       else
         format.html { redirect_to @workshop, notice: "Something went wrong" }
       end
     end
   end
 
-  def show
-    @workshop_booking = WorkshopBooking.find(params[:id])
-    @workshop_bookings = current_user.workshop_bookings
+  def index
+    @workshop_booking = current_user.workshop_bookings.first
+    @workshop_bookings = policy_scope(current_user.workshop_bookings)
     @next_workshop = @workshop_bookings.map(&:workshop).sort_by(&:start_date).first
     @workshops = Workshop.all
-
-    authorize @workshop_booking
   end
 
   private 
