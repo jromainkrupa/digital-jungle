@@ -13,29 +13,29 @@
   #hero_right_content: "entrepreneur_video"
 } %>
 
-<div>
-<section class="relative bg-cover overflow-hidden w-full h-72 bg-center" style="background-image:linear-gradient(180deg, rgba(3, 10, 3, 0.64) -6.12%, rgba(3, 10, 3, 0) 122.24%), url('<%= @workshop.image_url %>');">
+
+<header class=" bg-cover w-full h-72 bg-center" style="background-image:linear-gradient(180deg, rgba(3, 10, 3, 0.64) -6.12%, rgba(3, 10, 3, 0) 122.24%), url('<%= @workshop.image_url %>');">
   <div class="w-5/6 mx-auto">
     <%= render "shared/navbar", locales: locales %>
   </div>
-  <div class="absolute w-5/6 left-2/4 -bottom-0 ">
-    <div class="bg-white relative -left-2/4 z-10  px-8 py-6 rounded-t-xl">
-      <h1 class="h3 mt-2 text-clover-900">
-        <%= @workshop.name %>
-      </h1>
-      <p class="mt-4">Avec<span class="font-medium"> <%= @workshop.user.full_name %></span></p>
-      <div class="absolute w-5/6 bottom-0 left-2/4">
-        <hr class=" relative bg-clover-800 -left-1/2 mx-auto">
-      </div>
-    </div>
-  </div>
-</section>
+</header>
 
-<section>
-  <div class=" w-full linear-background">
-    <div class=" w-5/6  mx-auto">
-      <div class=" bg-white shadow rounded-b-xl px-8 py-8 flex flex-col ">
-        <div class="flex items-center justify-start">
+<main>
+  <div class="flex flex-col items center justify-center w-full linear-background">
+    <div class=" w-5/6 items-center mx-auto">
+
+      <div class="-mt-24 bg-white shadow rounded-xl px-8 py-8 flex flex-col ">
+        <div>
+          <h1 class="h3 mt-2 text-clover-900">
+            <%= @workshop.name %>
+          </h1>
+          <p class="mt-4">Avec<span class="font-medium"> <%= @workshop.user.full_name %></span></p>
+
+          <hr class="mt-8 bg-clover-800  mx-auto">
+        </div>
+
+
+        <div class="mt-8 flex items-center justify-start">
           <%= render_svg "icons/calendar", styles:"h-4 w-4" %>
           <p class="font-semibold ml-4"><%= @workshop.start_date.strftime('%d %B %Y - %Hh%M') %></p>
         </div>
@@ -58,19 +58,19 @@
       </div>
     </div>
   </div>
-</section>
+  <div class="bg-white  w-5/6 mt-12 rounded-xl shadow mx-auto px-8 py-8">
+    <h3 class="mt-2 ">Au programme</h3>
+    <p class="text-base mt-4  text-gray-500">
+      <%= @workshop.body %>
+    </p>
+    <h3 class="mt-8">À la fin vous repartez avec:</h3>
+    <p class="text-base mt-4 text-gray-500">
+      <%= @workshop.value_added %>
+    </p>
+  </div>
+</main>
 </div>
 
-<div class="bg-white relative w-5/6 mt-12 rounded-xl shadow mx-auto px-8 py-8">
-  <h3 class="mt-2 ">Au programme</h3>
-  <p class="text-base mt-4  text-gray-500">
-    <%= @workshop.body %>
-  </p>
-  <h3 class="mt-8">À la fin vous repartez avec:</h3>
-  <p class="text-base mt-4 text-gray-500">
-    <%= @workshop.value_added %>
-  </p>
-</div>
 
 
 <section class="mx-auto w-5/6 mt-12">
