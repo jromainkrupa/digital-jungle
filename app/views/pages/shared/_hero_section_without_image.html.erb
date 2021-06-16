@@ -15,11 +15,8 @@
               <div class="">
                 <dt>
                   <div class="flex mx-auto text-center items-center justify-center h-12 w-12 rounded-md  text-white">
-                    <!-- Heroicon name: outline/globe-alt -->
-
                     <div data-controller="lottie">
                       <lottie-player class="lottie-check" id="check-<%= index %>" data-action="click->lottie#open"
-
                         mode="normal"
                         src="<%= asset_path("check.json") %>"
                         style="width: 4rem;"
@@ -40,18 +37,16 @@
       </div>
       <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center">
         <div class="mt-5 sm:mt-8 flex justify-center items-center ">
-          <div class="">
-            <%= link_to t("#{locales[:path]}.hero-section.cta-primary"), new_user_registration_path, class: "#{locales[:colors][:primary_button]} mb-4" %>
+          <div class="<%= locales[:colors][:primary_button] %> mb-4">
+            <a href="#workshops" >
+              <%= t("#{locales[:path]}.hero-section.cta-primary") %>
+            </a>
           </div>
         </div>
       </div>
     </div>
-
     <div class="divide pt-24">
       <%= render_svg "waves_divider", styles: "" %>
     </div>
-
   </div>
-
-
 </div>
