@@ -32,14 +32,12 @@
       <%= f.label :email %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
     </div>
+
     <div class="form-group">
-      <%= f.label :language %>
-      <%= f.select :language, User.language_list,{}, {class: "select"} %>
+      <%= f.label :phone_number, "Téléphone" %>
+      <%= f.telephone_field :phone_number, autocomplete: "Téléphone", placeholder: true,  class: "form-control" %>
     </div>
-    <div class="form-group">
-      <%= f.label :is_entrepreneur, "Quel univers?" %>
-      <%= f.select :is_entrepreneur, [["💰 Contributeur", false],["🎤 Entrepreneur", true]],{}, {class: "select"} %>
-    </div>
+
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div><%= t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email) %></div>

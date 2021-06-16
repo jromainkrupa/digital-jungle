@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     if user_signed_in?
-      I18n.locale = current_user.language.to_sym
+      I18n.locale = locale_from_header || I18n.default_locale
     else
       I18n.locale = params[:lang] || locale_from_header || I18n.default_locale
     end
@@ -31,8 +31,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :is_entrepreneur, :language, :avatar])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :is_entrepreneur, :language, :avatar])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :phone_number, :avatar])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :phone_number, :avatar])
   end
 
   def after_sign_in_path_for(resource) 
