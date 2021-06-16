@@ -324,7 +324,7 @@ fr:
       how:
         overtitle: "Apprendre, construire, itérer"
         title: "Nos Workshops"
-        description: "Se lancer dans la tech c'est comme partir à l'aventure dans la jungle. On y vas pas sans se preparer un peu, et c'est pour ça qu'on est là ! On vous accompagne pas à pas avec divers ateliers pour devenir un aventurier confirmé du digital."
+        description: "Se lancer dans la tech c'est comme partir à l'aventure dans la jungle. On y vas pas sans se préparer un peu, et c'est pour ça qu'on est là ! On vous accompagne pas à pas avec divers ateliers pour devenir un aventurier du digital confirmé."
         cards:
           - title: "Comment créer un produit web"
             duration: "1 journée"
