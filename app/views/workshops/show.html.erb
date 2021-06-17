@@ -28,7 +28,7 @@
       <div class=" flex flex-col py-24 col-span-2 pr-24" style="">
         <div class="flex items-center justify-start">
           <%= render_svg "icons/calendar", styles:"h-4 w-4" %>
-          <p class="font-semibold ml-4"><%= @workshop.start_date.strftime('%d %B %Y - %Hh%M') %></p>
+          <p class="font-semibold ml-4"><%= @workshop.start_date.strftime('%d %B %Y - %Hh%M') %> à <%= (@workshop.start_date + @workshop.duration.hours).strftime('%Hh%M') %> </p>
         </div>
         <div class="flex mt-4 items-center justify-start">
           <%= render_svg "icons/location", styles:"h-4 w-4" %>

@@ -2,9 +2,9 @@
   <div class="flex items-center flex-shrink-0 mr-6">
       <%= link_to root_path, class:"flex items-center" do %>
         <% if locales[:colors][:logo_color] %>
-          <span class="h3 mt-1 text-<%= locales[:colors][:logo_color] %>">digital<span class="text-<%= locales[:colors][:logo_color] %>">jungle</span></span> 
+          <%= render_svg "logo_white", styles:"w-40" %>
         <% else %>
-          <span class="h3 mt-1 text-clover-700">digital<span class="text-hippie-500">jungle</span></span> 
+          <%= render_svg "logo", styles:"w-40" %>
         <% end %>
       <% end %>
   </div>
@@ -105,7 +105,11 @@
 
       <% else %>
       <div class="bg-goldish-200 p-4 flex flex-col items-end sm:block rounded-xl sm:p-0 sm:bg-transparent">
-        <%= link_to t("sign_in") , new_user_session_path, class: 'nav-link' %>
+        <% if locales[:colors][:logo_color] %>
+          <%= link_to t("sign_in") , new_user_session_path, class: 'nav-link text-white hover:text-gray-100' %>
+        <% else %>
+          <%= link_to t("sign_in") , new_user_session_path, class: 'nav-link text-clover-700 hover:text-clover-800' %>
+        <% end %>
         <%= link_to t("sign_up"), new_user_registration_path, class: 'mt-2 sm:mt-0 btn btn-primary' %>
       </div>
       <% end %>
