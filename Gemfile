@@ -81,3 +81,5 @@ gem 'pundit', '~> 2.1'
 gem "i18n-tasks", "~> 0.9.34"
 
 gem "browser", "~> 5.3"
+
+gem "friendly_id", "~> 5.4"
