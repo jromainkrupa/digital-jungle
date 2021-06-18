@@ -37,7 +37,7 @@
 
         <div class="mt-8 flex items-center justify-start">
           <%= render_svg "icons/calendar", styles:"h-4 w-4" %>
-          <p class="font-semibold ml-4"><%= @workshop.start_date.strftime('%d %B %Y - %Hh%M') %>  à <%= (@workshop.start_date + @workshop.duration.hours).strftime('%Hh%M') %> </p>
+          <p class="font-semibold ml-4"><%= stringify_workshop_date(@workshop) %></p>
         </div>
         <div class="flex mt-6 items-center justify-start">
           <%= render_svg "icons/location", styles:"h-4 w-4" %>
@@ -45,7 +45,7 @@
         </div>
         <div class="flex mt-6 items-center justify-start">
           <%= render_svg "icons/clock", styles:"h-4 w-4" %>
-          <p class="font-semibold ml-4"><%= @workshop.duration % 7 == 0 ? "1 journée" : "1/2 journée" %></p>
+          <p class="font-semibold ml-4"><%= stringify_workshop_duration(workshop) %> journée</p>
         </div>
         
         <div class="mt-12">
