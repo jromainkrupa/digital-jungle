@@ -40,7 +40,7 @@
         </div>
         <div class="flex mt-4 items-center justify-start">
           <%= render_svg "icons/clock", styles:"h-4 w-4" %>
-          <p class="font-semibold ml-4"><%= @workshop.duration % 7 == 0 ? "1 journée" : "1/2 journée" %></p>
+          <p class="font-semibold ml-4"><%= @workshop.duration % 8 == 0 ? "1 journée" : "1/2 journée" %></p>
         </div>
         
         <div class="mt-24 ">
