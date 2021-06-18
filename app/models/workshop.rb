@@ -1,4 +1,6 @@
 class Workshop < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   belongs_to :user
   has_many :workshop_bookings, dependent: :destroy
   has_many :users, through: :workshop_bookings

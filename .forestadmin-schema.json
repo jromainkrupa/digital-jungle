@@ -1313,16 +1313,13 @@
       "integration": null,
       "is_filterable": true,
       "is_read_only": false,
-      "is_required": true,
+      "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
       "reference": null,
       "inverse_of": null,
       "widget": null,
-      "validations": [{
-        "message": null,
-        "type": "is present"
-      }]
+      "validations": []
     }, {
       "field": "start_date",
       "type": "Date",
@@ -1331,16 +1328,13 @@
       "integration": null,
       "is_filterable": true,
       "is_read_only": false,
-      "is_required": true,
+      "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
       "reference": null,
       "inverse_of": null,
       "widget": null,
-      "validations": [{
-        "message": null,
-        "type": "is present"
-      }]
+      "validations": []
     }, {
       "field": "duration",
       "type": "Number",
@@ -1349,16 +1343,13 @@
       "integration": null,
       "is_filterable": true,
       "is_read_only": false,
-      "is_required": true,
+      "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
       "reference": null,
       "inverse_of": null,
       "widget": null,
-      "validations": [{
-        "message": null,
-        "type": "is present"
-      }]
+      "validations": []
     }, {
       "field": "image_url",
       "type": "String",
@@ -1438,6 +1429,21 @@
     }, {
       "field": "updated_at",
       "type": "Date",
+      "default_value": null,
+      "enums": null,
+      "integration": null,
+      "is_filterable": true,
+      "is_read_only": false,
+      "is_required": false,
+      "is_sortable": true,
+      "is_virtual": false,
+      "reference": null,
+      "inverse_of": null,
+      "widget": null,
+      "validations": []
+    }, {
+      "field": "slug",
+      "type": "String",
       "default_value": null,
       "enums": null,
       "integration": null,
