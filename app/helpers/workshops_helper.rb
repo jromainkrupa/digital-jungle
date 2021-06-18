@@ -8,7 +8,7 @@ module WorkshopsHelper
     if nb_half_day == 1
       "1/2"
     else
-      (nb_half_day * 2).to_s
+      (nb_half_day).to_s
     end
   end
 end
