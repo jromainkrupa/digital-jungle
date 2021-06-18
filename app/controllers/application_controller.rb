@@ -27,6 +27,10 @@ class ApplicationController < ActionController::Base
   def locale_from_header
     request.env.fetch('HTTP_ACCEPT_LANGUAGE','').scan(/[a-z]{2}/).first
   end
+  
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 
   protected
 
