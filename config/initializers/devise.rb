@@ -6,6 +6,10 @@ class TurboFailureApp < Devise::FailureApp
       super
     end
   end
+  
+  def route(scope)
+    :new_user_registration_url
+  end
 
   def skip_format?
     %w(html turbo_stream */*).include? request_format.to_s
