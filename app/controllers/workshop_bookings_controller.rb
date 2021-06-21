@@ -1,15 +1,22 @@
 class WorkshopBookingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create]
+  skip_after_action :verify_authorized, only: [:create]
   def create
-    @workshop = Workshop.find(params[:workshop_id])
-    @workshop_booking = WorkshopBooking.new(workshop: @workshop, user: current_user)
+    if current_user.nil?
+      session[:workshop] = params
+      redirect_to new_user_registration_path
+    else
+      @workshop = Workshop.find(params[:workshop_id])
+      @workshop_booking = WorkshopBooking.new(workshop: @workshop, user: current_user)
 
-    authorize @workshop_booking
+      authorize @workshop_booking
 
-    respond_to do |format|
-      if @workshop_booking.save
-        format.html { redirect_to workshop_bookings_path, notice: "Vous êtes bien inscrit au workshop." }
-      else
-        format.html { redirect_to @workshop, notice: "Something went wrong" }
+      respond_to do |format|
+        if @workshop_booking.save
+          format.html { redirect_to workshop_bookings_path, notice: "Vous êtes bien inscrit au workshop." }
+        else
+          format.html { redirect_to @workshop, notice: "Something went wrong" }
+        end
       end
     end
   end

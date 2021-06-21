@@ -82,3 +82,5 @@ gem "i18n-tasks", "~> 0.9.34"
 gem "browser", "~> 5.3"
 
 gem "friendly_id", "~> 5.4"
+
+gem "pry", "~> 0.14.1"

@@ -6,7 +6,7 @@ class TurboFailureApp < Devise::FailureApp
       super
     end
   end
-  
+
   def route(scope)
     :new_user_registration_url
   end

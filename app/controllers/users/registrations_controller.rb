@@ -72,9 +72,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   choose_universe_path
-  # end
+  def after_sign_up_path_for(resource)
+    if session[:workshop].present?
+      @workshop = Workshop.friendly.find(session[:workshop]["workshop_id"])
+      @workshop_booking = WorkshopBooking.new(workshop: @workshop, user: current_user)
+      session[:workshop] = nil
+ 
+      if @workshop_booking.save
+        flash[:notice] = "Vous avez bien posutlez au workshop: #{@workshop.name}"
+        workshop_bookings_path
+      else
+        @workshop
+      end
+    else
+      super
+    end
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
