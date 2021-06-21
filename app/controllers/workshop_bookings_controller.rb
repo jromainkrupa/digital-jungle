@@ -6,7 +6,7 @@ class WorkshopBookingsController < ApplicationController
       session[:workshop] = params
       redirect_to new_user_registration_path
     else
-      @workshop = Workshop.find(params[:workshop_id])
+      @workshop = Workshop.friendly.find(params[:workshop_id])
       @workshop_booking = WorkshopBooking.new(workshop: @workshop, user: current_user)
 
       authorize @workshop_booking
