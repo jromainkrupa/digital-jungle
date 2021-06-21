@@ -30,7 +30,16 @@
   <div class=" items-center" style="min-width:75%">
     <div class="grid-cols-5 mx-auto  grid w-full">
       <div class=" flex flex-col py-24 col-span-2 pr-24" style="">
-        <div class="flex items-center justify-start">
+        <div class="flex items-center justify-center py-4 border-2 rounded-xl w-1/2 border-red-500">
+          <p class="text-roman-500 font-extrabold h2">0€</p>
+          <p class="text-roman-500 ml-4 text-center font-semibold text-2xl line-through	"><%= @workshop.price %>HT</p>
+        </div>
+
+
+        <h3 class="h4 mt-8">
+          <%= t(".next-date") %>
+        </h3>
+        <div class="mt-4 flex items-center justify-start">
           <%= render_svg "icons/calendar", styles:"h-4 w-4" %>
           <p class="font-semibold ml-4"><%= stringify_workshop_date(@workshop) %></p>
         </div>

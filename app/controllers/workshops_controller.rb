@@ -48,6 +48,6 @@ class WorkshopsController < ApplicationController
   end
 
   def workshop_params
-    params.require(:workshop).permit(:name, :body,:value_added, :start_date, :duration, :image_url, :capacity, :user_id)
+    params.require(:workshop).permit(:name, :body,:value_added, :start_date, :duration, :image_url, :capacity, :user_id, :price)
   end
 end
