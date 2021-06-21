@@ -1,6 +1,7 @@
 module WorkshopsHelper
   def stringify_workshop_date(workshop)
-    "#{workshop.start_date.strftime('%d %B %Y, %Hh%M')} - #{(workshop.start_date + @workshop.duration.hours).strftime('%Hh%M')}"
+    #"#{workshop.start_date.strftime('%d %B %Y, %Hh%M')} - #{(workshop.start_date + @workshop.duration.hours).strftime('%Hh%M')}"
+    "#{I18n.l(workshop.start_date, format: '%d %B %Y, %Hh%M')} - #{I18n.l((workshop.start_date + @workshop.duration.hours), format: '%Hh%M')}"
   end
 
   def stringify_workshop_duration(workshop)

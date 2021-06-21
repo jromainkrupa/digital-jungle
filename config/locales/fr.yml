@@ -30,6 +30,22 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 fr:
+  date:
+    month_names:
+      [
+        Javier,
+        Février,
+        Mars,
+        Avril,
+        Mai,
+        Juin,
+        Juillet,
+        Août,
+        Septembre,
+        Octobre,
+        Novembre,
+        Decembre,
+      ]
   investor: "investisseur"
   footer:
     discuss: "Envie de discuter?"
