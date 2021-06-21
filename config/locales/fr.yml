@@ -89,7 +89,7 @@ fr:
     landing_workshops:
       hero-section:
         title_html: "Apprenez à <span>créer un produit digital</span> et lancez votre startup."
-        tagline: "Rejoignez nos ateliers, devenez explorateur et frayez vous un chemin dans la jungle du digital. Entouré de vos compagnons d'expédition et de vos formateurs, apprenez à créer un produit tech pas à pas."
+        tagline: "Rejoignez nos ateliers, devenez un E-diana Jones et frayez-vous un chemin dans la jungle du digital. Entouré.e de vos compagnons d'expédition et de vos formateurs, apprenez à créer un produit tech pas à pas."
         cta-primary: "Commencer l'aventure"
         cta-secondary:
         features:
@@ -98,13 +98,13 @@ fr:
           - title: "Des profs & intervenants"
             description: "aux petits oignons pour vous 7j/24h (ou presque)."
           - title: "Une communauté"
-            description: "d'étudiants et passionnés."
+            description: "d'étudiants passionnés."
           - title: "Coaching actif"
             description: "dédiés à VOTRE projet."
       how:
         overtitle: "Apprendre, construire, itérer"
         title: "Nos Workshops"
-        description: "Se lancer dans la tech c'est comme partir à l'aventure dans la jungle. On y vas pas sans se préparer un peu, et c'est pour ça qu'on est là ! On vous accompagne pas à pas avec divers ateliers pour devenir un aventurier du digital confirmé."
+        description: "Se lancer dans la tech c'est comme partir à l'aventure dans la jungle. On y vas pas sans se préparer. Et c'est pour ça que nous sommes là ! Nous vous accompagnons, pas à pas, à travers divers ateliers pour partir à la découverte du monde du numérique."
         cards:
           - title: "Comment créer un produit web"
             duration: "1 journée"
