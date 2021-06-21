@@ -84,7 +84,7 @@
               <div class="relative h-48 w-full bg-center bg-cover" style="background-image: url('<%= workshop.image_url %>');">
                 <div class="absolute left-1/2" style="top:11.25rem;">
                   <span class="relative -left-1/2 px-3 py-0.5 rounded-full text-sm font-medium bg-roman-500 text-white">
-                    <%= workshop.duration % 7 == 0 ? "1 journée" : "1/2 journée" %>
+                    <%= stringify_workshop_duration(@workshop) %> journée
                   </span>
                 </div>
               </div>
