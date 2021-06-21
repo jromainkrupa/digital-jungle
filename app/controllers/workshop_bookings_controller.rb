@@ -22,10 +22,17 @@ class WorkshopBookingsController < ApplicationController
   end
 
   def index
-    @workshop_booking = current_user.workshop_bookings.first
-    @workshop_bookings = policy_scope(current_user.workshop_bookings)
-    @next_workshop = @workshop_bookings.map(&:workshop).sort_by(&:start_date).first
-    @other_workshops = Workshop.all - @workshop_bookings.map(&:workshop)
+    if current_user.workshop_bookings.empty?
+      @other_workshops = policy_scope Workshop.all
+      @next_workshop = @other_workshops.sort_by(&:start_date).first
+      @workshop_booking = @next_workshop
+      
+    else
+      @workshop_booking = current_user.workshop_bookings.first
+      @workshop_bookings = policy_scope(current_user.workshop_bookings)
+      @next_workshop = @workshop_bookings.map(&:workshop).sort_by(&:start_date).first
+      @other_workshops = Workshop.all - @workshop_bookings.map(&:workshop)
+    end
   end
 
   private 
