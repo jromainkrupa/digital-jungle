@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-
-  mount ForestLiana::Engine => '/forest'
-  devise_for :users, controllers: {
-    registrations: 'users/registrations'
-  }
+  devise_for :users
 
   require "sidekiq/web"
   authenticate :user, ->(user) { user.admin? } do

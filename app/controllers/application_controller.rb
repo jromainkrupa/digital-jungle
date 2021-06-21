@@ -17,11 +17,7 @@ class ApplicationController < ActionController::Base
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   def set_locale
-    if user_signed_in?
-      I18n.locale = locale_from_header || I18n.default_locale
-    else
       I18n.locale = params[:lang] || locale_from_header || I18n.default_locale
-    end
   end
 
   def locale_from_header
