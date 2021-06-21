@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   has_many :workshop_bookings, dependent: :destroy
   has_many :projects, dependent: :destroy
-  has_many :investments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
   has_one_attached :avatar

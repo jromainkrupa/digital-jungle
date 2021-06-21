@@ -82,3 +82,7 @@ gem "browser", "~> 5.3"
 gem "friendly_id", "~> 5.4"
 
 gem "pry", "~> 0.14.1"
+
+gem "administrate", "~> 0.16.0"
+
+gem "httparty", "~> 0.18.1"
