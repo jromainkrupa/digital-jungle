@@ -18,11 +18,10 @@ require("../administrate/index");
 import "controllers";
 
 // Jumpstart Pro & other Functionality
-import "src/actiontext";
+
 //import "src/confirm" // We don't really care about fancy confirm modals in the admin
 import "src/direct_uploads";
 import "src/forms";
-import "src/timezone";
 
 // ADD YOUR JAVACSRIPT HERE
 
