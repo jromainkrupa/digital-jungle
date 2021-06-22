@@ -11,8 +11,8 @@ class WorkshopDashboard < Administrate::BaseDashboard
     user: Field::BelongsTo,
     workshop_bookings: Field::HasMany,
     users: Field::HasMany,
-    rich_text_body: Field::HasOne,
-    rich_text_value_added: Field::HasOne,
+    body: TrixField,
+    value_added: TrixField,
     id: Field::Number,
     name: Field::String,
     start_date: Field::DateTime,
@@ -35,7 +35,6 @@ class WorkshopDashboard < Administrate::BaseDashboard
     user
     workshop_bookings
     users
-    rich_text_body
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -44,8 +43,6 @@ class WorkshopDashboard < Administrate::BaseDashboard
     user
     workshop_bookings
     users
-    rich_text_body
-    rich_text_value_added
     id
     name
     start_date
@@ -66,8 +63,6 @@ class WorkshopDashboard < Administrate::BaseDashboard
     user
     workshop_bookings
     users
-    rich_text_body
-    rich_text_value_added
     name
     start_date
     duration

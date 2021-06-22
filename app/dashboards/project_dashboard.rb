@@ -9,10 +9,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
-    pitches: Field::HasMany,
-    investments: Field::HasMany,
     project_messages: Field::HasMany,
-    likes: Field::HasMany,
     id: Field::Number,
     name: Field::String,
     description: Field::String,
@@ -22,7 +19,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     pain: Field::Text,
     solution: Field::Text,
     target: Field::Text,
-    likes_count: Field::Number,
+
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -32,8 +29,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     user
-    pitches
-    investments
+
     project_messages
   ].freeze
 
@@ -41,10 +37,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     user
-    pitches
-    investments
     project_messages
-    likes
     id
     name
     description
@@ -54,7 +47,6 @@ class ProjectDashboard < Administrate::BaseDashboard
     pain
     solution
     target
-    likes_count
   ].freeze
 
   # FORM_ATTRIBUTES

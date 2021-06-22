@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_21_115251) do
+ActiveRecord::Schema.define(version: 2021_06_22_124820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,12 +129,8 @@ ActiveRecord::Schema.define(version: 2021_06_21_115251) do
     t.boolean "is_teacher", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "balance", default: 1000000
     t.string "language"
     t.boolean "admin", default: false
-    t.boolean "done_pitch_lesson", default: false
-    t.integer "next_action", default: 0
-    t.boolean "watched_tutorial", default: false
     t.boolean "is_approved_for_workshop", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

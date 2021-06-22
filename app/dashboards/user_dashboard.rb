@@ -10,8 +10,6 @@ class UserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     workshop_bookings: Field::HasMany,
     projects: Field::HasMany,
-    investments: Field::HasMany,
-    likes: Field::HasMany,
     avatar_attachment: Field::HasOne,
     avatar_blob: Field::HasOne,
     id: Field::Number,
@@ -27,12 +25,8 @@ class UserDashboard < Administrate::BaseDashboard
     is_teacher: Field::Boolean,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    balance: Field::Number,
     language: Field::String,
     admin: Field::Boolean,
-    done_pitch_lesson: Field::Boolean,
-    next_action: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
-    watched_tutorial: Field::Boolean,
     is_approved_for_workshop: Field::Boolean,
   }.freeze
 
@@ -42,10 +36,11 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
+    first_name
+    last_name
+    phone_number
+    email
     workshop_bookings
-    projects
-    investments
-    likes
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -53,8 +48,6 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     workshop_bookings
     projects
-    investments
-    likes
     avatar_attachment
     avatar_blob
     id
@@ -70,12 +63,8 @@ class UserDashboard < Administrate::BaseDashboard
     is_teacher
     created_at
     updated_at
-    balance
     language
     admin
-    done_pitch_lesson
-    next_action
-    watched_tutorial
     is_approved_for_workshop
   ].freeze
 
@@ -99,12 +88,8 @@ class UserDashboard < Administrate::BaseDashboard
     phone_number
     is_entrepreneur
     is_teacher
-    balance
     language
     admin
-    done_pitch_lesson
-    next_action
-    watched_tutorial
     is_approved_for_workshop
   ].freeze
 
