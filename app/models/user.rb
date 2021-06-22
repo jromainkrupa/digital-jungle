@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :workshop_bookings, dependent: :destroy
   has_many :projects, dependent: :destroy
-  has_many :likes, dependent: :destroy
+  # has_many :likes, dependent: :destroy
 
   has_one_attached :avatar
 
@@ -40,32 +40,32 @@ class User < ApplicationRecord
     [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
   end
 
-  def self.stringify_next_action(next_action)
-    case next_action
-    when "tutorial" then "Watch the tutorial"
-    when "create_project" then "Create your first project"
-    when "connect_slack" then "Connect to Slack to discuss about your project"
-    when "learn_how_to_pitch" then "Learn the art of a good pitch"
-    when "create_pitch_script" then "Create the script for your pitch"
-    when "upload_pitch" then "Record & Upload your pitch"
-    when "wait_validation" then "Ask & Wait for content validation"
-    when "validated" then "Start getting feedback!"     
-    end
-  end
+  # def self.stringify_next_action(next_action)
+  #   case next_action
+  #   when "tutorial" then "Watch the tutorial"
+  #   when "create_project" then "Create your first project"
+  #   when "connect_slack" then "Connect to Slack to discuss about your project"
+  #   when "learn_how_to_pitch" then "Learn the art of a good pitch"
+  #   when "create_pitch_script" then "Create the script for your pitch"
+  #   when "upload_pitch" then "Record & Upload your pitch"
+  #   when "wait_validation" then "Ask & Wait for content validation"
+  #   when "validated" then "Start getting feedback!"     
+  #   end
+  # end
 
-  def self.linkify_next_action(next_action)
-    case next_action
-    when "tutorial" then :entrepreneur_tutorial
-    end
-  end
+  # def self.linkify_next_action(next_action)
+  #   case next_action
+  #   when "tutorial" then :entrepreneur_tutorial
+  #   end
+  # end
 
-  def likes?(project)
-    project.likes.where(user_id: id).any?
-  end
+  # def likes?(project)
+  #   project.likes.where(user_id: id).any?
+  # end
 
-  def liked_projects
-    likes.map { |like| like.project }
-  end
+  # def liked_projects
+  #   likes.map { |like| like.project }
+  # end
 
   private
 
