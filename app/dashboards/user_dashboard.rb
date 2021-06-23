@@ -59,7 +59,6 @@ class UserDashboard < Administrate::BaseDashboard
     first_name
     last_name
     phone_number
-    is_entrepreneur
     is_teacher
     created_at
     updated_at
@@ -73,9 +72,6 @@ class UserDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     workshop_bookings
-    projects
-    investments
-    likes
     avatar_attachment
     avatar_blob
     email
@@ -86,7 +82,6 @@ class UserDashboard < Administrate::BaseDashboard
     first_name
     last_name
     phone_number
-    is_entrepreneur
     is_teacher
     language
     admin
@@ -108,7 +103,7 @@ class UserDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(user)
-  #   "User ##{user.id}"
-  # end
+  def display_resource(user)
+    user.full_name
+  end
 end
