@@ -13,7 +13,6 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true, uniqueness: { scope: :first_name}
   validates :email, presence: true, uniqueness: true
-  validates :balance, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   # after_create :send_welcome_email
 
