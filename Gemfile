@@ -86,3 +86,5 @@ gem "pry", "~> 0.14.1"
 gem "administrate", "~> 0.16.0"
 
 gem "httparty", "~> 0.18.1"
+
+gem "rails-i18n", "~> 6.0"

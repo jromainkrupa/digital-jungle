@@ -30,6 +30,13 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 fr:
+  activerecord:
+    models:
+      user: "Utilisateur"
+    attributes:
+      user:
+        name: "nom"
+        password: "mot de passe"
   date:
     month_names:
       [

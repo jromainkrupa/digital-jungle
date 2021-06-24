@@ -3,7 +3,7 @@ require 'rails_helper'
 describe User, type: :model do
   context 'Associations' do
     it { should have_many(:projects) } 
-    it { should have_many(:investments) } 
+    it { should have_many(:workshop_bookings) } 
   end
 
   context 'Validations' do
@@ -11,20 +11,9 @@ describe User, type: :model do
       user = User.create(first_name: "Jean",
                         last_name: "Krupa",
                         email: "jkrupa@hotmail.fr",
-                        password:"azerty",
-                        balance: 100,
-                        is_entrepreneur: false)
+                        phone_number: "0695500784",
+                        password:"azerty")
       expect(user).to be_valid
-    end
-
-    it "is should set a balance at 1M€ when created" do
-      user = User.create(first_name: "Jean",
-        last_name: "Krupa",
-        email: "jkrupa@hotmail.fr",
-        password:"azerty",
-        is_entrepreneur: false)
-
-      expect(user.balance).to be(1000000)
     end
 
     it "is invalid without a first name" do
@@ -65,18 +54,6 @@ describe User, type: :model do
         password: 'tototototo')
       user.valid?
       expect(user.errors[:email]).to include('has already been taken')
-    end
-
-    it "can become an entrepreneur" do     
-      user = User.create(first_name: "Jean",
-                        last_name: "Krupa",
-                        email: "jkrupa@hotmail.fr",
-                        password:"azerty",
-                        balance: 100,
-                        is_entrepreneur: false)
-      user.update(is_entrepreneur: true)
-      user.valid?
-      expect(user).to be_valid
     end
   end
 end
