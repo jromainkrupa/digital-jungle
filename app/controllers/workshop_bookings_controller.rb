@@ -26,7 +26,6 @@ class WorkshopBookingsController < ApplicationController
       @other_workshops = policy_scope Workshop.all
       @next_workshop = @other_workshops.sort_by(&:start_date).first
       @workshop_booking = @next_workshop
-      
     else
       @workshop_booking = current_user.workshop_bookings.first
       @workshop_bookings = policy_scope(current_user.workshop_bookings)

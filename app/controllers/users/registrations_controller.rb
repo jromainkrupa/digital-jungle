@@ -11,6 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   # def create
+  #   p "je suis dans create de devise"
   #   super
   # end
 
