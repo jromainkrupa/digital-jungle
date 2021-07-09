@@ -39,6 +39,7 @@ class User < ApplicationRecord
     [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
   end
 
+
   # def self.stringify_next_action(next_action)
   #   case next_action
   #   when "tutorial" then "Watch the tutorial"
