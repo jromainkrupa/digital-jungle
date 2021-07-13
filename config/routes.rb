@@ -3,8 +3,7 @@ Rails.application.routes.draw do
       resources :users
           resources :workshop_bookings
       resources :workshops
-      resources :project_messages
-
+    
       root to: "users#index"
     end
   devise_for :users,
