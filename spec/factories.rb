@@ -57,6 +57,4 @@ FactoryBot.define do
     name { "MyString" }
     description { "This a super cool description of a project, yes it's a bit to have to fill 50 characters." }
   end
-
-
 end
