@@ -3,8 +3,8 @@ require 'rails_helper'
 describe User, type: :model do
   context 'Associations' do
     it { should have_many(:workshop_bookings) } 
-    it { should have_many(:user_teams) } 
-    it { should have_many(:teams).through(:user_teams) } 
+    it { should have_many(:team_members) } 
+    it { should have_many(:teams).through(:team_members) } 
   end
 
   context 'Validations' do

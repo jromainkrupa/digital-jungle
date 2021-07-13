@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :workshop_bookings, dependent: :destroy
-  has_many :user_teams
-  has_many :teams, through: :user_teams
+  has_many :team_members
+  has_many :teams, through: :team_members
   # has_many :likes, dependent: :destroy
 
   has_one_attached :avatar

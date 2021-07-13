@@ -3,10 +3,10 @@ require 'rails_helper'
 describe Team, type: :model do
   context 'Associations' do
     it { should belong_to(:owner) } 
-    it { should have_many(:user_teams) } 
+    it { should have_many(:team_members) } 
     it { should have_many(:camps).through(:camp_teams) } 
     it { should have_many(:camp_teams) } 
-    it { should have_many(:users).through(:user_teams) } 
+    it { should have_many(:users).through(:team_members) } 
   end
 
   context 'Validations' do

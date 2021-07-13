@@ -15,7 +15,6 @@ FactoryBot.define do
     last_name    { Faker::Name.unique.name }
     email        { Faker::Internet.email }
     phone_number { '0695500784' }
-    is_entrepreneur { true }
     password     { Faker::Internet.password }
   end
 
