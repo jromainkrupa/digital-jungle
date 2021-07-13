@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe "workshops/new.html.erb", type: :view do
+RSpec.describe CampTeam, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

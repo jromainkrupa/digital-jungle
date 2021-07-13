@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_124820) do
+ActiveRecord::Schema.define(version: 2021_07_13_093224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,23 @@ ActiveRecord::Schema.define(version: 2021_06_22_124820) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "camp_teams", force: :cascade do |t|
+    t.bigint "camp_id", null: false
+    t.bigint "team_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["camp_id"], name: "index_camp_teams_on_camp_id"
+    t.index ["team_id"], name: "index_camp_teams_on_team_id"
+  end
+
+  create_table "camps", force: :cascade do |t|
+    t.string "name"
+    t.boolean "is_current"
+    t.datetime "start_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -64,56 +81,22 @@ ActiveRecord::Schema.define(version: 2021_06_22_124820) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
-  create_table "investments", force: :cascade do |t|
+  create_table "team_members", force: :cascade do |t|
+    t.bigint "team_id", null: false
     t.bigint "user_id", null: false
-    t.bigint "project_id", null: false
-    t.integer "amount", null: false
+    t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_investments_on_project_id"
-    t.index ["user_id"], name: "index_investments_on_user_id"
+    t.index ["team_id"], name: "index_team_members_on_team_id"
+    t.index ["user_id"], name: "index_team_members_on_user_id"
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "project_id", null: false
-    t.boolean "is_like"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_likes_on_project_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
-  create_table "pitches", force: :cascade do |t|
-    t.string "title"
-    t.bigint "project_id", null: false
-    t.boolean "is_publishable", default: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_pitches_on_project_id"
-  end
-
-  create_table "project_messages", force: :cascade do |t|
-    t.string "username"
-    t.text "body"
-    t.bigint "project_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_project_messages_on_project_id"
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.bigint "user_id", null: false
+  create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "channel_id"
-    t.text "pain"
-    t.text "solution"
-    t.text "target"
-    t.integer "likes_count", default: 0, null: false
-    t.index ["user_id"], name: "index_projects_on_user_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_teams_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -125,12 +108,13 @@ ActiveRecord::Schema.define(version: 2021_06_22_124820) do
     t.string "first_name"
     t.string "last_name"
     t.string "phone_number"
-    t.boolean "is_entrepreneur", default: false
+    t.string "language", default: "fr"
+    t.integer "next_action", default: 0
+    t.integer "integer", default: 0
     t.boolean "is_teacher", default: false
+    t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "language"
-    t.boolean "admin", default: false
     t.boolean "is_approved_for_workshop", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -143,15 +127,6 @@ ActiveRecord::Schema.define(version: 2021_06_22_124820) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_workshop_bookings_on_user_id"
     t.index ["workshop_id"], name: "index_workshop_bookings_on_workshop_id"
-  end
-
-  create_table "workshop_users", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "workshop_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_workshop_users_on_user_id"
-    t.index ["workshop_id"], name: "index_workshop_users_on_workshop_id"
   end
 
   create_table "workshops", force: :cascade do |t|
@@ -172,16 +147,12 @@ ActiveRecord::Schema.define(version: 2021_06_22_124820) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "investments", "projects"
-  add_foreign_key "investments", "users"
-  add_foreign_key "likes", "projects"
-  add_foreign_key "likes", "users"
-  add_foreign_key "pitches", "projects"
-  add_foreign_key "project_messages", "projects"
-  add_foreign_key "projects", "users"
+  add_foreign_key "camp_teams", "camps"
+  add_foreign_key "camp_teams", "teams"
+  add_foreign_key "team_members", "teams"
+  add_foreign_key "team_members", "users"
+  add_foreign_key "teams", "users"
   add_foreign_key "workshop_bookings", "users"
   add_foreign_key "workshop_bookings", "workshops"
-  add_foreign_key "workshop_users", "users"
-  add_foreign_key "workshop_users", "workshops"
   add_foreign_key "workshops", "users"
 end

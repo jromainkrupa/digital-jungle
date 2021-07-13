@@ -35,8 +35,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :first_name
       t.string :last_name
       t.string :phone_number
-      t.boolean :is_entrepreneur, default: false
+      t.string :language, default: "fr"
+      t.integer :next_action, :integer, default: 0
       t.boolean :is_teacher, default: false
+      t.boolean :admin, default: false
+
 
       t.timestamps null: false
     end
