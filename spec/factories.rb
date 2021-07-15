@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :section do
+    name { "MyString" }
+    price_in_cents { 1 }
+  end
+
   factory :team_member do
     team { nil }
     user { nil }

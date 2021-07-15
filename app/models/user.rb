@@ -40,6 +40,12 @@ class User < ApplicationRecord
     [['🇬🇧 English', 'en'], ['🇫🇷 Français', 'fr']]
   end
 
+  private
+
+  def default_team_name(user)
+    "##{self.id} #{user.first_name}'s Team"
+  end
+
 
   # def self.stringify_next_action(next_action)
   #   case next_action
