@@ -35,12 +35,23 @@ describe TeamSection, type: :model do
     it "is invalid without a team" do
       team_section = TeamSection.new(team: nil)
       team_section.valid?
-      expect(team_section.errors[:team]).to include('can\'t be blank')
+      expect(team_section.errors[:team]).to include('must exist')
     end
+
     it "is invalid without a section" do
       team_section = TeamSection.new(section: nil)
       team_section.valid?
-      expect(team_section.errors[:section]).to include('can\'t be blank')
+      expect(team_section.errors[:section]).to include('must exist')
     end
+
+    it "is invalid if team already has the section" do
+      team = create(:team)
+      section = create(:section)
+      team_section = TeamSection.create(team: team, section: section)
+      team_section_2 = TeamSection.new(team: team, section: section )      
+      team_section_2.valid?
+      expect(team_section_2.errors[:team]).to include('has already been taken') 
+    end
+
   end
 end

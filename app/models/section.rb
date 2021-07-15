@@ -9,4 +9,10 @@
 #  updated_at     :datetime         not null
 #
 class Section < ApplicationRecord
+  has_many :team_sections
+  has_many :challenges
+  has_many :lectures, through: :challenges
+  has_many :exercises, through: :challenges
+
+  validates :name, presence: true, uniqueness: true 
 end

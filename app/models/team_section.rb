@@ -21,4 +21,6 @@
 class TeamSection < ApplicationRecord
   belongs_to :team
   belongs_to :section
+
+  validates :team, uniqueness: { scope: :section }
 end

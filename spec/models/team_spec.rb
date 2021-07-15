@@ -23,7 +23,6 @@ describe Team, type: :model do
     it { should belong_to(:owner) } 
     it { should have_many(:team_sections) } 
     it { should have_many(:sections).through(:team_sections) } 
-    it { should have_many(:plans).through(:team_sections) } 
     it { should have_many(:team_members) } 
     it { should have_many(:users).through(:team_members) } 
   end
