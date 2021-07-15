@@ -32,9 +32,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :workshop_bookings, dependent: :destroy
+  has_many :workshops, through: :workshop_bookings
   has_many :team_members
   has_many :teams, through: :team_members
-  # has_many :likes, dependent: :destroy
 
   has_one_attached :avatar
 

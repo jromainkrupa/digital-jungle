@@ -20,4 +20,6 @@ class Challenge < ApplicationRecord
   belongs_to :section
   has_many :lectures
   has_many :exercises
+
+  validates :name, presence: true, uniqueness: true
 end

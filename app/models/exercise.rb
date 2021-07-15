@@ -18,4 +18,6 @@
 #
 class Exercise < ApplicationRecord
   belongs_to :challenge
+
+  validates :name, presence: true
 end

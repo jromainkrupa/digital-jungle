@@ -52,6 +52,5 @@ describe TeamSection, type: :model do
       team_section_2.valid?
       expect(team_section_2.errors[:team]).to include('has already been taken') 
     end
-
   end
 end

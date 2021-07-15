@@ -18,4 +18,7 @@
 #
 class Lecture < ApplicationRecord
   belongs_to :challenge
+
+  validates :name, presence: true, uniqueness: true
+
 end

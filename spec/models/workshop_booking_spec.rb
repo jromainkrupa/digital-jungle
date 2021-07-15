@@ -20,6 +20,40 @@
 #
 require 'rails_helper'
 
-RSpec.describe WorkshopBooking, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe WorkshopBooking, type: :model do
+  context 'Associations' do
+    it { should belong_to(:user) } 
+    it { should belong_to(:workshop) } 
+  end
+
+  context 'Validations' do
+    it "is valid with a user and workshop_booking" do
+      user = create(:user)
+      workshop = create(:workshop)
+      workshop_booking = WorkshopBooking.create( workshop: workshop, user: user)
+      expect(workshop_booking).to be_valid
+    end
+
+    it "is invalid without a user" do
+      workshop_booking = WorkshopBooking.new(user: nil)
+      workshop_booking.valid?
+      expect(workshop_booking.errors[:user]).to include('must exist')
+    end
+
+    it "is invalid without a workshop" do
+      workshop_booking = WorkshopBooking.new(workshop: nil)
+      workshop_booking.valid?
+      expect(workshop_booking.errors[:workshop]).to include('must exist')
+    end
+
+    it "is invalid without a duplicate workshop" do
+      workshop = create(:workshop)
+      user = create(:user)
+      workshop_booking = WorkshopBooking.create(user: user, workshop: workshop)
+      workshop_booking_2 = WorkshopBooking.new(user: user, workshop: workshop)
+      workshop_booking_2.valid?
+      expect(workshop_booking_2.errors[:user]).to include('has already been taken')
+    end
+  end
 end
+
