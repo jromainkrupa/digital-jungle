@@ -1,4 +1,14 @@
 FactoryBot.define do
+  factory :team_plan_section do
+    team { nil }
+    plan { nil }
+    section { nil }
+  end
+
+  factory :plan do
+    name { "MyString" }
+  end
+
   factory :section do
     name { "MyString" }
     price_in_cents { 1 }

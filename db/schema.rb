@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_13_142436) do
+ActiveRecord::Schema.define(version: 2021_07_15_094610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,12 @@ ActiveRecord::Schema.define(version: 2021_07_13_142436) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "plans", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string "name"
     t.integer "price_in_cents"
@@ -96,6 +102,17 @@ ActiveRecord::Schema.define(version: 2021_07_13_142436) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["team_id"], name: "index_team_members_on_team_id"
     t.index ["user_id"], name: "index_team_members_on_user_id"
+  end
+
+  create_table "team_plan_sections", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.bigint "plan_id", null: false
+    t.bigint "section_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plan_id"], name: "index_team_plan_sections_on_plan_id"
+    t.index ["section_id"], name: "index_team_plan_sections_on_section_id"
+    t.index ["team_id"], name: "index_team_plan_sections_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -158,6 +175,9 @@ ActiveRecord::Schema.define(version: 2021_07_13_142436) do
   add_foreign_key "camp_teams", "teams"
   add_foreign_key "team_members", "teams"
   add_foreign_key "team_members", "users"
+  add_foreign_key "team_plan_sections", "plans"
+  add_foreign_key "team_plan_sections", "sections"
+  add_foreign_key "team_plan_sections", "teams"
   add_foreign_key "teams", "users"
   add_foreign_key "workshop_bookings", "users"
   add_foreign_key "workshop_bookings", "workshops"

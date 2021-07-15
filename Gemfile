@@ -28,6 +28,22 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'devise', '~> 4.7'
+gem 'inline_svg', '~> 1.7'
+gem 'cloudinary', '~> 1.20'
+gem 'devise-i18n', '~> 1.9'
+gem 'sidekiq', '~> 6.2'
+gem 'sidekiq-failures', '~> 1.0'
+gem 'hotwire-rails', '~> 0.1.3'
+gem 'pundit', '~> 2.1'
+gem "i18n-tasks", "~> 0.9.34"
+gem "browser", "~> 5.3"
+gem "friendly_id", "~> 5.4"
+gem "pry", "~> 0.14.1"
+gem "administrate", "~> 0.16.0"
+gem "httparty", "~> 0.18.1"
+gem "rails-i18n", "~> 6.0"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -54,37 +70,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'bullet'
+  gem 'annotate'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise', '~> 4.7'
-
-gem 'inline_svg', '~> 1.7'
-
-gem 'cloudinary', '~> 1.20'
-
-gem 'devise-i18n', '~> 1.9'
-
-gem 'sidekiq', '~> 6.2'
-
-gem 'sidekiq-failures', '~> 1.0'
-
-gem 'hotwire-rails', '~> 0.1.3'
-
-gem 'pundit', '~> 2.1'
-
-gem "i18n-tasks", "~> 0.9.34"
-
-gem "browser", "~> 5.3"
-
-gem "friendly_id", "~> 5.4"
-
-gem "pry", "~> 0.14.1"
-
-gem "administrate", "~> 0.16.0"
-
-gem "httparty", "~> 0.18.1"
-
-gem "rails-i18n", "~> 6.0"

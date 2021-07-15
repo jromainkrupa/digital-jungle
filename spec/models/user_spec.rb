@@ -1,3 +1,30 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                       :bigint(8)        not null, primary key
+#  admin                    :boolean          default(FALSE)
+#  email                    :string           default(""), not null
+#  encrypted_password       :string           default(""), not null
+#  first_name               :string
+#  integer                  :integer(4)       default(0)
+#  is_approved_for_workshop :boolean          default(FALSE)
+#  is_teacher               :boolean          default(FALSE)
+#  language                 :string           default("fr")
+#  last_name                :string
+#  next_action              :integer(4)       default("tutorial")
+#  phone_number             :string
+#  remember_created_at      :datetime
+#  reset_password_sent_at   :datetime
+#  reset_password_token     :string
+#  created_at               :datetime         not null
+#  updated_at               :datetime         not null
+#
+# Indexes
+#
+#  index_users_on_email                 (email) UNIQUE
+#  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#
 require 'rails_helper'
 
 describe User, type: :model do
