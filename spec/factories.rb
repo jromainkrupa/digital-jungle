@@ -1,7 +1,6 @@
 FactoryBot.define do
-  factory :team_plan_section do
+  factory :team_section do
     team { nil }
-    plan { nil }
     section { nil }
   end
 

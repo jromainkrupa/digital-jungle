@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_15_094610) do
+ActiveRecord::Schema.define(version: 2021_07_15_104434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,23 +51,6 @@ ActiveRecord::Schema.define(version: 2021_07_15_094610) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-  end
-
-  create_table "camp_teams", force: :cascade do |t|
-    t.bigint "camp_id", null: false
-    t.bigint "team_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["camp_id"], name: "index_camp_teams_on_camp_id"
-    t.index ["team_id"], name: "index_camp_teams_on_team_id"
-  end
-
-  create_table "camps", force: :cascade do |t|
-    t.string "name"
-    t.boolean "is_current"
-    t.datetime "start_date"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -113,6 +96,15 @@ ActiveRecord::Schema.define(version: 2021_07_15_094610) do
     t.index ["plan_id"], name: "index_team_plan_sections_on_plan_id"
     t.index ["section_id"], name: "index_team_plan_sections_on_section_id"
     t.index ["team_id"], name: "index_team_plan_sections_on_team_id"
+  end
+
+  create_table "team_sections", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.bigint "section_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["section_id"], name: "index_team_sections_on_section_id"
+    t.index ["team_id"], name: "index_team_sections_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -171,13 +163,13 @@ ActiveRecord::Schema.define(version: 2021_07_15_094610) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "camp_teams", "camps"
-  add_foreign_key "camp_teams", "teams"
   add_foreign_key "team_members", "teams"
   add_foreign_key "team_members", "users"
   add_foreign_key "team_plan_sections", "plans"
   add_foreign_key "team_plan_sections", "sections"
   add_foreign_key "team_plan_sections", "teams"
+  add_foreign_key "team_sections", "sections"
+  add_foreign_key "team_sections", "teams"
   add_foreign_key "teams", "users"
   add_foreign_key "workshop_bookings", "users"
   add_foreign_key "workshop_bookings", "workshops"

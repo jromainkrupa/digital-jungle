@@ -10,6 +10,24 @@
 #
 require 'rails_helper'
 
-RSpec.describe Section, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Section, type: :model do
+  context 'Associations' do
+    it { should have_many(:team_sections) } 
+    it { should have_many(:challenges) } 
+    it { should have_many(:lectures).through(:challenges) } 
+    it { should have_many(:exercises).through(:challenges) } 
+  end
+
+  context 'Validations' do
+    it "is valid with a name" do
+      section = Section.create(name: "UX Desing")
+      expect(section).to be_valid
+    end
+
+    it "is invalid without a name" do
+      section = Section.new(name: nil)
+      section.valid?
+      expect(section.errors[:name]).to include('can\'t be blank')
+    end
+  end
 end
