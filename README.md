@@ -94,6 +94,18 @@ run `redis-cli FLUSHALL`
 
 ---
 
+### Active Text
+
+We use active text and trix editor.
+
+---
+
+### Test Framework
+
+Rspec is the test framework.
+
+---
+
 ### Payments via Stripe
 
 ---
